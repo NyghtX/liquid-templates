@@ -1,32 +1,16 @@
 using System;
-using Templify.ClassGenerator.Templates.Base;
 
 namespace Templify.ClassGenerator.Templates.Class.Property.SimpleTypes
 {
-    public class StringPropertyTemplateBuilder : PropertyTemplateBuilderBase<StringPropertyTemplateBuilder>
+    public class StringPropertyTemplateBuilder : SimplePropertyBuilderBase<StringPropertyTemplateBuilder, string>
     {
         /// <summary>
-        ///     TemplateFile, das zur Generierung der einer StringProperty genutzt werden soll
-        ///     Muss gesetzt werden, um die Fluent Generierung einer StringProperty nutzen zu können
+        ///     Beginnt den Prozess einr neuen SimpleProperty Template zum Generieren zu erstellen
         /// </summary>
-        public static TemplateFile TemplateFile;
-
-        public StringPropertyTemplateBuilder(TemplateFile templateFile) : base(templateFile)
-        {
-        }
-
-        /// <summary>
-        ///     Beginnt den Prozess ein neues StringProperty Template zum Generieren zu erstellen
-        /// </summary>
-        /// <returns>StringPropertyTemplate, das Fluent genutzt werden soll</returns>
+        /// <returns>TPropertyTemplateBuilder, das Fluent genutzt werden soll</returns>
         /// <exception cref="NullReferenceException">Wenn das TemplateFile noch nicht gesetzt wurde</exception>
-        public static StringPropertyTemplateBuilder Create()
-        {
-            if (TemplateFile == null)
-                throw new NullReferenceException(
-                    "Es wurde noch kein Template für das Generieren von String Properties gesetzt.");
+        public static StringPropertyTemplateBuilder Create() => new StringPropertyTemplateBuilder();
 
-            return new StringPropertyTemplateBuilder(TemplateFile);
-        }
+        protected override string PropertyTypeName { get; set; } = "string";
     }
 }

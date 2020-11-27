@@ -23,7 +23,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="034aa156-4b06-4872-b338-e638847744ce" name="Default Changelist" comment="Cleanup">
+      <change afterPath="$PROJECT_DIR$/src/Templify.ClassGenerator.Tests/Templates/Class/Property/SimplePropertyBuilderTests.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Templify.ClassGenerator/Templates/Base/TemplateFiles.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Templify.ClassGenerator/Templates/Class/Property/IPropertyTemplateBuilder.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Templify.ClassGenerator/Templates/Class/Property/IPropertyTemplateBuilderUngenericAction.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Templify.ClassGenerator/Templates/Class/Property/Property.template" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Templify.ClassGenerator/Templates/Class/Property/PropertyTemplatePlaceholder.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Templify.ClassGenerator/Templates/Class/Property/SimpleTypes/SimplePropertyBuilderBase.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Templify/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Templify/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Templify/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Templify/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Templify.ClassGenerator/Templates/Class/ClassTemplateBuilder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Templify.ClassGenerator/Templates/Class/ClassTemplateBuilder.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Templify.ClassGenerator/Templates/Class/Property/IPropertyTemplate.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Templify.ClassGenerator/Templates/Class/Property/PropertyTemplate.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Templify.ClassGenerator/Templates/Class/Property/PropertyTemplateBuilderBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Templify.ClassGenerator/Templates/Class/Property/PropertyTemplateBuilderBase.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Templify.ClassGenerator/Templates/Class/Property/SimpleTypes/StringPropertyTemplateBuilder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Templify.ClassGenerator/Templates/Class/Property/SimpleTypes/StringPropertyTemplateBuilder.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Templify.ClassGenerator/Templify.ClassGenerator.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/src/Templify.ClassGenerator/Templify.ClassGenerator.csproj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,7 +67,6 @@
         <option value="$PROJECT_DIR$/src/Templify.ClassGenerator/Templates/Class/Property/PropertyTypes.cs" />
         <option value="$PROJECT_DIR$/src/Templify.ClassGenerator/Templates/Class/Property/SimpleTypes.cs" />
         <option value="$PROJECT_DIR$/src/Templify.ClassGenerator.Tests/Templates/Class/ClassTemplateTests.cs" />
-        <option value="$PROJECT_DIR$/src/Templify.ClassGenerator/Templates/Class/Property/PropertyTemplate.cs" />
         <option value="$PROJECT_DIR$/src/Templify.ClassGenerator/Templates/Class/Property/SimpleTypes/StringPropertyTemplateBase.cs" />
         <option value="$PROJECT_DIR$/src/Templify.ClassGenerator/Templates/Class/IClassTemplate.cs" />
         <option value="$PROJECT_DIR$/src/Templify.ClassGenerator/Templates/Base/TemplateBase.cs" />
@@ -73,7 +85,18 @@
         <option value="$PROJECT_DIR$/src/Templify.ClassGenerator/Templates/Class/ClassTemplate.cs" />
         <option value="$PROJECT_DIR$/src/Templify.ClassGenerator/Templates/Base/TemplateBuilderBase.cs" />
         <option value="$PROJECT_DIR$/src/Templify.ClassGenerator.Tests/Templates/Class/ClassTemplateBuilderTests.cs" />
+        <option value="$PROJECT_DIR$/src/Templify.ClassGenerator/Templates/Class/Property/IPropertyTemplateBuilderUngenericAction.cs" />
+        <option value="$PROJECT_DIR$/src/Templify.ClassGenerator/Templates/Class/Property/IPropertyTemplateBuilder.cs" />
         <option value="$PROJECT_DIR$/src/Templify.ClassGenerator/Templates/Class/ClassTemplateBuilder.cs" />
+        <option value="$PROJECT_DIR$/src/Templify.ClassGenerator/Templates/Class/Property/SimpleTypes/SimpleProperty.template" />
+        <option value="$PROJECT_DIR$/src/Templify.ClassGenerator/Templates/Class/Property/PropertyTemplate.cs" />
+        <option value="$PROJECT_DIR$/src/Templify.ClassGenerator/Templates/Class/Property/ClassTemplatePlaceholder.cs" />
+        <option value="$PROJECT_DIR$/src/Templify.ClassGenerator/Templates/Class/Property/PropertyTemplatePlaceholder.cs" />
+        <option value="$PROJECT_DIR$/src/Templify.ClassGenerator/Templates/Base/TemplateFiles.cs" />
+        <option value="$PROJECT_DIR$/src/Templify.ClassGenerator/Templates/Class/Property/PropertyTemplateBuilderBase.cs" />
+        <option value="$PROJECT_DIR$/src/Templify.ClassGenerator/Templates/Class/Property/SimpleTypes/SimplePropertyBuilderBase.cs" />
+        <option value="$PROJECT_DIR$/src/Templify.ClassGenerator/Templates/Class/Property/SimpleTypes/StringPropertyTemplateBuilder.cs" />
+        <option value="$PROJECT_DIR$/src/Templify.ClassGenerator.Tests/Templates/Class/Property/SimplePropertyBuilderTests.cs" />
       </list>
     </option>
   </component>
@@ -120,7 +143,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1606496006147</updated>
-      <workItem from="1606496016229" duration="7694000" />
+      <workItem from="1606496016229" duration="10362000" />
     </task>
     <task id="LOCAL-00001" summary="Project Init">
       <created>1606496167923</created>
@@ -192,7 +215,14 @@
       <option name="project" value="LOCAL" />
       <updated>1606503979159</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Cleanup">
+      <created>1606504098116</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1606504098116</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -311,13 +341,17 @@
       <screen x="0" y="25" width="2048" height="1255" />
     </state>
     <state width="2006" height="446" key="GridCell.Tab.4.right/0.25.2048.1255@0.25.2048.1255" timestamp="1606503598170" />
-    <state x="836" y="290" key="RiderGenerateDialog" timestamp="1606500621624">
+    <state x="836" y="290" key="RiderGenerateDialog" timestamp="1606504721241">
       <screen x="0" y="25" width="2048" height="1255" />
     </state>
-    <state x="836" y="290" key="RiderGenerateDialog/0.25.2048.1255@0.25.2048.1255" timestamp="1606500621624" />
-    <state x="624" y="385" key="Vcs.Push.Dialog.v2" timestamp="1606504035636">
+    <state x="836" y="290" key="RiderGenerateDialog/0.25.2048.1255@0.25.2048.1255" timestamp="1606504721241" />
+    <state x="624" y="385" key="Vcs.Push.Dialog.v2" timestamp="1606504163028">
       <screen x="0" y="25" width="2048" height="1255" />
     </state>
-    <state x="624" y="385" key="Vcs.Push.Dialog.v2/0.25.2048.1255@0.25.2048.1255" timestamp="1606504035636" />
+    <state x="624" y="385" key="Vcs.Push.Dialog.v2/0.25.2048.1255@0.25.2048.1255" timestamp="1606504163028" />
+    <state x="824" y="566" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1606505744168">
+      <screen x="0" y="25" width="2048" height="1255" />
+    </state>
+    <state x="824" y="566" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.25.2048.1255@0.25.2048.1255" timestamp="1606505744168" />
   </component>
 </project>

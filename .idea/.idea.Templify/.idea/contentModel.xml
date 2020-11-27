@@ -24,6 +24,7 @@
             <e p="ITemplateBuilder.cs" t="Include" />
             <e p="TemplateBuilderBase.cs" t="Include" />
             <e p="TemplateFile.cs" t="Include" />
+            <e p="TemplateFiles.cs" t="Include" />
           </e>
           <e p="Class" t="Include">
             <e p="Class.template" t="Include" />
@@ -32,9 +33,14 @@
             <e p="ClassTemplatePlaceholder.cs" t="Include" />
             <e p="ClassTemplateValidator.cs" t="Include" />
             <e p="Property" t="Include">
-              <e p="IPropertyTemplate.cs" t="Include" />
+              <e p="IPropertyTemplateBuilder.cs" t="Include" />
+              <e p="IPropertyTemplateBuilderUngenericAction.cs" t="Include" />
+              <e p="Property.template" t="Include" />
+              <e p="PropertyTemplate.cs" t="Include" />
               <e p="PropertyTemplateBuilderBase.cs" t="Include" />
+              <e p="PropertyTemplatePlaceholder.cs" t="Include" />
               <e p="SimpleTypes" t="Include">
+                <e p="SimplePropertyBuilderBase.cs" t="Include" />
                 <e p="StringPropertyTemplateBuilder.cs" t="Include" />
               </e>
             </e>
@@ -61,6 +67,9 @@
         <e p="Templates" t="Include">
           <e p="Class" t="Include">
             <e p="ClassTemplateBuilderTests.cs" t="Include" />
+            <e p="Property" t="Include">
+              <e p="SimplePropertyBuilderTests.cs" t="Include" />
+            </e>
           </e>
         </e>
         <e p="Templify.ClassGenerator.Tests.csproj" t="IncludeRecursive" />

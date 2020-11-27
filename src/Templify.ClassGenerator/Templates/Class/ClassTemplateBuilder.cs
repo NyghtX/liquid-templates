@@ -60,11 +60,19 @@ namespace Templify.ClassGenerator.Templates.Class
         /// </summary>
         /// <param name="property">Property, die der Klasse hinzugefügt werden soll</param>
         /// <returns>ClassTemplate für Fluent Building</returns>
-        public ClassTemplateBuilder WithProperty(IPropertyTemplate property)
+        public ClassTemplateBuilder WithProperty(PropertyTemplate property)
         {
             //TODO Property hinzufügen
             return this;
         }
+
+        /// <summary>
+        ///     Fügt der Klasse eine Property hinzu
+        /// </summary>
+        /// <param name="property">Property, die der Klasse hinzugefügt werden soll</param>
+        /// <returns>ClassTemplate für Fluent Building</returns>
+        public ClassTemplateBuilder WithProperty(IPropertyTemplateBuilderUngenericAction property) =>
+            WithProperty(property.Build());
 
         /// <summary>
         ///     Definiert den Namespace, in dem die Klasse angelegt werden soll
