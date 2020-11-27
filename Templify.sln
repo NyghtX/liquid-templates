@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Templify.ClassGenerator", "src\Templify.ClassGenerator\Templify.ClassGenerator.csproj", "{81C2CAB3-744A-4BD7-9EA2-99374B8FC6C9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Templify.ClassGenerator.Tests", "src\Templify.ClassGenerator.Tests\Templify.ClassGenerator.Tests.csproj", "{85A650CD-152E-4DF4-BB59-B73A3125F076}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{81C2CAB3-744A-4BD7-9EA2-99374B8FC6C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{81C2CAB3-744A-4BD7-9EA2-99374B8FC6C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{81C2CAB3-744A-4BD7-9EA2-99374B8FC6C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{81C2CAB3-744A-4BD7-9EA2-99374B8FC6C9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{85A650CD-152E-4DF4-BB59-B73A3125F076}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{85A650CD-152E-4DF4-BB59-B73A3125F076}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{85A650CD-152E-4DF4-BB59-B73A3125F076}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{85A650CD-152E-4DF4-BB59-B73A3125F076}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
