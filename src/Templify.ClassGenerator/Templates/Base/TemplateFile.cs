@@ -5,22 +5,22 @@ using System.Reflection;
 namespace Templify.ClassGenerator.Templates.Base
 {
     /// <summary>
-    /// Geladenes Template File
+    ///     Geladenes Template File
     /// </summary>
     public class TemplateFile
     {
-        /// <summary>
-        /// Inhalt des Templates
-        /// </summary>
-        public string Content { get; }
-        
         public TemplateFile(string content)
         {
             Content = content;
         }
-        
+
         /// <summary>
-        /// Erzeugt ein neues Template File aus dem Inhalt einer Datei
+        ///     Inhalt des Templates
+        /// </summary>
+        public string Content { get; }
+
+        /// <summary>
+        ///     Erzeugt ein neues Template File aus dem Inhalt einer Datei
         /// </summary>
         /// <param name="fileName">Relativer Pfad zur Datei ausgehend vom bin dir</param>
         /// <returns>Erzeugte TemplateFile Instanz</returns>

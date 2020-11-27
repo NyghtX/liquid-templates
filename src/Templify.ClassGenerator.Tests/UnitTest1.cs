@@ -1,4 +1,3 @@
-using System;
 using Xunit;
 
 namespace Templify.ClassGenerator.Tests
@@ -8,7 +7,6 @@ namespace Templify.ClassGenerator.Tests
         [Fact]
         public void Test1()
         {
-
         }
     }
 }

@@ -5,30 +5,30 @@ using Templify.ClassGenerator.Templates.Base;
 namespace Templify.ClassGenerator.Templates.Class
 {
     /// <summary>
-    /// Template, auf das Replacements angewendet werden können
+    ///     Template, auf das Replacements angewendet werden können
     /// </summary>
     public class ClassTemplate : TemplateBase
     {
         /// <summary>
-        /// Namespace, in dem die Klasse angelegt werden soll
+        ///     Inheritance der Klasse
         /// </summary>
-        private string _namespace;
+        private ClassInheritanceTemplate _inheritance;
 
         /// <summary>
-        /// Name der Klasse
+        ///     Name der Klasse
         /// </summary>
         private string _name;
 
         /// <summary>
-        /// UsingTemplates für die Klasse
+        ///     Namespace, in dem die Klasse angelegt werden soll
         /// </summary>
-        private List<UsingTemplate> _usingTemplates = new List<UsingTemplate>();
+        private string _namespace;
 
         /// <summary>
-        /// Inheritance der Klasse
+        ///     UsingTemplates für die Klasse
         /// </summary>
-        private ClassInheritanceTemplate _inheritance;
-        
+        private readonly List<UsingTemplate> _usingTemplates = new List<UsingTemplate>();
+
         public ClassTemplate(TemplateFile templateFile) : base(templateFile)
         {
         }
@@ -36,11 +36,10 @@ namespace Templify.ClassGenerator.Templates.Class
         public ClassTemplate(string templatePath) : base(templatePath)
         {
         }
-        
-        
+
 
         /// <summary>
-        /// Fügt ein Template für Using Statements zum Template hinzu
+        ///     Fügt ein Template für Using Statements zum Template hinzu
         /// </summary>
         /// <param name="template">Using Template</param>
         /// <returns></returns>
@@ -48,13 +47,13 @@ namespace Templify.ClassGenerator.Templates.Class
         {
             if (_usingTemplates.Contains(template))
                 return this;
-            
+
             _usingTemplates.Add(template);
             return this;
         }
 
         /// <summary>
-        /// Setzt die Inheritance der Klasse
+        ///     Setzt die Inheritance der Klasse
         /// </summary>
         /// <param name="inheritanceTemplate">Inheritance</param>
         /// <returns></returns>
@@ -66,7 +65,7 @@ namespace Templify.ClassGenerator.Templates.Class
 
 
         /// <summary>
-        /// Setzt die Base-Class für die zu erzeugende Klasse
+        ///     Setzt die Base-Class für die zu erzeugende Klasse
         /// </summary>
         /// <param name="baseClass"></param>
         /// <returns></returns>
@@ -76,7 +75,7 @@ namespace Templify.ClassGenerator.Templates.Class
         }
 
         /// <summary>
-        /// Setzt den Namen, den die generierte Klasse erhalten soll
+        ///     Setzt den Namen, den die generierte Klasse erhalten soll
         /// </summary>
         /// <param name="className">Name der Klassem, die generiert werden soll</param>
         /// <returns>ClassTemplate für Fluent Building</returns>
@@ -85,9 +84,9 @@ namespace Templify.ClassGenerator.Templates.Class
             _name = className;
             return this;
         }
-        
+
         /// <summary>
-        /// Definiert den Namespace, in dem die Klasse angelegt werden soll
+        ///     Definiert den Namespace, in dem die Klasse angelegt werden soll
         /// </summary>
         /// <param name="inNamespace">Namespace, in dem die Klasse angelegt werden soll</param>
         /// <returns>ClassTemplate für Fluent Building</returns>
@@ -98,27 +97,28 @@ namespace Templify.ClassGenerator.Templates.Class
         }
 
         /// <summary>
-        /// Konvertiert das Template und die darauf angewandten Operationen zum einem String, der in den Compiler gegeben werden kann
+        ///     Konvertiert das Template und die darauf angewandten Operationen zum einem String, der in den Compiler gegeben
+        ///     werden kann
         /// </summary>
         /// <returns>Ausgefülltes Template</returns>
         public override string ToString()
         {
             var sb = new StringBuilder(Source.Content);
-            
+
             // => Usings Builden
             var usingBuilder = new StringBuilder();
             foreach (var usingTemplate in _usingTemplates)
                 usingBuilder.Append(usingTemplate);
-            
+
             // => Usings replacen
             sb.Replace(ClassTemplatePlaceholders.Usings, usingBuilder.ToString());
-            
+
             // => Klassenname replacen
             sb.Replace(ClassTemplatePlaceholders.ClassName, _name);
-            
+
             // => Namespace replacen
             sb.Replace(ClassTemplatePlaceholders.ClassNamespace, _namespace);
-            
+
             // => Inheritance replacen
             sb.Replace(ClassTemplatePlaceholders.ClassInheritance,
                 _inheritance != null ? _inheritance.ToString() : string.Empty);
@@ -131,7 +131,5 @@ namespace Templify.ClassGenerator.Templates.Class
         {
             return new ClassTemplate(string.Empty); //TODO Füllen
         }
-
-        
     }
 }

@@ -1,12 +1,12 @@
 namespace Templify.ClassGenerator.Templates.Base
 {
     /// <summary>
-    /// Basis für Templates
+    ///     Basis für Templates
     /// </summary>
     public abstract class TemplateBase
     {
         /// <summary>
-        /// Source Template
+        ///     Source Template
         /// </summary>
         protected readonly TemplateFile Source;
 
@@ -17,7 +17,6 @@ namespace Templify.ClassGenerator.Templates.Base
 
         public TemplateBase(string templatePath) : this(TemplateFile.From(templatePath))
         {
-            
         }
     }
 }
