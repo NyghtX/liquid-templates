@@ -52,11 +52,7 @@ namespace Templify.ClassGenerator.Templates.Class
         /// </summary>
         /// <param name="useNamespace">Namespace, der in die Klasse eingebunden werden soll</param>
         /// <returns>ClassTemplate für Fluent Building</returns>
-        public ClassTemplateBuilder ThatUses(string useNamespace)
-        {
-            ThatUses(new UsingTemplate(useNamespace));
-            return this;
-        }
+        public ClassTemplateBuilder ThatUses(string useNamespace) => ThatUses(new UsingTemplate(useNamespace));
 
 
         /// <summary>

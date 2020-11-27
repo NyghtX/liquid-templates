@@ -23,15 +23,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="034aa156-4b06-4872-b338-e638847744ce" name="Default Changelist" comment="Cleanup">
-      <change afterPath="$PROJECT_DIR$/src/Templify.ClassGenerator/Tools/StringBuilderExtensions.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Templify/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Templify/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Templify/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Templify/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Templify.ClassGenerator.Tests/Templates/Class/ClassTemplateTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Templify.ClassGenerator.Tests/Templates/Class/ClassTemplateBuilderTests.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Templify.ClassGenerator.Tests/Templify.ClassGenerator.Tests.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/src/Templify.ClassGenerator.Tests/Templify.ClassGenerator.Tests.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Templify.ClassGenerator/Templates/Base/TemplateBuilderBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Templify.ClassGenerator/Templates/Base/TemplateBuilderBase.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Templify.ClassGenerator/Templates/Class/ClassTemplate.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Templify.ClassGenerator/Templates/Class/ClassTemplate.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Templify.ClassGenerator/Templates/Class/ClassTemplateBuilder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Templify.ClassGenerator/Templates/Class/ClassTemplateBuilder.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Templify.ClassGenerator/Templify.ClassGenerator.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/src/Templify.ClassGenerator/Templify.ClassGenerator.csproj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,6 +32,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GithubDefaultAccount">
+    <option name="defaultAccountId" value="ebe31d96-1007-4e40-8d63-465151e669b5" />
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/1F4F0914-5411-4A47-9D76-C00412957903/1D6/StringBuilder.cs" root0="SKIP_HIGHLIGHTING" />
@@ -77,8 +72,8 @@
         <option value="$PROJECT_DIR$/src/Templify.ClassGenerator/Templates/Base/AccessModifier.cs" />
         <option value="$PROJECT_DIR$/src/Templify.ClassGenerator/Templates/Class/ClassTemplate.cs" />
         <option value="$PROJECT_DIR$/src/Templify.ClassGenerator/Templates/Base/TemplateBuilderBase.cs" />
-        <option value="$PROJECT_DIR$/src/Templify.ClassGenerator/Templates/Class/ClassTemplateBuilder.cs" />
         <option value="$PROJECT_DIR$/src/Templify.ClassGenerator.Tests/Templates/Class/ClassTemplateBuilderTests.cs" />
+        <option value="$PROJECT_DIR$/src/Templify.ClassGenerator/Templates/Class/ClassTemplateBuilder.cs" />
       </list>
     </option>
   </component>
@@ -125,7 +120,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1606496006147</updated>
-      <workItem from="1606496016229" duration="7553000" />
+      <workItem from="1606496016229" duration="7694000" />
     </task>
     <task id="LOCAL-00001" summary="Project Init">
       <created>1606496167923</created>
@@ -183,7 +178,21 @@
       <option name="project" value="LOCAL" />
       <updated>1606502632518</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="First Version">
+      <created>1606503968161</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1606503968161</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Cleanup">
+      <created>1606503979159</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1606503979159</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -209,18 +218,19 @@
     <MESSAGE value="Bascis des Fluent Class Buildings" />
     <MESSAGE value="Showcase" />
     <MESSAGE value="Builder Strecke" />
+    <MESSAGE value="First Version" />
     <MESSAGE value="Cleanup" />
     <option name="LAST_COMMIT_MESSAGE" value="Cleanup" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="779" y="501" key="ANALYSIS_DLG_com.jetbrains.rider.actions.impl.cleanup.RiderCodeCleanupAction$actionPerformed$dlg$1" timestamp="1606502626899">
+    <state x="779" y="501" key="ANALYSIS_DLG_com.jetbrains.rider.actions.impl.cleanup.RiderCodeCleanupAction$actionPerformed$dlg$1" timestamp="1606503973086">
       <screen x="0" y="25" width="2048" height="1255" />
     </state>
-    <state x="779" y="501" key="ANALYSIS_DLG_com.jetbrains.rider.actions.impl.cleanup.RiderCodeCleanupAction$actionPerformed$dlg$1/0.25.2048.1255@0.25.2048.1255" timestamp="1606502626899" />
-    <state x="870" y="567" key="Github.Dialog.Accounts.Choose" timestamp="1606502645546">
+    <state x="779" y="501" key="ANALYSIS_DLG_com.jetbrains.rider.actions.impl.cleanup.RiderCodeCleanupAction$actionPerformed$dlg$1/0.25.2048.1255@0.25.2048.1255" timestamp="1606503973086" />
+    <state x="870" y="567" key="Github.Dialog.Accounts.Choose" timestamp="1606504039190">
       <screen x="0" y="25" width="2048" height="1255" />
     </state>
-    <state x="870" y="567" key="Github.Dialog.Accounts.Choose/0.25.2048.1255@0.25.2048.1255" timestamp="1606502645546" />
+    <state x="870" y="567" key="Github.Dialog.Accounts.Choose/0.25.2048.1255@0.25.2048.1255" timestamp="1606504039190" />
     <state width="2006" height="446" key="GridCell.Tab.0.bottom" timestamp="1606503598167">
       <screen x="0" y="25" width="2048" height="1255" />
     </state>
@@ -305,9 +315,9 @@
       <screen x="0" y="25" width="2048" height="1255" />
     </state>
     <state x="836" y="290" key="RiderGenerateDialog/0.25.2048.1255@0.25.2048.1255" timestamp="1606500621624" />
-    <state x="624" y="385" key="Vcs.Push.Dialog.v2" timestamp="1606502641598">
+    <state x="624" y="385" key="Vcs.Push.Dialog.v2" timestamp="1606504035636">
       <screen x="0" y="25" width="2048" height="1255" />
     </state>
-    <state x="624" y="385" key="Vcs.Push.Dialog.v2/0.25.2048.1255@0.25.2048.1255" timestamp="1606502641598" />
+    <state x="624" y="385" key="Vcs.Push.Dialog.v2/0.25.2048.1255@0.25.2048.1255" timestamp="1606504035636" />
   </component>
 </project>
