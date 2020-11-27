@@ -1,5 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="034aa156-4b06-4872-b338-e638847744ce" name="Default Changelist" comment="Project Init">
+      <change afterPath="$PROJECT_DIR$/src/Templify.ClassGenerator/Templates/Class.template" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Templify.ClassGenerator/Templates/ClassInheritanceTemplate.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Templify.ClassGenerator/Templates/ClassTemplate.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Templify.ClassGenerator/Templates/ClassTemplatePlaceholders.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Templify.ClassGenerator/Templates/UsingTemplate.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Templify/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Templify/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Templify.ClassGenerator/Class1.cs" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/Templify.ClassGenerator/Templates/UsingTemplate.cs" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1ksj518rd6j5hkzC5j1H0c2kSRl" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
   <component name="RunManager">
     <configuration name="Templify.ClassGenerator.Tests" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="" />
@@ -19,5 +54,34 @@
         <option name="Build" />
       </method>
     </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="034aa156-4b06-4872-b338-e638847744ce" name="Default Changelist" comment="" />
+      <created>1606496006147</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1606496006147</updated>
+      <workItem from="1606496016229" duration="291000" />
+    </task>
+    <task id="LOCAL-00001" summary="Project Init">
+      <created>1606496167923</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1606496167924</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
+  <component name="VcsManagerConfiguration">
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+    <MESSAGE value="Project Init" />
+    <option name="LAST_COMMIT_MESSAGE" value="Project Init" />
   </component>
 </project>

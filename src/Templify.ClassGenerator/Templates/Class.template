@@ -1,0 +1,9 @@
+[USINGS]
+
+namespace [NAMESPACE]
+{
+    public class [CLASSNAME] [INHERITANCE]
+    {
+        
+    }
+}
