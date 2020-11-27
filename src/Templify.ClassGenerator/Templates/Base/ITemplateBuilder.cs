@@ -1,6 +1,6 @@
 namespace Templify.ClassGenerator.Templates.Base
 {
-    public interface ITemplate<TTemplate> where TTemplate : ITemplate<TTemplate>
+    public interface ITemplateBuilder<TTemplate> where TTemplate : ITemplateBuilder<TTemplate>
     {
         /// <summary>
         ///     Name des zu generierenden.. Etwas

@@ -21,23 +21,27 @@
         <e p="Templates" t="Include">
           <e p="Base" t="Include">
             <e p="AccessModifier.cs" t="Include" />
-            <e p="ITemplate.cs" t="Include" />
-            <e p="TemplateBase.cs" t="Include" />
+            <e p="ITemplateBuilder.cs" t="Include" />
+            <e p="TemplateBuilderBase.cs" t="Include" />
             <e p="TemplateFile.cs" t="Include" />
           </e>
           <e p="Class" t="Include">
             <e p="Class.template" t="Include" />
             <e p="ClassTemplate.cs" t="Include" />
-            <e p="ClassTemplatePlaceholders.cs" t="Include" />
+            <e p="ClassTemplateBuilder.cs" t="Include" />
+            <e p="ClassTemplatePlaceholder.cs" t="Include" />
+            <e p="ClassTemplateValidator.cs" t="Include" />
             <e p="Property" t="Include">
               <e p="IPropertyTemplate.cs" t="Include" />
-              <e p="PropertyTemplateBase.cs" t="Include" />
+              <e p="PropertyTemplateBuilderBase.cs" t="Include" />
               <e p="SimpleTypes" t="Include">
-                <e p="StringPropertyTemplate.cs" t="Include" />
+                <e p="StringPropertyTemplateBuilder.cs" t="Include" />
               </e>
             </e>
-            <e p="Using.template" t="Include" />
-            <e p="UsingTemplate.cs" t="Include" />
+            <e p="Using" t="Include">
+              <e p="Using.template" t="Include" />
+              <e p="UsingTemplate.cs" t="Include" />
+            </e>
           </e>
         </e>
         <e p="Templify.ClassGenerator.csproj" t="IncludeRecursive" />

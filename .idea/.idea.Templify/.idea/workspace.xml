@@ -23,20 +23,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="034aa156-4b06-4872-b338-e638847744ce" name="Default Changelist" comment="Cleanup">
-      <change afterPath="$PROJECT_DIR$/src/Templify.ClassGenerator.Tests/Templates/Class/ClassTemplateTests.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Templify.ClassGenerator/Templates/Base/AccessModifier.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Templify.ClassGenerator/Templates/Base/ITemplate.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Templify.ClassGenerator/Templates/Class/Property/IPropertyTemplate.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Templify.ClassGenerator/Templates/Class/Property/PropertyTemplateBase.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Templify.ClassGenerator/Templates/Class/Property/SimpleTypes/StringPropertyTemplate.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Templify.ClassGenerator/Templates/Class/ClassTemplateBuilder.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Templify.ClassGenerator/Templates/Class/ClassTemplatePlaceholder.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Templify.ClassGenerator/Templates/Class/ClassTemplateValidator.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Templify.ClassGenerator/Templates/Class/Property/PropertyTemplateBuilderBase.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Templify/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Templify/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Templify/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Templify/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Templify.ClassGenerator.Tests/Templify.ClassGenerator.Tests.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/src/Templify.ClassGenerator.Tests/Templify.ClassGenerator.Tests.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Templify.ClassGenerator.Tests/UnitTest1.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Templify.ClassGenerator/Templates/Base/TemplateBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Templify.ClassGenerator/Templates/Base/TemplateBase.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Templify.ClassGenerator/Templates/Class/ClassInheritanceTemplate.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Templify.ClassGenerator.Tests/Templates/Class/ClassTemplateTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Templify.ClassGenerator.Tests/Templates/Class/ClassTemplateTests.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Templify.ClassGenerator/Templates/Base/ITemplate.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Templify.ClassGenerator/Templates/Base/ITemplateBuilder.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Templify.ClassGenerator/Templates/Base/TemplateBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Templify.ClassGenerator/Templates/Base/TemplateBuilderBase.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Templify.ClassGenerator/Templates/Class/Class.template" beforeDir="false" afterPath="$PROJECT_DIR$/src/Templify.ClassGenerator/Templates/Class/Class.template" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Templify.ClassGenerator/Templates/Class/ClassTemplate.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Templify.ClassGenerator/Templates/Class/ClassTemplate.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Templify.ClassGenerator/Templates/Class/UsingTemplate.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Templify.ClassGenerator/Templates/Class/UsingTemplate.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Templify.ClassGenerator/Templates/Class/ClassTemplatePlaceholders.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Templify.ClassGenerator/Templates/Class/Property/PropertyTemplateBase.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Templify.ClassGenerator/Templates/Class/Property/SimpleTypes/StringPropertyTemplate.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Templify.ClassGenerator/Templates/Class/Property/SimpleTypes/StringPropertyTemplateBuilder.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Templify.ClassGenerator/Templates/Class/Using.template" beforeDir="false" afterPath="$PROJECT_DIR$/src/Templify.ClassGenerator/Templates/Class/Using/Using.template" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Templify.ClassGenerator/Templates/Class/UsingTemplate.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Templify.ClassGenerator/Templates/Class/Using/UsingTemplate.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Templify.ClassGenerator/Templify.ClassGenerator.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/src/Templify.ClassGenerator/Templify.ClassGenerator.csproj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,7 +64,6 @@
         <option value="$PROJECT_DIR$/src/Templify.ClassGenerator/Templates/Class/Property/PropertyTypes.cs" />
         <option value="$PROJECT_DIR$/src/Templify.ClassGenerator/Templates/Class/Property/SimpleTypes.cs" />
         <option value="$PROJECT_DIR$/src/Templify.ClassGenerator.Tests/Templates/Class/ClassTemplateTests.cs" />
-        <option value="$PROJECT_DIR$/src/Templify.ClassGenerator/Templates/Base/AccessModifier.cs" />
         <option value="$PROJECT_DIR$/src/Templify.ClassGenerator/Templates/Class/Property/PropertyTemplate.cs" />
         <option value="$PROJECT_DIR$/src/Templify.ClassGenerator/Templates/Class/Property/SimpleTypes/StringPropertyTemplateBase.cs" />
         <option value="$PROJECT_DIR$/src/Templify.ClassGenerator/Templates/Class/IClassTemplate.cs" />
@@ -71,7 +73,14 @@
         <option value="$PROJECT_DIR$/src/Templify.ClassGenerator/Templates/Class/Property/SimpleTypes/StringPropertyTemplate.cs" />
         <option value="$PROJECT_DIR$/src/Templify.ClassGenerator/Templates/Class/Property/IPropertyTemplate.cs" />
         <option value="$PROJECT_DIR$/src/Templify.ClassGenerator/Templates/Class/Property/PropertyTemplateBase.cs" />
+        <option value="$PROJECT_DIR$/src/Templify.ClassGenerator/Templates/Base/AccessModifier.cs" />
+        <option value="$PROJECT_DIR$/src/Templify.ClassGenerator/Templates/Class/Class.template" />
+        <option value="$PROJECT_DIR$/src/Templify.ClassGenerator/Templates/Class/ClassTemplatePlaceholder.cs" />
+        <option value="$PROJECT_DIR$/src/Templify.ClassGenerator/Templates/Class/ClassTemplateValidator.cs" />
+        <option value="$PROJECT_DIR$/src/Templify.ClassGenerator/Templates/Class/Using/UsingTemplate.cs" />
+        <option value="$PROJECT_DIR$/src/Templify.ClassGenerator/Templates/Base/ITemplateBuilder.cs" />
         <option value="$PROJECT_DIR$/src/Templify.ClassGenerator/Templates/Class/ClassTemplate.cs" />
+        <option value="$PROJECT_DIR$/src/Templify.ClassGenerator/Templates/Class/ClassTemplateBuilder.cs" />
       </list>
     </option>
   </component>
@@ -116,7 +125,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1606496006147</updated>
-      <workItem from="1606496016229" duration="5152000" />
+      <workItem from="1606496016229" duration="6099000" />
     </task>
     <task id="LOCAL-00001" summary="Project Init">
       <created>1606496167923</created>
@@ -146,7 +155,21 @@
       <option name="project" value="LOCAL" />
       <updated>1606497342790</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Showcase">
+      <created>1606501562641</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1606501562641</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Cleanup">
+      <created>1606501577300</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1606501577300</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -170,14 +193,15 @@
     <MESSAGE value="Project Init" />
     <MESSAGE value="First Templates" />
     <MESSAGE value="Bascis des Fluent Class Buildings" />
+    <MESSAGE value="Showcase" />
     <MESSAGE value="Cleanup" />
     <option name="LAST_COMMIT_MESSAGE" value="Cleanup" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="779" y="501" key="ANALYSIS_DLG_com.jetbrains.rider.actions.impl.cleanup.RiderCodeCleanupAction$actionPerformed$dlg$1" timestamp="1606497336812">
+    <state x="779" y="501" key="ANALYSIS_DLG_com.jetbrains.rider.actions.impl.cleanup.RiderCodeCleanupAction$actionPerformed$dlg$1" timestamp="1606501570638">
       <screen x="0" y="25" width="2048" height="1255" />
     </state>
-    <state x="779" y="501" key="ANALYSIS_DLG_com.jetbrains.rider.actions.impl.cleanup.RiderCodeCleanupAction$actionPerformed$dlg$1/0.25.2048.1255@0.25.2048.1255" timestamp="1606497336812" />
+    <state x="779" y="501" key="ANALYSIS_DLG_com.jetbrains.rider.actions.impl.cleanup.RiderCodeCleanupAction$actionPerformed$dlg$1/0.25.2048.1255@0.25.2048.1255" timestamp="1606501570638" />
     <state x="836" y="290" key="RiderGenerateDialog" timestamp="1606500621624">
       <screen x="0" y="25" width="2048" height="1255" />
     </state>

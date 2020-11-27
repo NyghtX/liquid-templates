@@ -3,8 +3,8 @@ namespace Templify.ClassGenerator.Templates.Base
     /// <summary>
     ///     Basis für Templates
     /// </summary>
-    public abstract class TemplateBase<TTemplateType> : ITemplate<TTemplateType>
-        where TTemplateType : TemplateBase<TTemplateType>
+    public abstract class TemplateBuilderBase<TTemplateType> : ITemplateBuilder<TTemplateType>
+        where TTemplateType : TemplateBuilderBase<TTemplateType>
     {
         /// <summary>
         ///     Source Template
@@ -12,12 +12,12 @@ namespace Templify.ClassGenerator.Templates.Base
         protected readonly TemplateFile Source;
 
 
-        public TemplateBase(TemplateFile templateFile)
+        public TemplateBuilderBase(TemplateFile templateFile)
         {
             Source = templateFile;
         }
 
-        public TemplateBase(string templatePath) : this(TemplateFile.From(templatePath))
+        public TemplateBuilderBase(string templatePath) : this(TemplateFile.From(templatePath))
         {
         }
 

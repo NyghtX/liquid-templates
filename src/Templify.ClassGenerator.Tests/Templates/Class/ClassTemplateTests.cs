@@ -9,12 +9,12 @@ namespace Templify.ClassGenerator.Tests.Templates.Class
         [Fact]
         public void ClassTemplate_Example()
         {
-            var myGeneratedClass = ClassTemplate
+            var myGeneratedClass = ClassTemplateBuilder
                 .CreateClass()
                 .WithName("MyGeneratedClass")
                 .InNamespace("Nyghtx.Generator.Generated")
                 .WithProperty(
-                    StringPropertyTemplate.Create()
+                    StringPropertyTemplateBuilder.Create()
                         .WithName("Vorname")
                 );
         }

@@ -3,7 +3,7 @@ using Templify.ClassGenerator.Templates.Base;
 
 namespace Templify.ClassGenerator.Templates.Class.Property.SimpleTypes
 {
-    public class StringPropertyTemplate : PropertyTemplateBase<StringPropertyTemplate>
+    public class StringPropertyTemplateBuilder : PropertyTemplateBuilderBase<StringPropertyTemplateBuilder>
     {
         /// <summary>
         ///     TemplateFile, das zur Generierung der einer StringProperty genutzt werden soll
@@ -11,7 +11,7 @@ namespace Templify.ClassGenerator.Templates.Class.Property.SimpleTypes
         /// </summary>
         public static TemplateFile TemplateFile;
 
-        public StringPropertyTemplate(TemplateFile templateFile) : base(templateFile)
+        public StringPropertyTemplateBuilder(TemplateFile templateFile) : base(templateFile)
         {
         }
 
@@ -20,13 +20,13 @@ namespace Templify.ClassGenerator.Templates.Class.Property.SimpleTypes
         /// </summary>
         /// <returns>StringPropertyTemplate, das Fluent genutzt werden soll</returns>
         /// <exception cref="NullReferenceException">Wenn das TemplateFile noch nicht gesetzt wurde</exception>
-        public static StringPropertyTemplate Create()
+        public static StringPropertyTemplateBuilder Create()
         {
             if (TemplateFile == null)
                 throw new NullReferenceException(
                     "Es wurde noch kein Template für das Generieren von String Properties gesetzt.");
 
-            return new StringPropertyTemplate(TemplateFile);
+            return new StringPropertyTemplateBuilder(TemplateFile);
         }
     }
 }
