@@ -12,7 +12,6 @@ namespace Templify.ClassGenerator.Templates.Class
     /// </summary>
     public class ClassTemplateBuilder : TemplateBuilderBase<ClassTemplateBuilder>
     {
-
         /// <summary>
         ///     TemplateFile, das zur Generierung der einer Klasse genutzt werden soll
         ///     Muss gesetzt werden, um die Fluent Generierung einer Klasse nutzen zu können
@@ -89,7 +88,7 @@ namespace Templify.ClassGenerator.Templates.Class
         public override string ToString()
         {
             var sb = new StringBuilder(Source.Content);
-            
+
             // => Usings replacen
             sb.Replace(ClassTemplatePlaceholder.Usings, BuildUsings());
 
@@ -108,7 +107,7 @@ namespace Templify.ClassGenerator.Templates.Class
             var template = new ClassTemplate(ToString());
 
             //TODO Template validieren
-            
+
             return template;
         }
 

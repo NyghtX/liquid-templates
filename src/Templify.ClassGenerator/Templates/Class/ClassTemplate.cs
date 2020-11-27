@@ -8,12 +8,12 @@ namespace Templify.ClassGenerator.Templates.Class
         }
 
         /// <summary>
-        /// Name der Klasse
+        ///     Name der Klasse
         /// </summary>
         public string Name { get; set; }
-        
+
         /// <summary>
-        /// SourceCode für die Klasse, der in den Compiler gegeben werden kann
+        ///     SourceCode für die Klasse, der in den Compiler gegeben werden kann
         /// </summary>
         public string Source { get; }
     }
