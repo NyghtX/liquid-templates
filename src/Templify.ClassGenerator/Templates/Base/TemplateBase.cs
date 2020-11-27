@@ -3,23 +3,14 @@ namespace Templify.ClassGenerator.Templates.Base
     /// <summary>
     ///     Basis für Templates
     /// </summary>
-    public abstract class TemplateBase<TTemplateType> : ITemplate<TTemplateType> where TTemplateType : TemplateBase<TTemplateType>
+    public abstract class TemplateBase<TTemplateType> : ITemplate<TTemplateType>
+        where TTemplateType : TemplateBase<TTemplateType>
     {
         /// <summary>
         ///     Source Template
         /// </summary>
         protected readonly TemplateFile Source;
-        
-        /// <summary>
-        /// Name, der generiert werden soll
-        /// </summary>
-        protected string Name { get; private set; }
 
-        /// <summary>
-        /// Access Modifier, der generiert werden soll
-        /// </summary>
-        protected AccessModifier AccessModifier { get; private set; } = AccessModifier.Public;
-        
 
         public TemplateBase(TemplateFile templateFile)
         {
@@ -30,9 +21,19 @@ namespace Templify.ClassGenerator.Templates.Base
         {
         }
 
+        /// <summary>
+        ///     Name, der generiert werden soll
+        /// </summary>
+        protected string Name { get; private set; }
 
         /// <summary>
-        /// Name des zu generierenden.. Etwas
+        ///     Access Modifier, der generiert werden soll
+        /// </summary>
+        protected AccessModifier AccessModifier { get; private set; } = AccessModifier.Public;
+
+
+        /// <summary>
+        ///     Name des zu generierenden.. Etwas
         /// </summary>
         /// <param name="name">Name</param>
         /// <returns>Instanz für Fluent Usage</returns>
@@ -43,7 +44,7 @@ namespace Templify.ClassGenerator.Templates.Base
         }
 
         /// <summary>
-        /// Setzt den Access Modifier für das zu generierende.. Etwas
+        ///     Setzt den Access Modifier für das zu generierende.. Etwas
         /// </summary>
         /// <param name="accessModifier">Access Modifier</param>
         /// <returns>Instanz für Fluent Usage</returns>

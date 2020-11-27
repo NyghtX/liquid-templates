@@ -20,10 +20,7 @@ namespace Templify.ClassGenerator.Templates.Class
 
         public UsingTemplate(IEnumerable<string> useNamespaces)
         {
-            foreach (var useNamespace in useNamespaces)
-            {
-                AddNamespace(useNamespace);
-            }
+            foreach (var useNamespace in useNamespaces) AddNamespace(useNamespace);
         }
 
         /// <summary>

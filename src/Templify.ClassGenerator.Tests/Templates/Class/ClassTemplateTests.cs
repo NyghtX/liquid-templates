@@ -16,7 +16,7 @@ namespace Templify.ClassGenerator.Tests.Templates.Class
                 .WithProperty(
                     StringPropertyTemplate.Create()
                         .WithName("Vorname")
-                    );
+                );
         }
     }
 }

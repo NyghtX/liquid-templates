@@ -11,16 +11,21 @@ namespace Templify.ClassGenerator.Templates.Class
     /// </summary>
     public class ClassTemplate : TemplateBase<ClassTemplate>
     {
-        
         /// <summary>
-        ///     Namespace, in dem die Klasse angelegt werden soll
+        ///     TemplateFile, das zur Generierung der einer Klasse genutzt werden soll
+        ///     Muss gesetzt werden, um die Fluent Generierung einer Klasse nutzen zu können
         /// </summary>
-        private string _namespace;
+        public static TemplateFile TemplateFile;
 
         /// <summary>
         ///     UsingTemplates für die Klasse
         /// </summary>
         private readonly List<UsingTemplate> _usingTemplates = new List<UsingTemplate>();
+
+        /// <summary>
+        ///     Namespace, in dem die Klasse angelegt werden soll
+        /// </summary>
+        private string _namespace;
 
         public ClassTemplate(TemplateFile templateFile) : base(templateFile)
         {
@@ -39,7 +44,7 @@ namespace Templify.ClassGenerator.Templates.Class
             _usingTemplates.Add(template);
             return this;
         }
-        
+
         /// <summary>
         ///     Fügt der zu generierenden Klasse einen Namespace hinzu, der genutzt werden soll
         /// </summary>
@@ -96,27 +101,21 @@ namespace Templify.ClassGenerator.Templates.Class
 
             // => Namespace replacen
             sb.Replace(ClassTemplatePlaceholders.ClassNamespace, _namespace);
-            
+
             // => Template erzeugen und zurückgeben
             return sb.ToString();
         }
 
         /// <summary>
-        /// TemplateFile, das zur Generierung der einer Klasse genutzt werden soll
-        /// Muss gesetzt werden, um die Fluent Generierung einer Klasse nutzen zu können
-        /// </summary>
-        public static TemplateFile TemplateFile;
-        
-        /// <summary>
-        /// Beginnt den Prozess ein neues Class Template zum Generieren zu erstellen
+        ///     Beginnt den Prozess ein neues Class Template zum Generieren zu erstellen
         /// </summary>
         /// <returns>ClassTemplate, das Fluent genutzt werden soll</returns>
         /// <exception cref="NullReferenceException">Wenn das TemplateFile noch nicht gesetzt wurde</exception>
         public static ClassTemplate CreateClass()
         {
-            if(TemplateFile == null)
+            if (TemplateFile == null)
                 throw new NullReferenceException("Es wurde noch kein Template für das Generieren von Klassen gesetzt.");
-            
+
             return new ClassTemplate(TemplateFile);
         }
     }

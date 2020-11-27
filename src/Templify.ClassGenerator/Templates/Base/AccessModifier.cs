@@ -1,7 +1,7 @@
 namespace Templify.ClassGenerator.Templates.Base
 {
     /// <summary>
-    /// AccessModifier
+    ///     AccessModifier
     /// </summary>
     public enum AccessModifier
     {
