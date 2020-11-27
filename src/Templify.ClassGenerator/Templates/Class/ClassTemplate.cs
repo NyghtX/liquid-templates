@@ -20,7 +20,7 @@ namespace Templify.ClassGenerator.Templates.Class
         public string Source { get; }
 
         /// <summary>
-        /// Namespace, in dem die Klasse angelegt werden soll
+        ///     Namespace, in dem die Klasse angelegt werden soll
         /// </summary>
         public string Namespace { get; set; }
 

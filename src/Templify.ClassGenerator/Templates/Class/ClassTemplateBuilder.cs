@@ -98,7 +98,7 @@ namespace Templify.ClassGenerator.Templates.Class
 
             // => Namespace replacen
             sb.ReplacePlaceholder(ClassTemplatePlaceholder.Namespace, _namespace);
-            
+
             // => Accessmodifier replacen
             sb.ReplacePlaceholder(ClassTemplatePlaceholder.AccessModifier, AccessModifier);
 

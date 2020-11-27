@@ -11,6 +11,11 @@ namespace Templify.ClassGenerator.Templates.Base
         /// </summary>
         protected readonly TemplateFile Source;
 
+        /// <summary>
+        ///     Access Modifier, der generiert werden soll
+        /// </summary>
+        protected AccessModifier AccessModifierValue = Base.AccessModifier.Public;
+
 
         public TemplateBuilderBase(TemplateFile templateFile)
         {
@@ -27,17 +32,9 @@ namespace Templify.ClassGenerator.Templates.Base
         protected string Name { get; private set; }
 
         /// <summary>
-        /// Access Modifier
+        ///     Access Modifier
         /// </summary>
-        public string AccessModifier
-        {
-            get => AccessModifierValue.ToString().ToLower();
-        }
-
-        /// <summary>
-        ///     Access Modifier, der generiert werden soll
-        /// </summary>
-        protected AccessModifier AccessModifierValue = Base.AccessModifier.Public;
+        public string AccessModifier => AccessModifierValue.ToString().ToLower();
 
 
         /// <summary>
