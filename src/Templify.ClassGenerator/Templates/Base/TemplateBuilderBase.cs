@@ -27,9 +27,17 @@ namespace Templify.ClassGenerator.Templates.Base
         protected string Name { get; private set; }
 
         /// <summary>
+        /// Access Modifier
+        /// </summary>
+        public string AccessModifier
+        {
+            get => AccessModifierValue.ToString().ToLower();
+        }
+
+        /// <summary>
         ///     Access Modifier, der generiert werden soll
         /// </summary>
-        protected AccessModifier AccessModifier { get; private set; } = AccessModifier.Public;
+        protected AccessModifier AccessModifierValue = Base.AccessModifier.Public;
 
 
         /// <summary>
@@ -50,7 +58,7 @@ namespace Templify.ClassGenerator.Templates.Base
         /// <returns>Instanz für Fluent Usage</returns>
         public TTemplateType ThatIs(AccessModifier accessModifier)
         {
-            AccessModifier = accessModifier;
+            AccessModifierValue = accessModifier;
             return (TTemplateType) this;
         }
     }

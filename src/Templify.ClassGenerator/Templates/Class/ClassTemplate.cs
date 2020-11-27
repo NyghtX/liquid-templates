@@ -1,3 +1,5 @@
+using Templify.ClassGenerator.Templates.Base;
+
 namespace Templify.ClassGenerator.Templates.Class
 {
     public class ClassTemplate
@@ -16,5 +18,12 @@ namespace Templify.ClassGenerator.Templates.Class
         ///     SourceCode für die Klasse, der in den Compiler gegeben werden kann
         /// </summary>
         public string Source { get; }
+
+        /// <summary>
+        /// Namespace, in dem die Klasse angelegt werden soll
+        /// </summary>
+        public string Namespace { get; set; }
+
+        public AccessModifier AccessModifier { get; set; }
     }
 }

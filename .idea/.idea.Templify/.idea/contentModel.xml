@@ -45,6 +45,9 @@
           </e>
         </e>
         <e p="Templify.ClassGenerator.csproj" t="IncludeRecursive" />
+        <e p="Tools" t="Include">
+          <e p="StringBuilderExtensions.cs" t="Include" />
+        </e>
       </e>
       <e p="src/Templify.ClassGenerator.Tests" t="IncludeRecursive">
         <e p="bin" t="ExcludeRecursive" />
@@ -57,7 +60,7 @@
         </e>
         <e p="Templates" t="Include">
           <e p="Class" t="Include">
-            <e p="ClassTemplateTests.cs" t="Include" />
+            <e p="ClassTemplateBuilderTests.cs" t="Include" />
           </e>
         </e>
         <e p="Templify.ClassGenerator.Tests.csproj" t="IncludeRecursive" />

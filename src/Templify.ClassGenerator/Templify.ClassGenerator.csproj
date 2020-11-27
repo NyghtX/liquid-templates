@@ -8,4 +8,10 @@
     <PackageReference Include="FluentValidation" Version="9.3.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="Templates\Class\Class.template">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>

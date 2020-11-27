@@ -4,6 +4,7 @@ using System.Text;
 using Templify.ClassGenerator.Templates.Base;
 using Templify.ClassGenerator.Templates.Class.Property;
 using Templify.ClassGenerator.Templates.Class.Using;
+using Templify.ClassGenerator.Tools;
 
 namespace Templify.ClassGenerator.Templates.Class
 {
@@ -90,13 +91,16 @@ namespace Templify.ClassGenerator.Templates.Class
             var sb = new StringBuilder(Source.Content);
 
             // => Usings replacen
-            sb.Replace(ClassTemplatePlaceholder.Usings, BuildUsings());
+            sb.ReplacePlaceholder(ClassTemplatePlaceholder.Usings, BuildUsings());
 
             // => Klassenname replacen
-            sb.Replace(ClassTemplatePlaceholder.Classname, Name);
+            sb.ReplacePlaceholder(ClassTemplatePlaceholder.Classname, Name);
 
             // => Namespace replacen
-            sb.Replace(ClassTemplatePlaceholder.Namespace, _namespace);
+            sb.ReplacePlaceholder(ClassTemplatePlaceholder.Namespace, _namespace);
+            
+            // => Accessmodifier replacen
+            sb.ReplacePlaceholder(ClassTemplatePlaceholder.AccessModifier, AccessModifier);
 
             // => Template erzeugen und zurückgeben
             return sb.ToString();
@@ -104,7 +108,12 @@ namespace Templify.ClassGenerator.Templates.Class
 
         public ClassTemplate Build()
         {
-            var template = new ClassTemplate(ToString());
+            var template = new ClassTemplate(ToString())
+            {
+                Name = Name,
+                Namespace = _namespace,
+                AccessModifier = AccessModifierValue
+            };
 
             //TODO Template validieren
 
