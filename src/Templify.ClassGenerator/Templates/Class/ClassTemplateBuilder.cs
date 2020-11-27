@@ -52,7 +52,10 @@ namespace Templify.ClassGenerator.Templates.Class
         /// </summary>
         /// <param name="useNamespace">Namespace, der in die Klasse eingebunden werden soll</param>
         /// <returns>ClassTemplate für Fluent Building</returns>
-        public ClassTemplateBuilder ThatUses(string useNamespace) => ThatUses(new UsingTemplate(useNamespace));
+        public ClassTemplateBuilder ThatUses(string useNamespace)
+        {
+            return ThatUses(new UsingTemplate(useNamespace));
+        }
 
 
         /// <summary>
@@ -71,8 +74,10 @@ namespace Templify.ClassGenerator.Templates.Class
         /// </summary>
         /// <param name="property">Property, die der Klasse hinzugefügt werden soll</param>
         /// <returns>ClassTemplate für Fluent Building</returns>
-        public ClassTemplateBuilder WithProperty(IPropertyTemplateBuilderUngenericAction property) =>
-            WithProperty(property.Build());
+        public ClassTemplateBuilder WithProperty(IPropertyTemplateBuilderUngenericAction property)
+        {
+            return WithProperty(property.Build());
+        }
 
         /// <summary>
         ///     Definiert den Namespace, in dem die Klasse angelegt werden soll

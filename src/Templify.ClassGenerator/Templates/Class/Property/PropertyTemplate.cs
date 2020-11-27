@@ -15,7 +15,7 @@ namespace Templify.ClassGenerator.Templates.Class.Property
         public string Name { get; set; }
 
         /// <summary>
-        /// Name des Types der Property
+        ///     Name des Types der Property
         /// </summary>
         public string PropertyTypeName { get; set; }
 
@@ -23,7 +23,8 @@ namespace Templify.ClassGenerator.Templates.Class.Property
         ///     SourceCode für die Klasse, der in den Compiler gegeben werden kann
         /// </summary>
         public string Source { get; }
-        
 
-        public AccessModifier AccessModifier { get; set; }    }
+
+        public AccessModifier AccessModifier { get; set; }
+    }
 }

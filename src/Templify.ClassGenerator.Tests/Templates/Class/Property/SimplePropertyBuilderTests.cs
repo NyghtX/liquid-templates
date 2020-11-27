@@ -19,7 +19,7 @@ namespace Templify.ClassGenerator.Tests.Templates.Class.Property
                 .WithName("Vorname")
                 .ThatIs(AccessModifier.Private)
                 .Build();
-            
+
             // => Assert
             myStringProperty.Source.Should().Be("private string Vorname ;");
         }

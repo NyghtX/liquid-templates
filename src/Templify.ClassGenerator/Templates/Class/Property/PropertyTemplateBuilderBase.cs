@@ -5,21 +5,25 @@ using Templify.ClassGenerator.Tools;
 
 namespace Templify.ClassGenerator.Templates.Class.Property
 {
-    public abstract class PropertyTemplateBuilderBase<TPropertyBuilderTemplate, TPropertyType> : TemplateBuilderBase<TPropertyBuilderTemplate>,
-        IPropertyTemplateBuilder<TPropertyBuilderTemplate, TPropertyType> where TPropertyBuilderTemplate : TemplateBuilderBase<TPropertyBuilderTemplate>, IPropertyTemplateBuilder<TPropertyBuilderTemplate, TPropertyType>
+    public abstract class PropertyTemplateBuilderBase<TPropertyBuilderTemplate, TPropertyType> :
+        TemplateBuilderBase<TPropertyBuilderTemplate>,
+        IPropertyTemplateBuilder<TPropertyBuilderTemplate, TPropertyType>
+        where TPropertyBuilderTemplate : TemplateBuilderBase<TPropertyBuilderTemplate>,
+        IPropertyTemplateBuilder<TPropertyBuilderTemplate, TPropertyType>
     {
         public PropertyTemplateBuilderBase() : this(TemplateFiles.PropertyTemplateFile)
         {
             if (TemplateFiles.PropertyTemplateFile == null)
-                throw new NullReferenceException("Es wurde noch kein Template für das Generieren von Properties gesetzt.");
+                throw new NullReferenceException(
+                    "Es wurde noch kein Template für das Generieren von Properties gesetzt.");
         }
-        
+
         protected PropertyTemplateBuilderBase(TemplateFile templateFile) : base(templateFile)
         {
         }
 
         /// <summary>
-        /// TypeName der Property, die generiert werden soll
+        ///     TypeName der Property, die generiert werden soll
         /// </summary>
         protected abstract string PropertyTypeName { get; set; }
 
@@ -51,27 +55,8 @@ namespace Templify.ClassGenerator.Templates.Class.Property
             throw new NotImplementedException();
         }
 
-        public override string ToString()
-        {
-            var sb = new StringBuilder(Source.Content);
-            
-            // => Access Modifier
-            sb.ReplacePlaceholder(PropertyTemplatePlaceholder.AccessModifier, AccessModifier);
-            
-            // => Type
-            sb.ReplacePlaceholder(PropertyTemplatePlaceholder.PropertyType, PropertyTypeName);
-            
-            // => Name
-            sb.ReplacePlaceholder(PropertyTemplatePlaceholder.PropertyName, Name);
-            
-            // => End
-            sb.ReplacePlaceholder(PropertyTemplatePlaceholder.PropertyEnd, ";");
-
-            return sb.ToString();
-        }
-
         /// <summary>
-        /// Builded das Template für die Property
+        ///     Builded das Template für die Property
         /// </summary>
         /// <returns>Gebuildetes Template</returns>
         public PropertyTemplate Build()
@@ -82,6 +67,25 @@ namespace Templify.ClassGenerator.Templates.Class.Property
                 AccessModifier = AccessModifierValue,
                 PropertyTypeName = PropertyTypeName
             };
+        }
+
+        public override string ToString()
+        {
+            var sb = new StringBuilder(Source.Content);
+
+            // => Access Modifier
+            sb.ReplacePlaceholder(PropertyTemplatePlaceholder.AccessModifier, AccessModifier);
+
+            // => Type
+            sb.ReplacePlaceholder(PropertyTemplatePlaceholder.PropertyType, PropertyTypeName);
+
+            // => Name
+            sb.ReplacePlaceholder(PropertyTemplatePlaceholder.PropertyName, Name);
+
+            // => End
+            sb.ReplacePlaceholder(PropertyTemplatePlaceholder.PropertyEnd, ";");
+
+            return sb.ToString();
         }
     }
 }
