@@ -13,6 +13,19 @@ namespace Templify.ClassGenerator.Templates.Class
         /// </summary>
         private readonly List<string> _namespaces = new List<string>();
 
+        public UsingTemplate(string useNamespace)
+        {
+            AddNamespace(useNamespace);
+        }
+
+        public UsingTemplate(IEnumerable<string> useNamespaces)
+        {
+            foreach (var useNamespace in useNamespaces)
+            {
+                AddNamespace(useNamespace);
+            }
+        }
+
         /// <summary>
         ///     Fügt einen Namespace zum Template hinzu
         /// </summary>

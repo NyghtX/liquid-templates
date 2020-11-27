@@ -1,24 +1,17 @@
+using System;
 using System.Collections.Generic;
 using System.Text;
 using Templify.ClassGenerator.Templates.Base;
+using Templify.ClassGenerator.Templates.Class.Property;
 
 namespace Templify.ClassGenerator.Templates.Class
 {
     /// <summary>
     ///     Template, auf das Replacements angewendet werden können
     /// </summary>
-    public class ClassTemplate : TemplateBase
+    public class ClassTemplate : TemplateBase<ClassTemplate>
     {
-        /// <summary>
-        ///     Inheritance der Klasse
-        /// </summary>
-        private ClassInheritanceTemplate _inheritance;
-
-        /// <summary>
-        ///     Name der Klasse
-        /// </summary>
-        private string _name;
-
+        
         /// <summary>
         ///     Namespace, in dem die Klasse angelegt werden soll
         /// </summary>
@@ -33,16 +26,11 @@ namespace Templify.ClassGenerator.Templates.Class
         {
         }
 
-        public ClassTemplate(string templatePath) : base(templatePath)
-        {
-        }
-
-
         /// <summary>
         ///     Fügt ein Template für Using Statements zum Template hinzu
         /// </summary>
         /// <param name="template">Using Template</param>
-        /// <returns></returns>
+        /// <returns>ClassTemplate für Fluent Building</returns>
         public ClassTemplate ThatUses(UsingTemplate template)
         {
             if (_usingTemplates.Contains(template))
@@ -51,37 +39,27 @@ namespace Templify.ClassGenerator.Templates.Class
             _usingTemplates.Add(template);
             return this;
         }
-
+        
         /// <summary>
-        ///     Setzt die Inheritance der Klasse
+        ///     Fügt der zu generierenden Klasse einen Namespace hinzu, der genutzt werden soll
         /// </summary>
-        /// <param name="inheritanceTemplate">Inheritance</param>
-        /// <returns></returns>
-        public ClassTemplate ThatInheritsFrom(ClassInheritanceTemplate inheritanceTemplate)
-        {
-            _inheritance = inheritanceTemplate;
-            return this;
-        }
-
-
-        /// <summary>
-        ///     Setzt die Base-Class für die zu erzeugende Klasse
-        /// </summary>
-        /// <param name="baseClass"></param>
-        /// <returns></returns>
-        public ClassTemplate WithBaseClass(string baseClass)
-        {
-            return this;
-        }
-
-        /// <summary>
-        ///     Setzt den Namen, den die generierte Klasse erhalten soll
-        /// </summary>
-        /// <param name="className">Name der Klassem, die generiert werden soll</param>
+        /// <param name="useNamespace">Namespace, der in die Klasse eingebunden werden soll</param>
         /// <returns>ClassTemplate für Fluent Building</returns>
-        public ClassTemplate WithName(string className)
+        public ClassTemplate ThatUses(string useNamespace)
         {
-            _name = className;
+            ThatUses(new UsingTemplate(useNamespace));
+            return this;
+        }
+
+
+        /// <summary>
+        ///     Fügt der Klasse eine Property hinzu
+        /// </summary>
+        /// <param name="property">Property, die der Klasse hinzugefügt werden soll</param>
+        /// <returns>ClassTemplate für Fluent Building</returns>
+        public ClassTemplate WithProperty(IPropertyTemplate property)
+        {
+            //TODO Property hinzufügen
             return this;
         }
 
@@ -114,22 +92,32 @@ namespace Templify.ClassGenerator.Templates.Class
             sb.Replace(ClassTemplatePlaceholders.Usings, usingBuilder.ToString());
 
             // => Klassenname replacen
-            sb.Replace(ClassTemplatePlaceholders.ClassName, _name);
+            sb.Replace(ClassTemplatePlaceholders.ClassName, Name);
 
             // => Namespace replacen
             sb.Replace(ClassTemplatePlaceholders.ClassNamespace, _namespace);
-
-            // => Inheritance replacen
-            sb.Replace(ClassTemplatePlaceholders.ClassInheritance,
-                _inheritance != null ? _inheritance.ToString() : string.Empty);
-
+            
             // => Template erzeugen und zurückgeben
             return sb.ToString();
         }
 
-        public static ClassTemplate Create()
+        /// <summary>
+        /// TemplateFile, das zur Generierung der einer Klasse genutzt werden soll
+        /// Muss gesetzt werden, um die Fluent Generierung einer Klasse nutzen zu können
+        /// </summary>
+        public static TemplateFile TemplateFile;
+        
+        /// <summary>
+        /// Beginnt den Prozess ein neues Class Template zum Generieren zu erstellen
+        /// </summary>
+        /// <returns>ClassTemplate, das Fluent genutzt werden soll</returns>
+        /// <exception cref="NullReferenceException">Wenn das TemplateFile noch nicht gesetzt wurde</exception>
+        public static ClassTemplate CreateClass()
         {
-            return new ClassTemplate(string.Empty); //TODO Füllen
+            if(TemplateFile == null)
+                throw new NullReferenceException("Es wurde noch kein Template für das Generieren von Klassen gesetzt.");
+            
+            return new ClassTemplate(TemplateFile);
         }
     }
 }
