@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Templify.ClassGenerator.Templates
+namespace Templify.ClassGenerator.Templates.Class
 {
     /// <summary>
     /// Template für den Using Bereich einer Klasse

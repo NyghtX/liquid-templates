@@ -1,4 +1,4 @@
-namespace Templify.ClassGenerator.Templates
+namespace Templify.ClassGenerator.Templates.Class
 {
     public static class ClassTemplatePlaceholders
     {

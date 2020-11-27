@@ -1,4 +1,4 @@
-namespace Templify.ClassGenerator.Templates
+namespace Templify.ClassGenerator.Templates.Class
 {
     /// <summary>
     /// Template für die Inheritance einer Klasse

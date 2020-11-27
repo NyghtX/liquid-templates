@@ -1,30 +1,23 @@
-using System;
 using System.Collections.Generic;
-using System.IO;
-using System.Reflection;
 using System.Text;
+using Templify.ClassGenerator.Templates.Base;
 
-namespace Templify.ClassGenerator.Templates
+namespace Templify.ClassGenerator.Templates.Class
 {
     /// <summary>
     /// Template, auf das Replacements angewendet werden können
     /// </summary>
-    public class ClassTemplate
+    public class ClassTemplate : TemplateBase
     {
-        /// <summary>
-        /// Quellstring des Templates
-        /// </summary>
-        private readonly string _source;
-
         /// <summary>
         /// Namespace, in dem die Klasse angelegt werden soll
         /// </summary>
-        private readonly string _namespace;
+        private string _namespace;
 
         /// <summary>
         /// Name der Klasse
         /// </summary>
-        private readonly string _name;
+        private string _name;
 
         /// <summary>
         /// UsingTemplates für die Klasse
@@ -36,28 +29,22 @@ namespace Templify.ClassGenerator.Templates
         /// </summary>
         private ClassInheritanceTemplate _inheritance;
         
-        public ClassTemplate(string ns, string name) : this(ReadTemplate("Templates/Class.template"), ns, name)
-        {}
-
-        /// <summary>
-        /// Initialisiert das Template
-        /// </summary>
-        /// <param name="source">Inhalt des Templates, das initialisiert werden soll</param>
-        public ClassTemplate(string source, string ns, string name)
+        public ClassTemplate(TemplateFile templateFile) : base(templateFile)
         {
-            _source = source;
-            _namespace = ns;
-            _name = name;
-
-            // => Placeholder finden
         }
+
+        public ClassTemplate(string templatePath) : base(templatePath)
+        {
+        }
+        
+        
 
         /// <summary>
         /// Fügt ein Template für Using Statements zum Template hinzu
         /// </summary>
         /// <param name="template">Using Template</param>
         /// <returns></returns>
-        public ClassTemplate AddUsing(UsingTemplate template)
+        public ClassTemplate ThatUses(UsingTemplate template)
         {
             if (_usingTemplates.Contains(template))
                 return this;
@@ -71,7 +58,7 @@ namespace Templify.ClassGenerator.Templates
         /// </summary>
         /// <param name="inheritanceTemplate">Inheritance</param>
         /// <returns></returns>
-        public ClassTemplate SetInheritance(ClassInheritanceTemplate inheritanceTemplate)
+        public ClassTemplate ThatInheritsFrom(ClassInheritanceTemplate inheritanceTemplate)
         {
             _inheritance = inheritanceTemplate;
             return this;
@@ -83,8 +70,30 @@ namespace Templify.ClassGenerator.Templates
         /// </summary>
         /// <param name="baseClass"></param>
         /// <returns></returns>
-        public ClassTemplate SetBaseClass(string baseClass)
+        public ClassTemplate WithBaseClass(string baseClass)
         {
+            return this;
+        }
+
+        /// <summary>
+        /// Setzt den Namen, den die generierte Klasse erhalten soll
+        /// </summary>
+        /// <param name="className">Name der Klassem, die generiert werden soll</param>
+        /// <returns>ClassTemplate für Fluent Building</returns>
+        public ClassTemplate WithName(string className)
+        {
+            _name = className;
+            return this;
+        }
+        
+        /// <summary>
+        /// Definiert den Namespace, in dem die Klasse angelegt werden soll
+        /// </summary>
+        /// <param name="inNamespace">Namespace, in dem die Klasse angelegt werden soll</param>
+        /// <returns>ClassTemplate für Fluent Building</returns>
+        public ClassTemplate InNamespace(string inNamespace)
+        {
+            _namespace = inNamespace;
             return this;
         }
 
@@ -94,7 +103,7 @@ namespace Templify.ClassGenerator.Templates
         /// <returns>Ausgefülltes Template</returns>
         public override string ToString()
         {
-            var sb = new StringBuilder(_source);
+            var sb = new StringBuilder(Source.Content);
             
             // => Usings Builden
             var usingBuilder = new StringBuilder();
@@ -117,14 +126,12 @@ namespace Templify.ClassGenerator.Templates
             // => Template erzeugen und zurückgeben
             return sb.ToString();
         }
-        
-        private static string ReadTemplate(string fileName)
+
+        public static ClassTemplate Create()
         {
-            var codeBaseUrl = new Uri(Assembly.GetExecutingAssembly().CodeBase);
-            var codeBasePath = Uri.UnescapeDataString(codeBaseUrl.AbsolutePath);
-            var dirPath = Path.GetDirectoryName(codeBasePath);
-            var templateFile = Path.Combine(dirPath ?? throw new InvalidOperationException(), fileName);
-            return File.ReadAllText(templateFile);
+            return new ClassTemplate(string.Empty); //TODO Füllen
         }
+
+        
     }
 }

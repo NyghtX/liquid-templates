@@ -19,11 +19,18 @@
           </e>
         </e>
         <e p="Templates" t="Include">
-          <e p="Class.template" t="Include" />
-          <e p="ClassInheritanceTemplate.cs" t="Include" />
-          <e p="ClassTemplate.cs" t="Include" />
-          <e p="ClassTemplatePlaceholders.cs" t="Include" />
-          <e p="UsingTemplate.cs" t="Include" />
+          <e p="Base" t="Include">
+            <e p="TemplateBase.cs" t="Include" />
+            <e p="TemplateFile.cs" t="Include" />
+          </e>
+          <e p="Class" t="Include">
+            <e p="Class.template" t="Include" />
+            <e p="ClassInheritanceTemplate.cs" t="Include" />
+            <e p="ClassTemplate.cs" t="Include" />
+            <e p="ClassTemplatePlaceholders.cs" t="Include" />
+            <e p="Using.template" t="Include" />
+            <e p="UsingTemplate.cs" t="Include" />
+          </e>
         </e>
         <e p="Templify.ClassGenerator.csproj" t="IncludeRecursive" />
       </e>
