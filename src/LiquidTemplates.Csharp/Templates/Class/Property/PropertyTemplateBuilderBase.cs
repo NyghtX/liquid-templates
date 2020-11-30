@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.Text;
 using LiquidTemplates.Csharp.Templates.Base;
 using LiquidTemplates.Csharp.Tools;
@@ -6,9 +7,9 @@ using LiquidTemplates.Csharp.Tools;
 namespace LiquidTemplates.Csharp.Templates.Class.Property
 {
     public abstract class PropertyTemplateBuilderBase<TPropertyBuilderTemplate, TPropertyType> :
-        TemplateBuilderBase<TPropertyBuilderTemplate>,
+        TemplateBuilderBase,
         IPropertyTemplateBuilder<TPropertyBuilderTemplate, TPropertyType>
-        where TPropertyBuilderTemplate : TemplateBuilderBase<TPropertyBuilderTemplate>,
+        where TPropertyBuilderTemplate : TemplateBuilderBase,
         IPropertyTemplateBuilder<TPropertyBuilderTemplate, TPropertyType>
     {
         public PropertyTemplateBuilderBase() : this(TemplateFiles.PropertyTemplateFile)
@@ -18,7 +19,8 @@ namespace LiquidTemplates.Csharp.Templates.Class.Property
                     "Es wurde noch kein Template für das Generieren von Properties gesetzt.");
         }
 
-        protected PropertyTemplateBuilderBase(TemplateFile templateFile) : base(templateFile)
+        //TODO Richtige Placeholder einsetzen
+        protected PropertyTemplateBuilderBase(TemplateFile templateFile) : base(templateFile, new Dictionary<string, TemplatePlaceholder>())
         {
         }
 
@@ -36,51 +38,20 @@ namespace LiquidTemplates.Csharp.Templates.Class.Property
         {
             throw new NotImplementedException();
         }
-
-        /// <summary>
-        ///     Gibt an, dass die Property nur innerhalb der Klasse geändert werden können soll
-        /// </summary>
-        /// <returns>Instanz für Fluent Usage</returns>
-        public TPropertyBuilderTemplate WithPrivateSetter()
-        {
-            throw new NotImplementedException();
-        }
-
-        /// <summary>
-        ///     Gibt an, dass die Property nur innerhalb der Klasse und ihren Children geändert werden können soll
-        /// </summary>
-        /// <returns>Instanz für Fluent Usage</returns>
-        public TPropertyBuilderTemplate WithProtectedSetter()
-        {
-            throw new NotImplementedException();
-        }
-
-        /// <summary>
-        ///     Builded das Template für die Property
-        /// </summary>
-        /// <returns>Gebuildetes Template</returns>
-        public PropertyTemplate Build()
-        {
-            return new PropertyTemplate(ToString())
-            {
-                Name = Name,
-                AccessModifier = AccessModifierValue,
-                PropertyTypeName = PropertyTypeName
-            };
-        }
+        
 
         public override string ToString()
         {
             var sb = new StringBuilder(Source.Content);
 
             // => Access Modifier
-            sb.ReplacePlaceholder(PropertyTemplatePlaceholder.AccessModifier, AccessModifier);
+            //sb.ReplacePlaceholder(PropertyTemplatePlaceholder.AccessModifier, AccessModifier);
 
             // => Type
             sb.ReplacePlaceholder(PropertyTemplatePlaceholder.PropertyType, PropertyTypeName);
 
             // => Name
-            sb.ReplacePlaceholder(PropertyTemplatePlaceholder.PropertyName, Name);
+            //sb.ReplacePlaceholder(PropertyTemplatePlaceholder.PropertyName, Name);
 
             // => End
             sb.ReplacePlaceholder(PropertyTemplatePlaceholder.PropertyEnd, ";");

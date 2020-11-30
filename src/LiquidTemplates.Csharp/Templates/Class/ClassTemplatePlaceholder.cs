@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using LiquidTemplates.Csharp.Templates.Base;
 
 namespace LiquidTemplates.Csharp.Templates.Class
 {
@@ -15,21 +16,12 @@ namespace LiquidTemplates.Csharp.Templates.Class
         /// <summary>
         ///     Placeholder, die zur Verfügung stehen
         /// </summary>
-        public static IEnumerable<string> All = new[]
+        public static Dictionary<string, TemplatePlaceholder> Placeholders = new Dictionary<string, TemplatePlaceholder>
         {
-            Usings,
-            Namespace,
-            AccessModifier,
-            Classname
-        };
-
-        /// <summary>
-        ///     Placeholder, die gefüllt werden müssen
-        /// </summary>
-        public static IEnumerable<string> Required = new[]
-        {
-            Namespace,
-            Classname
+            {Classname, new TemplatePlaceholder(Classname, true, false)},
+            {Namespace, new TemplatePlaceholder(Namespace, true, false)},
+            {AccessModifier, new TemplatePlaceholder(AccessModifier, true, false)},
+            {Usings, new TemplatePlaceholder(Usings)},
         };
     }
 }

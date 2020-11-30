@@ -1,19 +1,13 @@
+using LiquidTemplates.Csharp.Templates.Extensions;
+
 namespace LiquidTemplates.Csharp.Templates.Base
 {
-    public interface ITemplateBuilder<TTemplate> where TTemplate : ITemplateBuilder<TTemplate>
+    public interface ITemplateBuilder
     {
         /// <summary>
-        ///     Name des zu generierenden.. Etwas
+        /// Fügt der List der Replacements einen Eintrag hinzu
         /// </summary>
-        /// <param name="name">Name</param>
-        /// <returns>Instanz für Fluent Usage</returns>
-        TTemplate WithName(string name);
-
-        /// <summary>
-        ///     Setzt den Access Modifier für das zu generierende.. Etwas
-        /// </summary>
-        /// <param name="accessModifier">Access Modifier</param>
-        /// <returns>Instanz für Fluent Usage</returns>
-        TTemplate ThatIs(AccessModifier accessModifier);
+        /// <param name="replacement">Replacement, dass an den Placeholder gebracht wird</param>
+        public void AddReplacement(PlaceHolderReplacement replacement);
     }
 }

@@ -1,6 +1,9 @@
 using FluentAssertions;
 using LiquidTemplates.Csharp.Templates.Base;
 using LiquidTemplates.Csharp.Templates.Class;
+using LiquidTemplates.Csharp.Templates.Class.AccessModifier;
+using LiquidTemplates.Csharp.Templates.Class.Words.That;
+using LiquidTemplates.Csharp.Templates.Class.Words.That.Is;
 using Xunit;
 
 namespace LiquidTemplates.Csharp.Tests.Templates.Class
@@ -11,29 +14,26 @@ namespace LiquidTemplates.Csharp.Tests.Templates.Class
         public void ClassTemplate_Simple_Example()
         {
             // => Arrange
-            ClassTemplateBuilder.TemplateFile = TemplateFile.From("Templates/Class/Class.template");
+            TemplateFiles.ClassTemplateFile = TemplateFile.From("Templates/Class/Class.template");
 
             // => Act
             var myGeneratedClass = ClassTemplateBuilder
                 .CreateClass()
                 .WithName("MyGeneratedClass")
                 .InNamespace("Nyghtx.Generator.Generated")
-                .ThatIs(AccessModifier.Private)
-                .Build();
+                .That().Is().Public()
+                .ToString();
 
             // => Assert
 
             // Klassenname
-            myGeneratedClass.Name.Should().Be("MyGeneratedClass");
-            myGeneratedClass.Source.Should().Contain("MyGeneratedClass");
+            myGeneratedClass.Should().Contain("MyGeneratedClass");
 
             // Namespace
-            myGeneratedClass.Namespace.Should().Be("Nyghtx.Generator.Generated");
-            myGeneratedClass.Source.Should().Contain("namespace Nyghtx.Generator.Generated");
+            myGeneratedClass.Should().Contain("namespace Nyghtx.Generator.Generated");
 
             // Access
-            myGeneratedClass.AccessModifier.Should().Be(AccessModifier.Private);
-            myGeneratedClass.Source.Should().Contain("private class");
+            myGeneratedClass.Should().Contain("public class");
         }
     }
 }
