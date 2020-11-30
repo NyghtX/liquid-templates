@@ -61,12 +61,16 @@
             </e>
             <e p="Words" t="Include">
               <e p="That" t="Include">
+                <e p="ClassTemplateBuilderThatExtension.cs" t="Include" />
                 <e p="ClassTemplateThatBuilder.cs" t="Include" />
                 <e p="Is" t="Include">
                   <e p="ClassTemplateIsBuilder.cs" t="Include" />
                   <e p="ClassTemplateThatBuilderIsExtension.cs" t="Include" />
                 </e>
-                <e p="TemplateBuilderThatExtension.cs" t="Include" />
+              </e>
+              <e p="With" t="Include">
+                <e p="ClassTemplateBuilderWithExtension.cs" t="Include" />
+                <e p="ClassTemplateWithBuilder.cs" t="Include" />
               </e>
             </e>
           </e>
