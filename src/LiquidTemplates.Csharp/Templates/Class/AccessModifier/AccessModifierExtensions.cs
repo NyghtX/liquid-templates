@@ -7,19 +7,22 @@ namespace LiquidTemplates.Csharp.Templates.Class.AccessModifier
     {
         public static IClassTemplateBuilder Private(this ClassTemplateIsBuilder classTemplateIsBuilder)
         {
-            classTemplateIsBuilder.ClassTemplateBuilder.AddReplacement(new PlaceHolderReplacement(ClassTemplatePlaceholder.AccessModifier, "private"));
+            classTemplateIsBuilder.ClassTemplateBuilder.AddReplacement(
+                new PlaceHolderReplacement(ClassTemplatePlaceholder.AccessModifier, "private"));
             return classTemplateIsBuilder.ClassTemplateBuilder;
         }
-        
+
         public static IClassTemplateBuilder Public(this ClassTemplateIsBuilder classTemplateIsBuilder)
         {
-            classTemplateIsBuilder.ClassTemplateBuilder.AddReplacement(new PlaceHolderReplacement(ClassTemplatePlaceholder.AccessModifier, "public"));
+            classTemplateIsBuilder.ClassTemplateBuilder.AddReplacement(
+                new PlaceHolderReplacement(ClassTemplatePlaceholder.AccessModifier, "public"));
             return classTemplateIsBuilder.ClassTemplateBuilder;
         }
-        
+
         public static IClassTemplateBuilder Internal(this ClassTemplateIsBuilder classTemplateIsBuilder)
         {
-            classTemplateIsBuilder.ClassTemplateBuilder.AddReplacement(new PlaceHolderReplacement(ClassTemplatePlaceholder.AccessModifier, "internal"));
+            classTemplateIsBuilder.ClassTemplateBuilder.AddReplacement(
+                new PlaceHolderReplacement(ClassTemplatePlaceholder.AccessModifier, "internal"));
             return classTemplateIsBuilder.ClassTemplateBuilder;
         }
     }

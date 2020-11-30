@@ -20,7 +20,8 @@ namespace LiquidTemplates.Csharp.Templates.Class.Property
         }
 
         //TODO Richtige Placeholder einsetzen
-        protected PropertyTemplateBuilderBase(TemplateFile templateFile) : base(templateFile, new Dictionary<string, TemplatePlaceholder>())
+        protected PropertyTemplateBuilderBase(TemplateFile templateFile) : base(templateFile,
+            new Dictionary<string, TemplatePlaceholder>())
         {
         }
 
@@ -38,7 +39,7 @@ namespace LiquidTemplates.Csharp.Templates.Class.Property
         {
             throw new NotImplementedException();
         }
-        
+
 
         public override string ToString()
         {

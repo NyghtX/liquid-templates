@@ -9,13 +9,13 @@ namespace LiquidTemplates.Csharp.Templates.Class
     /// </summary>
     public class ClassTemplateBuilder : TemplateBuilderBase, IClassTemplateBuilder
     {
-        
-        public ClassTemplateBuilder(TemplateFile templateFile) : base(templateFile, ClassTemplatePlaceholder.Placeholders)
+        public ClassTemplateBuilder(TemplateFile templateFile) : base(templateFile,
+            ClassTemplatePlaceholder.Placeholders)
         {
         }
 
         /// <summary>
-        /// Gibt an, wie die Klasse heißen soll
+        ///     Gibt an, wie die Klasse heißen soll
         /// </summary>
         /// <param name="name">Name, den die Klasse haben soll</param>
         /// <returns>ClassBuilder für Fluent Syntax</returns>
@@ -35,7 +35,7 @@ namespace LiquidTemplates.Csharp.Templates.Class
             AddReplacement(new PlaceHolderReplacement(ClassTemplatePlaceholder.Namespace, inNamespace));
             return this;
         }
-        
+
         /// <summary>
         ///     Beginnt den Prozess ein neues Class Template zum Generieren zu erstellen
         /// </summary>
@@ -43,7 +43,7 @@ namespace LiquidTemplates.Csharp.Templates.Class
         /// <exception cref="NullReferenceException">Wenn das TemplateFile noch nicht gesetzt wurde</exception>
         public static IClassTemplateBuilder CreateClass()
         {
-            if (TemplateFiles.ClassTemplateFile== null)
+            if (TemplateFiles.ClassTemplateFile == null)
                 throw new NullReferenceException("Es wurde noch kein Template für das Generieren von Klassen gesetzt.");
 
             return new ClassTemplateBuilder(TemplateFiles.ClassTemplateFile);
