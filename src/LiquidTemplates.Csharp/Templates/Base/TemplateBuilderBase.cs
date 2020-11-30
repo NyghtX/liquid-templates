@@ -12,6 +12,11 @@ namespace LiquidTemplates.Csharp.Templates.Base
     public abstract class TemplateBuilderBase : ITemplateBuilder
     {
         /// <summary>
+        ///     Platzhalter, die im Template ersetzt werden können
+        /// </summary>
+        private readonly Dictionary<string, TemplatePlaceholder> _placeholders;
+
+        /// <summary>
         ///     Replacements, die für das Builden des Templates genutzt werden
         /// </summary>
         private readonly Dictionary<string, List<PlaceHolderReplacement>> _replacements =
@@ -21,11 +26,6 @@ namespace LiquidTemplates.Csharp.Templates.Base
         ///     Source Template
         /// </summary>
         protected readonly TemplateFile Source;
-
-        /// <summary>
-        ///     Platzhalter, die im Template ersetzt werden können
-        /// </summary>
-        private readonly Dictionary<string, TemplatePlaceholder> _placeholders;
 
         public TemplateBuilderBase(TemplateFile templateFile, Dictionary<string, TemplatePlaceholder> placeholders)
         {

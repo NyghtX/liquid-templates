@@ -23,7 +23,7 @@ namespace LiquidTemplates.Csharp.Templates.Class
             {Namespace, new TemplatePlaceholder(Namespace, true, false)},
             {AccessModifier, new TemplatePlaceholder(AccessModifier, true, false)},
             {Usings, new TemplatePlaceholder(Usings)},
-            {Property, new TemplatePlaceholder(Property)},
+            {Property, new TemplatePlaceholder(Property)}
         };
     }
 }

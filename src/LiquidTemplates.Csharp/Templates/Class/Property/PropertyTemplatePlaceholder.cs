@@ -11,7 +11,7 @@ namespace LiquidTemplates.Csharp.Templates.Class.Property
         public const string PropertyType = "PROPERTYTYPE";
         public const string PropertyName = "PROPERTYNAME";
         public const string PropertyEnd = "PROPERTYEND";
-        
+
         /// <summary>
         ///     Placeholder, die zur Verfügung stehen
         /// </summary>

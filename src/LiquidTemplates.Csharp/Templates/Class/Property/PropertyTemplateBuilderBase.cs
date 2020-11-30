@@ -20,7 +20,7 @@ namespace LiquidTemplates.Csharp.Templates.Class.Property
             PropertyTemplatePlaceholder.Placeholders)
         {
         }
-        
+
 
         public PlaceHolderReplacement GetReplacement()
         {

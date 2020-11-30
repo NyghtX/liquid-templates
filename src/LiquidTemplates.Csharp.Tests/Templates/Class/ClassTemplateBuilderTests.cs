@@ -29,7 +29,6 @@ namespace LiquidTemplates.Csharp.Tests.Templates.Class
                     StringPropertyTemplateBuilder
                         .Create()
                         .WithName("Vorname")
-
                 )
                 .ToString();
 
@@ -43,10 +42,9 @@ namespace LiquidTemplates.Csharp.Tests.Templates.Class
 
             // Access
             myGeneratedClass.Should().Contain("public class");
-            
+
             // Property
             myGeneratedClass.Should().Contain("public string Vorname");
-
         }
     }
 }

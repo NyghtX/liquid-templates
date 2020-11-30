@@ -9,6 +9,7 @@ namespace LiquidTemplates.Csharp.Templates.Class.Property.SimpleTypes
         {
             AddReplacement(new PlaceHolderReplacement(PropertyTemplatePlaceholder.PropertyType, "string"));
         }
+
         /// <summary>
         ///     Beginnt den Prozess einr neuen SimpleProperty Template zum Generieren zu erstellen
         /// </summary>
