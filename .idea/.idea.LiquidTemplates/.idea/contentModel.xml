@@ -70,7 +70,7 @@
               </e>
               <e p="With" t="Include">
                 <e p="ClassTemplateBuilderWithExtension.cs" t="Include" />
-                <e p="ClassTemplateWithBuilder.cs" t="Include" />
+                <e p="IClassTemplateBuilderWithBuilder.cs" t="Include" />
               </e>
             </e>
           </e>

@@ -2,8 +2,10 @@ using FluentAssertions;
 using LiquidTemplates.Csharp.Templates.Base;
 using LiquidTemplates.Csharp.Templates.Class;
 using LiquidTemplates.Csharp.Templates.Class.AccessModifier;
+using LiquidTemplates.Csharp.Templates.Class.Property.SimpleTypes;
 using LiquidTemplates.Csharp.Templates.Class.Words.That;
 using LiquidTemplates.Csharp.Templates.Class.Words.That.Is;
+using LiquidTemplates.Csharp.Templates.Class.Words.With;
 using Xunit;
 
 namespace LiquidTemplates.Csharp.Tests.Templates.Class
@@ -15,6 +17,7 @@ namespace LiquidTemplates.Csharp.Tests.Templates.Class
         {
             // => Arrange
             TemplateFiles.ClassTemplateFile = TemplateFile.From("Templates/Class/Class.template");
+            TemplateFiles.PropertyTemplateFile = TemplateFile.From("Templates/Class/Property/Property.template");
 
             // => Act
             var myGeneratedClass = ClassTemplateBuilder
@@ -22,6 +25,12 @@ namespace LiquidTemplates.Csharp.Tests.Templates.Class
                 .WithName("MyGeneratedClass")
                 .InNamespace("Nyghtx.Generator.Generated")
                 .That().Is().Public()
+                .With(
+                    StringPropertyTemplateBuilder
+                        .Create()
+                        .WithName("Vorname")
+
+                )
                 .ToString();
 
             // => Assert
@@ -34,6 +43,10 @@ namespace LiquidTemplates.Csharp.Tests.Templates.Class
 
             // Access
             myGeneratedClass.Should().Contain("public class");
+            
+            // Property
+            myGeneratedClass.Should().Contain("public string Vorname");
+
         }
     }
 }

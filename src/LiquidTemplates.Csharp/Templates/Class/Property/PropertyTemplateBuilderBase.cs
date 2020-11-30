@@ -1,16 +1,12 @@
 using System;
-using System.Collections.Generic;
-using System.Text;
 using LiquidTemplates.Csharp.Templates.Base;
-using LiquidTemplates.Csharp.Tools;
+using LiquidTemplates.Csharp.Templates.Extensions;
 
 namespace LiquidTemplates.Csharp.Templates.Class.Property
 {
-    public abstract class PropertyTemplateBuilderBase<TPropertyBuilderTemplate, TPropertyType> :
+    public abstract class PropertyTemplateBuilderBase :
         TemplateBuilderBase,
-        IPropertyTemplateBuilder<TPropertyBuilderTemplate, TPropertyType>
-        where TPropertyBuilderTemplate : TemplateBuilderBase,
-        IPropertyTemplateBuilder<TPropertyBuilderTemplate, TPropertyType>
+        IPropertyTemplateBuilder
     {
         public PropertyTemplateBuilderBase() : this(TemplateFiles.PropertyTemplateFile)
         {
@@ -21,43 +17,20 @@ namespace LiquidTemplates.Csharp.Templates.Class.Property
 
         //TODO Richtige Placeholder einsetzen
         protected PropertyTemplateBuilderBase(TemplateFile templateFile) : base(templateFile,
-            new Dictionary<string, TemplatePlaceholder>())
+            PropertyTemplatePlaceholder.Placeholders)
         {
         }
+        
 
-        /// <summary>
-        ///     TypeName der Property, die generiert werden soll
-        /// </summary>
-        protected abstract string PropertyTypeName { get; set; }
-
-        /// <summary>
-        ///     Standard Wert, der von der Property genutzt wird
-        /// </summary>
-        /// <param name="value">Standard Wert</param>
-        /// <returns>Instanz für Fluent Usage</returns>
-        public TPropertyBuilderTemplate WithDefaultValue(TPropertyType value)
+        public PlaceHolderReplacement GetReplacement()
         {
-            throw new NotImplementedException();
+            return new PlaceHolderReplacement(ClassTemplatePlaceholder.Property, ToString());
         }
 
-
-        public override string ToString()
+        public IPropertyTemplateBuilder WithName(string name)
         {
-            var sb = new StringBuilder(Source.Content);
-
-            // => Access Modifier
-            //sb.ReplacePlaceholder(PropertyTemplatePlaceholder.AccessModifier, AccessModifier);
-
-            // => Type
-            sb.ReplacePlaceholder(PropertyTemplatePlaceholder.PropertyType, PropertyTypeName);
-
-            // => Name
-            //sb.ReplacePlaceholder(PropertyTemplatePlaceholder.PropertyName, Name);
-
-            // => End
-            sb.ReplacePlaceholder(PropertyTemplatePlaceholder.PropertyEnd, ";");
-
-            return sb.ToString();
+            AddReplacement(new PlaceHolderReplacement(PropertyTemplatePlaceholder.PropertyName, name));
+            return this;
         }
     }
 }

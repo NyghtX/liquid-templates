@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using LiquidTemplates.Csharp.Templates.Base;
 
 namespace LiquidTemplates.Csharp.Templates.Class.Property
 {
@@ -9,29 +10,16 @@ namespace LiquidTemplates.Csharp.Templates.Class.Property
     {
         public const string PropertyType = "PROPERTYTYPE";
         public const string PropertyName = "PROPERTYNAME";
-        public const string AccessModifier = "ACCESSMODIFIER";
         public const string PropertyEnd = "PROPERTYEND";
-
+        
         /// <summary>
         ///     Placeholder, die zur Verfügung stehen
         /// </summary>
-        public static IEnumerable<string> All = new[]
+        public static Dictionary<string, TemplatePlaceholder> Placeholders = new Dictionary<string, TemplatePlaceholder>
         {
-            AccessModifier,
-            PropertyType,
-            PropertyName,
-            PropertyEnd
-        };
-
-        /// <summary>
-        ///     Placeholder, die gefüllt werden müssen
-        /// </summary>
-        public static IEnumerable<string> Required = new[]
-        {
-            AccessModifier,
-            PropertyType,
-            PropertyName,
-            PropertyEnd
+            {PropertyType, new TemplatePlaceholder(PropertyType, true, false)},
+            {PropertyName, new TemplatePlaceholder(PropertyName, true, false)},
+            {PropertyEnd, new TemplatePlaceholder(PropertyEnd)}
         };
     }
 }

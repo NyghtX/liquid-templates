@@ -1,13 +1,12 @@
+using LiquidTemplates.Csharp.Templates.Class.Words.With;
+
 namespace LiquidTemplates.Csharp.Templates.Class.Property
 {
     public interface
-        IPropertyTemplateBuilder<TPropertyTemplate, TPropertyType>
+        IPropertyTemplateBuilder :         IClassTemplateBuilderWithBuilder
+
+
     {
-        /// <summary>
-        ///     Standard Wert, der von der Property genutzt wird
-        /// </summary>
-        /// <param name="value">Standard Wert</param>
-        /// <returns>Instanz für Fluent Usage</returns>
-        TPropertyTemplate WithDefaultValue(TPropertyType value);
+    IPropertyTemplateBuilder WithName(string name);
     }
 }

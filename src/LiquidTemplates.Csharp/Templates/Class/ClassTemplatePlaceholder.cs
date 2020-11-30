@@ -12,6 +12,7 @@ namespace LiquidTemplates.Csharp.Templates.Class
         public const string Namespace = "NAMESPACE";
         public const string Classname = "CLASSNAME";
         public const string AccessModifier = "ACCESSMODIFIER";
+        public const string Property = "PROPERTY";
 
         /// <summary>
         ///     Placeholder, die zur Verfügung stehen
@@ -21,7 +22,8 @@ namespace LiquidTemplates.Csharp.Templates.Class
             {Classname, new TemplatePlaceholder(Classname, true, false)},
             {Namespace, new TemplatePlaceholder(Namespace, true, false)},
             {AccessModifier, new TemplatePlaceholder(AccessModifier, true, false)},
-            {Usings, new TemplatePlaceholder(Usings)}
+            {Usings, new TemplatePlaceholder(Usings)},
+            {Property, new TemplatePlaceholder(Property)},
         };
     }
 }

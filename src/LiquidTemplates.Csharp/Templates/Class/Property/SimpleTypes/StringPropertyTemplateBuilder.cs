@@ -1,11 +1,14 @@
 using System;
+using LiquidTemplates.Csharp.Templates.Extensions;
 
 namespace LiquidTemplates.Csharp.Templates.Class.Property.SimpleTypes
 {
-    public class StringPropertyTemplateBuilder : SimplePropertyBuilderBase<StringPropertyTemplateBuilder, string>
+    public class StringPropertyTemplateBuilder : SimplePropertyBuilderBase
     {
-        protected override string PropertyTypeName { get; set; } = "string";
-
+        public StringPropertyTemplateBuilder()
+        {
+            AddReplacement(new PlaceHolderReplacement(PropertyTemplatePlaceholder.PropertyType, "string"));
+        }
         /// <summary>
         ///     Beginnt den Prozess einr neuen SimpleProperty Template zum Generieren zu erstellen
         /// </summary>
