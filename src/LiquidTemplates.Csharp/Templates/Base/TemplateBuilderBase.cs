@@ -45,9 +45,9 @@ namespace LiquidTemplates.Csharp.Templates.Base
         {
             // => Aus liste der Placeholder suchen
             var placeholder = _placeholders[replacement.Placeholder];
-            if(!placeholder.Multiple)
+            if (!placeholder.Multiple)
                 _replacements[replacement.Placeholder] = new List<PlaceHolderReplacement> {replacement};
-            else 
+            else
                 _replacements[replacement.Placeholder].Add(replacement);
         }
 

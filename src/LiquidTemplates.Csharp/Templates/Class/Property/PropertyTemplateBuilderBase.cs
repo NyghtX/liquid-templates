@@ -12,6 +12,7 @@ namespace LiquidTemplates.Csharp.Templates.Class.Property
                 throw new NullReferenceException(
                     "Es wurde noch kein Template für das Generieren von Properties gesetzt.");
         }
+
         protected PropertyTemplateBuilderBase(TemplateFile templateFile) : base(templateFile,
             PropertyTemplatePlaceholder.Placeholders)
         {
@@ -25,8 +26,10 @@ namespace LiquidTemplates.Csharp.Templates.Class.Property
         ///     Holt das Replacement aus dem Builder
         /// </summary>
         /// <returns></returns>
-        public PlaceHolderReplacement GetReplacement() =>
-            new PlaceHolderReplacement(ClassTemplatePlaceholder.Property, ToString());
+        public PlaceHolderReplacement GetReplacement()
+        {
+            return new PlaceHolderReplacement(ClassTemplatePlaceholder.Property, ToString());
+        }
 
         public IPropertyTemplateBuilder WithName(string name)
         {
