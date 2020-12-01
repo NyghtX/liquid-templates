@@ -16,9 +16,9 @@ namespace LiquidTemplates.Csharp.Tools
         /// <param name="placeholder">Identifier des Placeholders</param>
         /// <param name="withValue">Wert, der an die Stelle des Placeholders eingesetzt werden soll </param>
         /// <returns></returns>
-        public static StringBuilder ReplacePlaceholder(this StringBuilder sb, string placeholder, string withValue)
+        public static void ReplacePlaceholder(this StringBuilder sb, string placeholder, string withValue)
         {
-            return sb.Replace(CreatePlaceholder(placeholder), withValue);
+            sb.Replace(CreatePlaceholder(placeholder), withValue);
         }
 
         private static string CreatePlaceholder(string placeholder)
