@@ -1,5 +1,4 @@
 using FluentAssertions;
-using LiquidTemplates.Csharp.Templates;
 using LiquidTemplates.Csharp.Templates.Class;
 using LiquidTemplates.Words.That;
 using LiquidTemplates.Words.That.Is;
