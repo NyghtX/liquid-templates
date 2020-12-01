@@ -4,9 +4,7 @@ using LiquidTemplates.Csharp.Templates.Extensions;
 
 namespace LiquidTemplates.Csharp.Templates.Class.Property
 {
-    public abstract class PropertyTemplateBuilderBase :
-        TemplateBuilderBase,
-        IPropertyTemplateBuilder
+    public abstract class PropertyTemplateBuilderBase : TemplateBuilderBase, IPropertyTemplateBuilder
     {
         public PropertyTemplateBuilderBase() : this(TemplateFiles.PropertyTemplateFile)
         {
@@ -14,18 +12,21 @@ namespace LiquidTemplates.Csharp.Templates.Class.Property
                 throw new NullReferenceException(
                     "Es wurde noch kein Template für das Generieren von Properties gesetzt.");
         }
-
-        //TODO Richtige Placeholder einsetzen
         protected PropertyTemplateBuilderBase(TemplateFile templateFile) : base(templateFile,
             PropertyTemplatePlaceholder.Placeholders)
         {
+            // => Default Getter und Setter setzen
+            AddReplacement(new PlaceHolderReplacement("GETTER", "get;"));
+            AddReplacement(new PlaceHolderReplacement("SETTER", "set;"));
         }
 
 
-        public PlaceHolderReplacement GetReplacement()
-        {
-            return new PlaceHolderReplacement(ClassTemplatePlaceholder.Property, ToString());
-        }
+        /// <summary>
+        ///     Holt das Replacement aus dem Builder
+        /// </summary>
+        /// <returns></returns>
+        public PlaceHolderReplacement GetReplacement() =>
+            new PlaceHolderReplacement(ClassTemplatePlaceholder.Property, ToString());
 
         public IPropertyTemplateBuilder WithName(string name)
         {

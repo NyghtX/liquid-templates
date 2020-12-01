@@ -43,7 +43,12 @@ namespace LiquidTemplates.Csharp.Templates.Base
         /// <param name="replacement">Replacement, dass an den Placeholder gebracht wird</param>
         public void AddReplacement(PlaceHolderReplacement replacement)
         {
-            _replacements[replacement.Placeholder].Add(replacement);
+            // => Aus liste der Placeholder suchen
+            var placeholder = _placeholders[replacement.Placeholder];
+            if(!placeholder.Multiple)
+                _replacements[replacement.Placeholder] = new List<PlaceHolderReplacement> {replacement};
+            else 
+                _replacements[replacement.Placeholder].Add(replacement);
         }
 
         public override string ToString()
@@ -60,9 +65,6 @@ namespace LiquidTemplates.Csharp.Templates.Base
                 if (placeholder.Required && replacements.Count < 1)
                     throw new MissingMemberException(
                         $"Es muss mindestens ein Replacement für den Placeholder {placeholder.Identifier} gesetzt sein.");
-                if (!placeholder.Multiple && replacements.Count > 1)
-                    throw new MissingMemberException(
-                        $"Es darf maximal ein Replacement für den Placeholder {placeholder.Identifier} gesetzt sein.");
 
                 // => Replacements zusammenführen
                 var replacementStringBuilder = new StringBuilder();

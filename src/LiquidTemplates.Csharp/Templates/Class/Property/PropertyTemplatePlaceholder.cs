@@ -10,7 +10,8 @@ namespace LiquidTemplates.Csharp.Templates.Class.Property
     {
         public const string PropertyType = "PROPERTYTYPE";
         public const string PropertyName = "PROPERTYNAME";
-        public const string PropertyEnd = "PROPERTYEND";
+        public const string PropertyGetter = "GETTER";
+        public const string PropertySetter = "SETTER";
 
         /// <summary>
         ///     Placeholder, die zur Verfügung stehen
@@ -19,7 +20,8 @@ namespace LiquidTemplates.Csharp.Templates.Class.Property
         {
             {PropertyType, new TemplatePlaceholder(PropertyType, true, false)},
             {PropertyName, new TemplatePlaceholder(PropertyName, true, false)},
-            {PropertyEnd, new TemplatePlaceholder(PropertyEnd)}
+            {PropertyGetter, new TemplatePlaceholder(PropertyGetter, true, false)},
+            {PropertySetter, new TemplatePlaceholder(PropertySetter, true, false)}
         };
     }
 }
