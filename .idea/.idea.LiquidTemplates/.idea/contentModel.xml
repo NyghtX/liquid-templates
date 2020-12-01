@@ -39,6 +39,7 @@
             <e p="Property" t="Include">
               <e p="IPropertyTemplateBuilder.cs" t="Include" />
               <e p="Property.template" t="Include" />
+              <e p="PropertyAccessorExtensions.cs" t="Include" />
               <e p="PropertyTemplateBuilderBase.cs" t="Include" />
               <e p="PropertyTemplatePlaceholder.cs" t="Include" />
               <e p="SimpleTypes" t="Include">
@@ -46,6 +47,14 @@
                 <e p="StringPropertyTemplateBuilder.cs" t="Include" />
               </e>
               <e p="Words" t="Include">
+                <e p="That" t="Include">
+                  <e p="Has" t="Include">
+                    <e p="PropertyTemplateHasBuilder.cs" t="Include" />
+                    <e p="PropertyTemplateThatBuilderHasExtension.cs" t="Include" />
+                  </e>
+                  <e p="PropertyTemplateBuilderThatExtension.cs" t="Include" />
+                  <e p="PropertyTemplateThatBuilder.cs" t="Include" />
+                </e>
                 <e p="With" t="Include">
                   <e p="IPropertyTemplateBuilderWithBuilder.cs" t="Include" />
                   <e p="PropertyTemplateBuilderWithExtension.cs" t="Include" />

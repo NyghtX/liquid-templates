@@ -2,7 +2,10 @@ using FluentAssertions;
 using LiquidTemplates.Csharp.Templates.Base;
 using LiquidTemplates.Csharp.Templates.Class;
 using LiquidTemplates.Csharp.Templates.Class.AccessModifier;
+using LiquidTemplates.Csharp.Templates.Class.Property;
 using LiquidTemplates.Csharp.Templates.Class.Property.SimpleTypes;
+using LiquidTemplates.Csharp.Templates.Class.Property.Words.That;
+using LiquidTemplates.Csharp.Templates.Class.Property.Words.That.Has;
 using LiquidTemplates.Csharp.Templates.Class.Words.That;
 using LiquidTemplates.Csharp.Templates.Class.Words.That.Is;
 using LiquidTemplates.Csharp.Templates.Class.Words.With;
@@ -29,6 +32,7 @@ namespace LiquidTemplates.Csharp.Tests.Templates.Class
                     StringPropertyTemplateBuilder
                         .Create()
                         .WithName("Vorname")
+                        .That().Has().PrivateSetter()
                 )
                 .ToString();
 
@@ -44,7 +48,7 @@ namespace LiquidTemplates.Csharp.Tests.Templates.Class
             myGeneratedClass.Should().Contain("public class");
 
             // Property
-            myGeneratedClass.Should().Contain("public string Vorname");
+            myGeneratedClass.Should().Contain("public string Vorname {get; private set;}");
         }
     }
 }
