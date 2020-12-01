@@ -12,6 +12,8 @@ namespace LiquidTemplates.Csharp.Templates.Class
         public const string Classname = "CLASSNAME";
         public const string AccessModifier = "ACCESSMODIFIER";
         public const string Property = "PROPERTY";
+        public const string Method = "METHOD";
+        public const string Inheritance = "INHERITANCE";
 
         /// <summary>
         ///     Placeholder, die zur Verfügung stehen
@@ -22,7 +24,9 @@ namespace LiquidTemplates.Csharp.Templates.Class
             {Namespace, new TemplatePlaceholder(Namespace, true, false)},
             {AccessModifier, new TemplatePlaceholder(AccessModifier, true, false)},
             {Usings, new TemplatePlaceholder(Usings)},
-            {Property, new TemplatePlaceholder(Property)}
+            {Property, new TemplatePlaceholder(Property)},
+            {Method, new TemplatePlaceholder(Method)},
+            {Inheritance, new TemplatePlaceholder(Inheritance)}
         };
     }
 }

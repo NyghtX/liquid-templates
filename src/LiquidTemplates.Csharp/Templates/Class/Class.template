@@ -2,9 +2,11 @@
 
 namespace [NAMESPACE]
 {
-    [ACCESSMODIFIER] class [CLASSNAME]
+    [ACCESSMODIFIER] class [CLASSNAME] [INHERITANCE]
     {
         [PROPERTY]
+        
+        [METHOD]
 
     }
 }

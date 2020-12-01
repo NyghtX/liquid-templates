@@ -22,13 +22,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="aba93b88-5f68-4dd9-81ef-9a476e241955" name="Default Changelist" comment="Refactor">
-      <change afterPath="$PROJECT_DIR$/src/LiquidTemplates.Csharp/Templates/Class/Property/SimpleTypes/BoolPropertyTemplateBuilder.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/LiquidTemplates.Csharp/Templates/Class/Property/SimpleTypes/DoublePropertyTemplateBuilder.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/LiquidTemplates.Csharp/Templates/Class/Property/SimpleTypes/FloatPropertyTemplateBuilder.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/LiquidTemplates.Csharp/Templates/Class/Property/SimpleTypes/IntPropertyTemplateBuilder.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.LiquidTemplates/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LiquidTemplates/.idea/contentModel.xml" afterDir="false" />
+    <list default="true" id="aba93b88-5f68-4dd9-81ef-9a476e241955" name="Default Changelist" comment="Weitere Builder für Simple Types">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.LiquidTemplates/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LiquidTemplates/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LiquidTemplates.Csharp/Templates/Class/Class.template" beforeDir="false" afterPath="$PROJECT_DIR$/src/LiquidTemplates.Csharp/Templates/Class/Class.template" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LiquidTemplates.Csharp/Templates/Class/ClassTemplatePlaceholder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/LiquidTemplates.Csharp/Templates/Class/ClassTemplatePlaceholder.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,9 +51,7 @@
         <option value="$PROJECT_DIR$/src/LiquidTemplates.Csharp/Templates/Class/Words/With/ClassTemplateBuilderWithExtension.cs" />
         <option value="$PROJECT_DIR$/src/LiquidTemplates.Csharp/Templates/Class/Property/Property.cs" />
         <option value="$PROJECT_DIR$/src/LiquidTemplates.Csharp/Templates/Class/Property/SimpleTypes/SimplePropertyBuilderBase.cs" />
-        <option value="$PROJECT_DIR$/src/LiquidTemplates.Csharp/Templates/Class/ClassTemplatePlaceholder.cs" />
         <option value="$PROJECT_DIR$/src/LiquidTemplates.Csharp/Templates/Class/Property/SimpleTypes/StringPropertyTemplateBuilder.cs" />
-        <option value="$PROJECT_DIR$/src/LiquidTemplates.Csharp/Templates/Class/Class.template" />
         <option value="$PROJECT_DIR$/src/LiquidTemplates.Csharp/Templates/Class/Property/Words/With/IClassTemplateBuilderWithBuilder.cs" />
         <option value="$PROJECT_DIR$/src/LiquidTemplates.Csharp/Templates/Class/Property/Words/With/IPropertyTemplateBuilderWithBuilder.cs" />
         <option value="$PROJECT_DIR$/src/LiquidTemplates.Csharp/Templates/Class/Property/Words/With/PropertyTemplateBuilderWithExtension.cs" />
@@ -98,6 +93,8 @@
         <option value="$PROJECT_DIR$/src/LiquidTemplates.Csharp/Templates/Class/Property/SimpleTypes/FloatPropertyTemplateBuilder.cs" />
         <option value="$PROJECT_DIR$/src/LiquidTemplates.Csharp/Templates/Class/Property/SimpleTypes/DoublePropertyTemplateBuilder.cs" />
         <option value="$PROJECT_DIR$/src/LiquidTemplates.Csharp/Templates/Class/Property/SimpleTypes/BoolPropertyTemplateBuilder.cs" />
+        <option value="$PROJECT_DIR$/src/LiquidTemplates.Csharp/Templates/Class/Class.template" />
+        <option value="$PROJECT_DIR$/src/LiquidTemplates.Csharp/Templates/Class/ClassTemplatePlaceholder.cs" />
       </list>
     </option>
   </component>
@@ -114,7 +111,7 @@
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="C#" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected=".NET Project.LiquidTemplates.Csharp.Tests">
     <configuration name="LiquidTemplates.Csharp.Tests" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="" />
       <option name="PROGRAM_PARAMETERS" value="" />
@@ -144,7 +141,7 @@
       <updated>1606545207603</updated>
       <workItem from="1606545211639" duration="6943000" />
       <workItem from="1606728488998" duration="9011000" />
-      <workItem from="1606833864600" duration="538000" />
+      <workItem from="1606833864600" duration="978000" />
     </task>
     <task id="LOCAL-00001" summary="Rename">
       <created>1606545225651</created>
@@ -251,7 +248,14 @@
       <option name="project" value="LOCAL" />
       <updated>1606836928123</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Weitere Builder für Simple Types">
+      <created>1606842217462</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1606842217462</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -283,7 +287,8 @@
     <MESSAGE value="Private Setter Extension Test" />
     <MESSAGE value="Class Access Modifier Tests" />
     <MESSAGE value="Refactor" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactor" />
+    <MESSAGE value="Weitere Builder für Simple Types" />
+    <option name="LAST_COMMIT_MESSAGE" value="Weitere Builder für Simple Types" />
   </component>
   <component name="WindowStateProjectService">
     <state x="779" y="526" key="ANALYSIS_DLG_com.jetbrains.rider.actions.impl.cleanup.RiderCodeCleanupAction$actionPerformed$dlg$1" timestamp="1606810239383">
