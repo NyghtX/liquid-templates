@@ -1,3 +1,5 @@
+using LiquidTemplates.Replacement;
+
 namespace LiquidTemplates.Words.With
 {
     public static class TemplateBuilderWithExtension

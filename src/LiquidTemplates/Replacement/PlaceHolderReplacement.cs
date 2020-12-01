@@ -1,4 +1,4 @@
-namespace LiquidTemplates
+namespace LiquidTemplates.Replacement
 {
     public class PlaceHolderReplacement
     {

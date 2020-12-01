@@ -1,3 +1,4 @@
+using LiquidTemplates.Replacement;
 using LiquidTemplates.Words.That.Is;
 
 namespace LiquidTemplates.Csharp.Templates.Class

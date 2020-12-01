@@ -1,3 +1,5 @@
+using LiquidTemplates.Replacement;
+
 namespace LiquidTemplates
 {
     public interface ITemplateBuilder

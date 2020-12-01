@@ -1,3 +1,5 @@
+using LiquidTemplates.Replacement;
+
 namespace LiquidTemplates.Csharp.Templates.Class.Property
 {
     public interface IPropertyTemplateBuilder : IReplacementBuilder, ITemplateBuilder

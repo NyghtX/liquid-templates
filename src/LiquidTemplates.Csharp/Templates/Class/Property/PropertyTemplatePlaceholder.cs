@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using LiquidTemplates.Replacement;
 
 namespace LiquidTemplates.Csharp.Templates.Class.Property
 {
