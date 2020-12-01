@@ -8,6 +8,11 @@ namespace LiquidTemplates.Csharp.Templates.Class
     /// </summary>
     public class ClassTemplateBuilder : TemplateBuilderBase, IClassTemplateBuilder
     {
+        /// <summary>
+        /// TemplateFile, das für ClassTemplates genutzt werden soll
+        /// </summary>
+        public static TemplateFile TemplateFile = TemplateFile.From("Templates/Class/Class.template");
+        
         public ClassTemplateBuilder(TemplateFile templateFile) : base(templateFile,
             ClassTemplatePlaceholder.Placeholders)
         {
@@ -40,12 +45,7 @@ namespace LiquidTemplates.Csharp.Templates.Class
         /// </summary>
         /// <returns>ClassTemplate, das Fluent genutzt werden soll</returns>
         /// <exception cref="NullReferenceException">Wenn das TemplateFile noch nicht gesetzt wurde</exception>
-        public static IClassTemplateBuilder CreateClass()
-        {
-            if (TemplateFiles.ClassTemplateFile == null)
-                throw new NullReferenceException("Es wurde noch kein Template für das Generieren von Klassen gesetzt.");
-
-            return new ClassTemplateBuilder(TemplateFiles.ClassTemplateFile);
-        }
+        public static IClassTemplateBuilder CreateClass() =>
+            new ClassTemplateBuilder(TemplateFile);
     }
 }

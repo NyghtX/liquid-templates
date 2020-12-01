@@ -18,7 +18,6 @@
           <e p="ITemplateBuilder.cs" t="Include" />
           <e p="TemplateBuilderBase.cs" t="Include" />
           <e p="TemplateFile.cs" t="Include" />
-          <e p="TemplateFiles.cs" t="Include" />
         </e>
         <e p="bin" t="ExcludeRecursive" />
         <e p="LiquidTemplates.csproj" t="IncludeRecursive" />

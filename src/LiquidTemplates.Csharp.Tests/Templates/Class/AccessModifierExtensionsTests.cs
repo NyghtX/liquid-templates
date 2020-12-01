@@ -12,7 +12,6 @@ namespace LiquidTemplates.Csharp.Tests.Templates.Class
         public void Private()
         {
             // => Arrange
-            TemplateFiles.ClassTemplateFile = TemplateFile.From("Templates/Class/Class.template");
             var template = ClassTemplateBuilder.CreateClass()
                 .WithName("Testname")
                 .InNamespace("Testnamespace")
@@ -28,7 +27,6 @@ namespace LiquidTemplates.Csharp.Tests.Templates.Class
         public void Public()
         {
             // => Arrange
-            TemplateFiles.ClassTemplateFile = TemplateFile.From("Templates/Class/Class.template");
             var template = ClassTemplateBuilder.CreateClass()
                 .WithName("Testname")
                 .InNamespace("Testnamespace")
@@ -44,7 +42,6 @@ namespace LiquidTemplates.Csharp.Tests.Templates.Class
         public void Internal()
         {
             // => Arrange
-            TemplateFiles.ClassTemplateFile = TemplateFile.From("Templates/Class/Class.template");
             var template = ClassTemplateBuilder.CreateClass()
                 .WithName("Testname")
                 .InNamespace("Testnamespace")

@@ -13,7 +13,6 @@ namespace LiquidTemplates.Csharp.Tests.Templates.Class.Property
         public void PrivateSetter()
         {
             // => Arrange
-            TemplateFiles.PropertyTemplateFile = TemplateFile.From("Templates/Class/Property/Property.template");
             var replacement = StringPropertyTemplateBuilder.Create()
                 .WithName("Testname")
 

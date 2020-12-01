@@ -1,15 +1,16 @@
-using System;
 using LiquidTemplates.Replacement;
 
 namespace LiquidTemplates.Csharp.Templates.Class.Property
 {
     public abstract class PropertyTemplateBuilderBase : TemplateBuilderBase, IPropertyTemplateBuilder
     {
-        public PropertyTemplateBuilderBase() : this(TemplateFiles.PropertyTemplateFile)
+        /// <summary>
+        /// TemplateFile, das für PropertyTemplates genutzt werden soll
+        /// </summary>
+        public static TemplateFile TemplateFile = TemplateFile.From("Templates/Class/Property/Property.template");
+        
+        public PropertyTemplateBuilderBase() : this(TemplateFile)
         {
-            if (TemplateFiles.PropertyTemplateFile == null)
-                throw new NullReferenceException(
-                    "Es wurde noch kein Template für das Generieren von Properties gesetzt.");
         }
 
         protected PropertyTemplateBuilderBase(TemplateFile templateFile) : base(templateFile,
