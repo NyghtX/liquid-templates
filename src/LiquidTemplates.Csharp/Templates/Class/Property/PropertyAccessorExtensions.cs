@@ -1,4 +1,3 @@
-using LiquidTemplates.Csharp.Templates.Extensions;
 using LiquidTemplates.Csharp.Templates.Words.That.Has;
 
 namespace LiquidTemplates.Csharp.Templates.Class.Property

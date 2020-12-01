@@ -1,6 +1,4 @@
 using System;
-using LiquidTemplates.Csharp.Templates.Base;
-using LiquidTemplates.Csharp.Templates.Extensions;
 
 namespace LiquidTemplates.Csharp.Templates.Class
 {

@@ -1,5 +1,3 @@
-using LiquidTemplates.Csharp.Templates.Base;
-
 namespace LiquidTemplates.Csharp.Templates.Words.That.Has
 {
     public static class TemplateBuilderThatHasExtension

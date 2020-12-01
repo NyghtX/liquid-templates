@@ -1,5 +1,3 @@
-using LiquidTemplates.Csharp.Templates.Base;
-
 namespace LiquidTemplates.Csharp.Templates.Words.With
 {
     public static class TemplateBuilderWithExtension

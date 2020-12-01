@@ -1,6 +1,4 @@
-using LiquidTemplates.Csharp.Templates.Extensions;
-
-namespace LiquidTemplates.Csharp.Templates.Base
+namespace LiquidTemplates.Csharp.Templates
 {
     public interface ITemplateBuilder
     {

@@ -17,4 +17,8 @@
     </None>
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Templates\Extensions" />
+  </ItemGroup>
+
 </Project>

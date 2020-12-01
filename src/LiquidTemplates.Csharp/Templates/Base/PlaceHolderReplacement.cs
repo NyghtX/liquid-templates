@@ -1,4 +1,4 @@
-namespace LiquidTemplates.Csharp.Templates.Extensions
+namespace LiquidTemplates.Csharp.Templates
 {
     public class PlaceHolderReplacement
     {
