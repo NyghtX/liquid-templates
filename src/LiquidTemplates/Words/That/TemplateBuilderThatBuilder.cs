@@ -1,4 +1,4 @@
-namespace LiquidTemplates.Csharp.Templates.Words.That
+namespace LiquidTemplates.Words.That
 {
     public class TemplateBuilderThatBuilder<TTemplateBuilder> where TTemplateBuilder : ITemplateBuilder
     {

@@ -1,6 +1,6 @@
 using System.Text;
 
-namespace LiquidTemplates.Csharp.Tools
+namespace LiquidTemplates.Tools
 {
     /// <summary>
     ///     Extensions für den StringBuilder

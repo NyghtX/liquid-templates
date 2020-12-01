@@ -1,4 +1,4 @@
-namespace LiquidTemplates.Csharp.Templates
+namespace LiquidTemplates
 {
     public class TemplatePlaceholder
     {

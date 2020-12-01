@@ -13,6 +13,46 @@
     <e p="$PROJECT_DIR$" t="IncludeFlat">
       <e p="LiquidTemplates.sln" t="IncludeFlat" />
       <e p="packages" t="ExcludeRecursive" />
+      <e p="src/LiquidTemplates" t="IncludeRecursive">
+        <e p="Base" t="Include">
+          <e p="IReplacementBuilder.cs" t="Include" />
+          <e p="ITemplateBuilder.cs" t="Include" />
+          <e p="PlaceHolderReplacement.cs" t="Include" />
+          <e p="TemplateBuilderBase.cs" t="Include" />
+          <e p="TemplateFile.cs" t="Include" />
+          <e p="TemplateFiles.cs" t="Include" />
+          <e p="TemplatePlaceholder.cs" t="Include" />
+        </e>
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="LiquidTemplates.csproj" t="IncludeRecursive" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netstandard2.1" t="Include">
+              <e p="LiquidTemplates.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Tools" t="Include">
+          <e p="StringBuilderExtensions.cs" t="Include" />
+        </e>
+        <e p="Words" t="Include">
+          <e p="That" t="Include">
+            <e p="Has" t="Include">
+              <e p="TemplateBuilderThatHasBuilder.cs" t="Include" />
+              <e p="TemplateBuilderThatHasExtension.cs" t="Include" />
+            </e>
+            <e p="Is" t="Include">
+              <e p="TemplateBuilderThatIsBuilder.cs" t="Include" />
+              <e p="TemplateBuilderThatIsExtension.cs" t="Include" />
+            </e>
+            <e p="TemplateBuilderThatBuilder.cs" t="Include" />
+            <e p="TemplateBuilderThatExtension.cs" t="Include" />
+          </e>
+          <e p="With" t="Include">
+            <e p="TemplateBuilderWithExtension.cs" t="Include" />
+          </e>
+        </e>
+      </e>
       <e p="src/LiquidTemplates.Csharp" t="IncludeRecursive">
         <e p="bin" t="ExcludeRecursive" />
         <e p="LiquidTemplates.Csharp.csproj" t="IncludeRecursive" />
@@ -25,15 +65,6 @@
           </e>
         </e>
         <e p="Templates" t="Include">
-          <e p="Base" t="Include">
-            <e p="IReplacementBuilder.cs" t="Include" />
-            <e p="ITemplateBuilder.cs" t="Include" />
-            <e p="PlaceHolderReplacement.cs" t="Include" />
-            <e p="TemplateBuilderBase.cs" t="Include" />
-            <e p="TemplateFile.cs" t="Include" />
-            <e p="TemplateFiles.cs" t="Include" />
-            <e p="TemplatePlaceholder.cs" t="Include" />
-          </e>
           <e p="Class" t="Include">
             <e p="AccessModifierExtensions.cs" t="Include" />
             <e p="Class.template" t="Include" />
@@ -60,27 +91,6 @@
               <e p="UsingTemplate.cs" t="Include" />
             </e>
           </e>
-          <e p="Extensions" t="Include" />
-          <e p="Words" t="Include">
-            <e p="That" t="Include">
-              <e p="Has" t="Include">
-                <e p="TemplateBuilderThatHasBuilder.cs" t="Include" />
-                <e p="TemplateBuilderThatHasExtension.cs" t="Include" />
-              </e>
-              <e p="Is" t="Include">
-                <e p="TemplateBuilderThatIsBuilder.cs" t="Include" />
-                <e p="TemplateBuilderThatIsExtension.cs" t="Include" />
-              </e>
-              <e p="TemplateBuilderThatBuilder.cs" t="Include" />
-              <e p="TemplateBuilderThatExtension.cs" t="Include" />
-            </e>
-            <e p="With" t="Include">
-              <e p="TemplateBuilderWithExtension.cs" t="Include" />
-            </e>
-          </e>
-        </e>
-        <e p="Tools" t="Include">
-          <e p="StringBuilderExtensions.cs" t="Include" />
         </e>
       </e>
       <e p="src/LiquidTemplates.Csharp.Tests" t="IncludeRecursive">

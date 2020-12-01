@@ -1,4 +1,4 @@
-using LiquidTemplates.Csharp.Templates.Words.That.Is;
+using LiquidTemplates.Words.That.Is;
 
 namespace LiquidTemplates.Csharp.Templates.Class
 {

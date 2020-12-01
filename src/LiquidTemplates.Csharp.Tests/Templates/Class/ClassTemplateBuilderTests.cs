@@ -3,10 +3,10 @@ using LiquidTemplates.Csharp.Templates;
 using LiquidTemplates.Csharp.Templates.Class;
 using LiquidTemplates.Csharp.Templates.Class.Property;
 using LiquidTemplates.Csharp.Templates.Class.Property.SimpleTypes;
-using LiquidTemplates.Csharp.Templates.Words.That;
-using LiquidTemplates.Csharp.Templates.Words.That.Has;
-using LiquidTemplates.Csharp.Templates.Words.That.Is;
-using LiquidTemplates.Csharp.Templates.Words.With;
+using LiquidTemplates.Words.That;
+using LiquidTemplates.Words.That.Has;
+using LiquidTemplates.Words.That.Is;
+using LiquidTemplates.Words.With;
 using Xunit;
 
 namespace LiquidTemplates.Csharp.Tests.Templates.Class

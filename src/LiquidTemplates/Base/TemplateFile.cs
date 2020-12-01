@@ -2,7 +2,7 @@ using System;
 using System.IO;
 using System.Reflection;
 
-namespace LiquidTemplates.Csharp.Templates
+namespace LiquidTemplates
 {
     /// <summary>
     ///     Geladenes Template File

@@ -1,9 +1,9 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
-using LiquidTemplates.Csharp.Tools;
+using LiquidTemplates.Tools;
 
-namespace LiquidTemplates.Csharp.Templates
+namespace LiquidTemplates
 {
     /// <summary>
     ///     Basis für Templates

@@ -1,4 +1,4 @@
-namespace LiquidTemplates.Csharp.Templates.Words.That.Has
+namespace LiquidTemplates.Words.That.Has
 {
     public static class TemplateBuilderThatHasExtension
     {

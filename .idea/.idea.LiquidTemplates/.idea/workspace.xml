@@ -22,10 +22,26 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="aba93b88-5f68-4dd9-81ef-9a476e241955" name="Default Changelist" comment="Weitere Builder für Simple Types">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.LiquidTemplates/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LiquidTemplates/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/LiquidTemplates.Csharp/Templates/Class/Class.template" beforeDir="false" afterPath="$PROJECT_DIR$/src/LiquidTemplates.Csharp/Templates/Class/Class.template" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/LiquidTemplates.Csharp/Templates/Class/ClassTemplatePlaceholder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/LiquidTemplates.Csharp/Templates/Class/ClassTemplatePlaceholder.cs" afterDir="false" />
+    <list default="true" id="aba93b88-5f68-4dd9-81ef-9a476e241955" name="Default Changelist" comment="Class Template erweitert">
+      <change afterPath="$PROJECT_DIR$/src/LiquidTemplates/Base/IReplacementBuilder.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/LiquidTemplates/Base/ITemplateBuilder.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/LiquidTemplates/Base/PlaceHolderReplacement.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/LiquidTemplates/Base/TemplateBuilderBase.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/LiquidTemplates/Base/TemplateFile.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/LiquidTemplates/Base/TemplateFiles.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/LiquidTemplates/Base/TemplatePlaceholder.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/LiquidTemplates/LiquidTemplates.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.LiquidTemplates/riderModule.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LiquidTemplates/riderModule.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LiquidTemplates.sln" beforeDir="false" afterPath="$PROJECT_DIR$/LiquidTemplates.sln" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LiquidTemplates.Csharp/LiquidTemplates.Csharp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/src/LiquidTemplates.Csharp/LiquidTemplates.Csharp.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LiquidTemplates.Csharp/Templates/Base/IReplacementBuilder.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LiquidTemplates.Csharp/Templates/Base/ITemplateBuilder.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LiquidTemplates.Csharp/Templates/Base/PlaceHolderReplacement.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LiquidTemplates.Csharp/Templates/Base/TemplateBuilderBase.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LiquidTemplates.Csharp/Templates/Base/TemplateFile.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LiquidTemplates.Csharp/Templates/Base/TemplateFiles.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LiquidTemplates.Csharp/Templates/Base/TemplatePlaceholder.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LiquidTemplates.Csharp/Tools/StringBuilderExtensions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/LiquidTemplates/Tools/StringBuilderExtensions.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,13 +55,16 @@
     <option name="defaultAccountId" value="ebe31d96-1007-4e40-8d63-465151e669b5" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/LiquidTemplates.Csharp/Templates/Class/ClassTemplateBuilder.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/18FD0280-F595-4534-A864-9C11E9235D85/2D/Object.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/LiquidTemplates.Csharp/Templates/Class/ClassTemplatePlaceholder.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/LiquidTemplates.Csharp/Templates/Class/Property/SimpleTypes/IntPropertyTemplateBuilder.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/LiquidTemplates.Csharp/Templates/Class/Property/SimpleTypes/DoublePropertyTemplateBuilder.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/LiquidTemplates.Csharp/Templates/Class/Property/SimpleTypes/FloatPropertyTemplateBuilder.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/LiquidTemplates.Csharp/Templates/Class/Words/With/ClassTemplateWithBuilder.cs" />
-        <option value="$PROJECT_DIR$/src/LiquidTemplates.Csharp/Templates/Class/Words/That/ClassTemplateBuilderThatExtension.cs" />
         <option value="$PROJECT_DIR$/src/LiquidTemplates.Csharp/Templates/Class/Property/ClassTemplateBuilderWithPropertyExtension.cs" />
         <option value="$PROJECT_DIR$/src/LiquidTemplates.Csharp/Templates/Class/Words/With/IClassTemplateBuilderWithBuilder.cs" />
         <option value="$PROJECT_DIR$/src/LiquidTemplates.Csharp/Templates/Class/Words/With/ClassTemplateBuilderWithExtension.cs" />
@@ -95,6 +114,8 @@
         <option value="$PROJECT_DIR$/src/LiquidTemplates.Csharp/Templates/Class/Property/SimpleTypes/BoolPropertyTemplateBuilder.cs" />
         <option value="$PROJECT_DIR$/src/LiquidTemplates.Csharp/Templates/Class/Class.template" />
         <option value="$PROJECT_DIR$/src/LiquidTemplates.Csharp/Templates/Class/ClassTemplatePlaceholder.cs" />
+        <option value="$PROJECT_DIR$/src/LiquidTemplates/Tools/StringBuilderExtensions.cs" />
+        <option value="$PROJECT_DIR$/src/LiquidTemplates/Base/TemplateBuilderBase.cs" />
       </list>
     </option>
   </component>
@@ -141,7 +162,7 @@
       <updated>1606545207603</updated>
       <workItem from="1606545211639" duration="6943000" />
       <workItem from="1606728488998" duration="9011000" />
-      <workItem from="1606833864600" duration="978000" />
+      <workItem from="1606833864600" duration="1353000" />
     </task>
     <task id="LOCAL-00001" summary="Rename">
       <created>1606545225651</created>
@@ -255,7 +276,14 @@
       <option name="project" value="LOCAL" />
       <updated>1606842217462</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Class Template erweitert">
+      <created>1606842982023</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1606842982023</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -288,7 +316,8 @@
     <MESSAGE value="Class Access Modifier Tests" />
     <MESSAGE value="Refactor" />
     <MESSAGE value="Weitere Builder für Simple Types" />
-    <option name="LAST_COMMIT_MESSAGE" value="Weitere Builder für Simple Types" />
+    <MESSAGE value="Class Template erweitert" />
+    <option name="LAST_COMMIT_MESSAGE" value="Class Template erweitert" />
   </component>
   <component name="WindowStateProjectService">
     <state x="779" y="526" key="ANALYSIS_DLG_com.jetbrains.rider.actions.impl.cleanup.RiderCodeCleanupAction$actionPerformed$dlg$1" timestamp="1606810239383">
@@ -383,6 +412,10 @@
       <screen x="0" y="25" width="2048" height="1255" />
     </state>
     <state width="2006" height="446" key="GridCell.Tab.4.right/0.25.2048.1255@0.25.2048.1255" timestamp="1606810184645" />
+    <state x="624" y="389" key="Rider.ProjectTemplateDialog.Size" timestamp="1606843064537">
+      <screen x="0" y="25" width="2048" height="1255" />
+    </state>
+    <state x="624" y="389" key="Rider.ProjectTemplateDialog.Size/0.25.2048.1255@0.25.2048.1255" timestamp="1606843064537" />
     <state x="785" y="271" key="RiderGenerateDialog" timestamp="1606656800423">
       <screen x="0" y="25" width="2048" height="1255" />
     </state>

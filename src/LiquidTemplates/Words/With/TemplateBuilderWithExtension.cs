@@ -1,4 +1,4 @@
-namespace LiquidTemplates.Csharp.Templates.Words.With
+namespace LiquidTemplates.Words.With
 {
     public static class TemplateBuilderWithExtension
     {

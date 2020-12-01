@@ -1,8 +1,8 @@
 using FluentAssertions;
 using LiquidTemplates.Csharp.Templates;
 using LiquidTemplates.Csharp.Templates.Class;
-using LiquidTemplates.Csharp.Templates.Words.That;
-using LiquidTemplates.Csharp.Templates.Words.That.Is;
+using LiquidTemplates.Words.That;
+using LiquidTemplates.Words.That.Is;
 using Xunit;
 
 namespace LiquidTemplates.Csharp.Tests.Templates.Class

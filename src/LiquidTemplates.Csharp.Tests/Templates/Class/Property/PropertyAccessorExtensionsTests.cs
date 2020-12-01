@@ -2,8 +2,8 @@ using FluentAssertions;
 using LiquidTemplates.Csharp.Templates;
 using LiquidTemplates.Csharp.Templates.Class.Property;
 using LiquidTemplates.Csharp.Templates.Class.Property.SimpleTypes;
-using LiquidTemplates.Csharp.Templates.Words.That;
-using LiquidTemplates.Csharp.Templates.Words.That.Has;
+using LiquidTemplates.Words.That;
+using LiquidTemplates.Words.That.Has;
 using Xunit;
 
 namespace LiquidTemplates.Csharp.Tests.Templates.Class.Property
