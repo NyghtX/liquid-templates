@@ -23,18 +23,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="aba93b88-5f68-4dd9-81ef-9a476e241955" name="Default Changelist" comment="Refactor">
+      <change afterPath="$PROJECT_DIR$/src/LiquidTemplates.Csharp/Templates/Class/Property/SimpleTypes/BoolPropertyTemplateBuilder.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/LiquidTemplates.Csharp/Templates/Class/Property/SimpleTypes/DoublePropertyTemplateBuilder.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/LiquidTemplates.Csharp/Templates/Class/Property/SimpleTypes/FloatPropertyTemplateBuilder.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/LiquidTemplates.Csharp/Templates/Class/Property/SimpleTypes/IntPropertyTemplateBuilder.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.LiquidTemplates/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LiquidTemplates/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.LiquidTemplates/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LiquidTemplates/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/LiquidTemplates.Csharp/LiquidTemplates.Csharp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/src/LiquidTemplates.Csharp/LiquidTemplates.Csharp.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/LiquidTemplates.Csharp/Templates/Base/IReplacementBuilder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/LiquidTemplates.Csharp/Templates/Base/IReplacementBuilder.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/LiquidTemplates.Csharp/Templates/Base/ITemplateBuilder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/LiquidTemplates.Csharp/Templates/Base/ITemplateBuilder.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/LiquidTemplates.Csharp/Templates/Base/TemplateBuilderBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/LiquidTemplates.Csharp/Templates/Base/TemplateBuilderBase.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/LiquidTemplates.Csharp/Templates/Class/AccessModifierExtensions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/LiquidTemplates.Csharp/Templates/Class/AccessModifierExtensions.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/LiquidTemplates.Csharp/Templates/Class/ClassTemplateBuilder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/LiquidTemplates.Csharp/Templates/Class/ClassTemplateBuilder.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/LiquidTemplates.Csharp/Templates/Class/Property/PropertyAccessorExtensions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/LiquidTemplates.Csharp/Templates/Class/Property/PropertyAccessorExtensions.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/LiquidTemplates.Csharp/Templates/Class/Property/PropertyTemplateBuilderBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/LiquidTemplates.Csharp/Templates/Class/Property/PropertyTemplateBuilderBase.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/LiquidTemplates.Csharp/Templates/Class/Property/SimpleTypes/StringPropertyTemplateBuilder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/LiquidTemplates.Csharp/Templates/Class/Property/SimpleTypes/StringPropertyTemplateBuilder.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/LiquidTemplates.Csharp/Templates/Extensions/PlaceHolderReplacement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/LiquidTemplates.Csharp/Templates/Base/PlaceHolderReplacement.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,10 +47,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/LiquidTemplates.Csharp/Templates/Class/AccessModifier/AccessModifierExtensions.cs" />
-        <option value="$PROJECT_DIR$/src/LiquidTemplates.Csharp/Templates/Class/Words/That/TemplateBuilderThatExtension.cs" />
-        <option value="$PROJECT_DIR$/src/LiquidTemplates.Csharp/Templates/Class/Words/That/Is/ClassTemplateThatBuilderIsExtension.cs" />
-        <option value="$PROJECT_DIR$/src/LiquidTemplates.Csharp/Templates/Class/Words/With/ClassTemplateThatBuilder.cs" />
         <option value="$PROJECT_DIR$/src/LiquidTemplates.Csharp/Templates/Class/Words/With/ClassTemplateWithBuilder.cs" />
         <option value="$PROJECT_DIR$/src/LiquidTemplates.Csharp/Templates/Class/Words/That/ClassTemplateBuilderThatExtension.cs" />
         <option value="$PROJECT_DIR$/src/LiquidTemplates.Csharp/Templates/Class/Property/ClassTemplateBuilderWithPropertyExtension.cs" />
@@ -104,6 +94,10 @@
         <option value="$PROJECT_DIR$/src/LiquidTemplates.Csharp/Templates/Class/Property/IPropertyTemplateBuilder.cs" />
         <option value="$PROJECT_DIR$/src/LiquidTemplates.Csharp.Tests/Templates/Class/Property/PropertyAccessorExtensionsTests.cs" />
         <option value="$PROJECT_DIR$/src/LiquidTemplates.Csharp/Templates/Base/PlaceHolderReplacement.cs" />
+        <option value="$PROJECT_DIR$/src/LiquidTemplates.Csharp/Templates/Class/Property/SimpleTypes/IntPropertyTemplateBuilder.cs" />
+        <option value="$PROJECT_DIR$/src/LiquidTemplates.Csharp/Templates/Class/Property/SimpleTypes/FloatPropertyTemplateBuilder.cs" />
+        <option value="$PROJECT_DIR$/src/LiquidTemplates.Csharp/Templates/Class/Property/SimpleTypes/DoublePropertyTemplateBuilder.cs" />
+        <option value="$PROJECT_DIR$/src/LiquidTemplates.Csharp/Templates/Class/Property/SimpleTypes/BoolPropertyTemplateBuilder.cs" />
       </list>
     </option>
   </component>
@@ -150,7 +144,7 @@
       <updated>1606545207603</updated>
       <workItem from="1606545211639" duration="6943000" />
       <workItem from="1606728488998" duration="9011000" />
-      <workItem from="1606833864600" duration="283000" />
+      <workItem from="1606833864600" duration="538000" />
     </task>
     <task id="LOCAL-00001" summary="Rename">
       <created>1606545225651</created>
@@ -250,7 +244,14 @@
       <option name="project" value="LOCAL" />
       <updated>1606817433619</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Refactor">
+      <created>1606836928123</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1606836928123</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
