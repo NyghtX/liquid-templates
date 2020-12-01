@@ -29,9 +29,7 @@
             <e p="TemplatePlaceholder.cs" t="Include" />
           </e>
           <e p="Class" t="Include">
-            <e p="AccessModifier" t="Include">
-              <e p="AccessModifierExtensions.cs" t="Include" />
-            </e>
+            <e p="AccessModifierExtensions.cs" t="Include" />
             <e p="Class.template" t="Include" />
             <e p="ClassTemplateBuilder.cs" t="Include" />
             <e p="ClassTemplatePlaceholder.cs" t="Include" />
@@ -100,6 +98,7 @@
         </e>
         <e p="Templates" t="Include">
           <e p="Class" t="Include">
+            <e p="AccessModifierExtensionsTests.cs" t="Include" />
             <e p="ClassTemplateBuilderTests.cs" t="Include" />
             <e p="Property" t="Include">
               <e p="PropertyAccessorExtensionsTests.cs" t="Include" />

@@ -1,7 +1,7 @@
 using LiquidTemplates.Csharp.Templates.Class.Words.That.Is;
 using LiquidTemplates.Csharp.Templates.Extensions;
 
-namespace LiquidTemplates.Csharp.Templates.Class.AccessModifier
+namespace LiquidTemplates.Csharp.Templates.Class
 {
     public static class AccessModifierExtensions
     {
