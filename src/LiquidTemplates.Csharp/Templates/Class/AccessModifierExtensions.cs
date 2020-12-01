@@ -1,29 +1,30 @@
-using LiquidTemplates.Csharp.Templates.Class.Words.That.Is;
 using LiquidTemplates.Csharp.Templates.Extensions;
+using LiquidTemplates.Csharp.Templates.Words.That.Is;
 
 namespace LiquidTemplates.Csharp.Templates.Class
 {
     public static class AccessModifierExtensions
     {
-        public static IClassTemplateBuilder Private(this ClassTemplateIsBuilder classTemplateIsBuilder)
+        public static IClassTemplateBuilder Private(this TemplateBuilderThatIsBuilder<IClassTemplateBuilder> templateBuilderThatIsBuilder)
         {
-            classTemplateIsBuilder.ClassTemplateBuilder.AddReplacement(
+            templateBuilderThatIsBuilder.TemplateBuilder.AddReplacement(
                 new PlaceHolderReplacement(ClassTemplatePlaceholder.AccessModifier, "private"));
-            return classTemplateIsBuilder.ClassTemplateBuilder;
+            return templateBuilderThatIsBuilder.TemplateBuilder;
         }
-
-        public static IClassTemplateBuilder Public(this ClassTemplateIsBuilder classTemplateIsBuilder)
+        
+        public static IClassTemplateBuilder Public(this TemplateBuilderThatIsBuilder<IClassTemplateBuilder> templateBuilderThatIsBuilder)
         {
-            classTemplateIsBuilder.ClassTemplateBuilder.AddReplacement(
+            templateBuilderThatIsBuilder.TemplateBuilder.AddReplacement(
                 new PlaceHolderReplacement(ClassTemplatePlaceholder.AccessModifier, "public"));
-            return classTemplateIsBuilder.ClassTemplateBuilder;
+            return templateBuilderThatIsBuilder.TemplateBuilder;
         }
-
-        public static IClassTemplateBuilder Internal(this ClassTemplateIsBuilder classTemplateIsBuilder)
+        
+        public static IClassTemplateBuilder Internal(this TemplateBuilderThatIsBuilder<IClassTemplateBuilder> templateBuilderThatIsBuilder)
         {
-            classTemplateIsBuilder.ClassTemplateBuilder.AddReplacement(
+            templateBuilderThatIsBuilder.TemplateBuilder.AddReplacement(
                 new PlaceHolderReplacement(ClassTemplatePlaceholder.AccessModifier, "internal"));
-            return classTemplateIsBuilder.ClassTemplateBuilder;
+            return templateBuilderThatIsBuilder.TemplateBuilder;
         }
+        
     }
 }

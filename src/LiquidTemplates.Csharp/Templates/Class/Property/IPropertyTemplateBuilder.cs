@@ -1,9 +1,8 @@
 using LiquidTemplates.Csharp.Templates.Base;
-using LiquidTemplates.Csharp.Templates.Class.Words.With;
 
 namespace LiquidTemplates.Csharp.Templates.Class.Property
 {
-    public interface IPropertyTemplateBuilder : IClassTemplateBuilderWithBuilder, ITemplateBuilder
+    public interface IPropertyTemplateBuilder : IReplacementBuilder, ITemplateBuilder
     {
         /// <summary>
         ///     Gibt der Property einen Namen

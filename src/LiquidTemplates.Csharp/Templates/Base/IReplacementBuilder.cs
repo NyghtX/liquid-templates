@@ -1,8 +1,8 @@
 using LiquidTemplates.Csharp.Templates.Extensions;
 
-namespace LiquidTemplates.Csharp.Templates.Class.Words.With
+namespace LiquidTemplates.Csharp.Templates.Base
 {
-    public interface IClassTemplateBuilderWithBuilder
+    public interface IReplacementBuilder
     {
         /// <summary>
         ///     Holt das Replacement aus dem Builder

@@ -1,14 +1,14 @@
-using LiquidTemplates.Csharp.Templates.Class.Property.Words.That.Has;
 using LiquidTemplates.Csharp.Templates.Extensions;
+using LiquidTemplates.Csharp.Templates.Words.That.Has;
 
 namespace LiquidTemplates.Csharp.Templates.Class.Property
 {
     public static class PropertyAccessorExtensions
     {
-        public static IPropertyTemplateBuilder PrivateSetter(this PropertyTemplateHasBuilder builder)
+        public static IPropertyTemplateBuilder PrivateSetter(this TemplateBuilderThatHasBuilder<IPropertyTemplateBuilder> builder)
         {
-            builder.PropertyTemplateBuilder.AddReplacement(new PlaceHolderReplacement(PropertyTemplatePlaceholder.PropertySetter, "private set;"));
-            return builder.PropertyTemplateBuilder;
+            builder.TemplateBuilder.AddReplacement(new PlaceHolderReplacement(PropertyTemplatePlaceholder.PropertySetter, "private set;"));
+            return builder.TemplateBuilder;
         }
     }
 }

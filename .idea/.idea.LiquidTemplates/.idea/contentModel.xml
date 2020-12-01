@@ -22,6 +22,7 @@
         </e>
         <e p="Templates" t="Include">
           <e p="Base" t="Include">
+            <e p="IReplacementBuilder.cs" t="Include" />
             <e p="ITemplateBuilder.cs" t="Include" />
             <e p="TemplateBuilderBase.cs" t="Include" />
             <e p="TemplateFile.cs" t="Include" />
@@ -44,42 +45,31 @@
                 <e p="SimplePropertyBuilderBase.cs" t="Include" />
                 <e p="StringPropertyTemplateBuilder.cs" t="Include" />
               </e>
-              <e p="Words" t="Include">
-                <e p="That" t="Include">
-                  <e p="Has" t="Include">
-                    <e p="PropertyTemplateHasBuilder.cs" t="Include" />
-                    <e p="PropertyTemplateThatBuilderHasExtension.cs" t="Include" />
-                  </e>
-                  <e p="PropertyTemplateBuilderThatExtension.cs" t="Include" />
-                  <e p="PropertyTemplateThatBuilder.cs" t="Include" />
-                </e>
-                <e p="With" t="Include">
-                  <e p="IPropertyTemplateBuilderWithBuilder.cs" t="Include" />
-                  <e p="PropertyTemplateBuilderWithExtension.cs" t="Include" />
-                </e>
-              </e>
             </e>
             <e p="Using" t="Include">
               <e p="Using.template" t="Include" />
               <e p="UsingTemplate.cs" t="Include" />
             </e>
-            <e p="Words" t="Include">
-              <e p="That" t="Include">
-                <e p="ClassTemplateBuilderThatExtension.cs" t="Include" />
-                <e p="ClassTemplateThatBuilder.cs" t="Include" />
-                <e p="Is" t="Include">
-                  <e p="ClassTemplateIsBuilder.cs" t="Include" />
-                  <e p="ClassTemplateThatBuilderIsExtension.cs" t="Include" />
-                </e>
-              </e>
-              <e p="With" t="Include">
-                <e p="ClassTemplateBuilderWithExtension.cs" t="Include" />
-                <e p="IClassTemplateBuilderWithBuilder.cs" t="Include" />
-              </e>
-            </e>
           </e>
           <e p="Extensions" t="Include">
             <e p="PlaceHolderReplacement.cs" t="Include" />
+          </e>
+          <e p="Words" t="Include">
+            <e p="That" t="Include">
+              <e p="Has" t="Include">
+                <e p="TemplateBuilderThatHasBuilder.cs" t="Include" />
+                <e p="TemplateBuilderThatHasExtension.cs" t="Include" />
+              </e>
+              <e p="Is" t="Include">
+                <e p="TemplateBuilderThatIsBuilder.cs" t="Include" />
+                <e p="TemplateBuilderThatIsExtension.cs" t="Include" />
+              </e>
+              <e p="TemplateBuilderThatBuilder.cs" t="Include" />
+              <e p="TemplateBuilderThatExtension.cs" t="Include" />
+            </e>
+            <e p="With" t="Include">
+              <e p="TemplateBuilderWithExtension.cs" t="Include" />
+            </e>
           </e>
         </e>
         <e p="Tools" t="Include">
