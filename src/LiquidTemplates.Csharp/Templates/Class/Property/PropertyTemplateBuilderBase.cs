@@ -5,10 +5,10 @@ namespace LiquidTemplates.Csharp.Templates.Class.Property
     public abstract class PropertyTemplateBuilderBase : TemplateBuilderBase, IPropertyTemplateBuilder
     {
         /// <summary>
-        /// TemplateFile, das für PropertyTemplates genutzt werden soll
+        ///     TemplateFile, das für PropertyTemplates genutzt werden soll
         /// </summary>
         public static TemplateFile TemplateFile = TemplateFile.From("Templates/Class/Property/Property.template");
-        
+
         public PropertyTemplateBuilderBase() : this(TemplateFile)
         {
         }
