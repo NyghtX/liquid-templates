@@ -24,7 +24,7 @@ namespace LiquidTemplates.Csharp.Tests.Templates.Class
             // => Assert
             template.Should().Contain("private class Testname");
         }
-        
+
         [Fact]
         public void Public()
         {
@@ -40,7 +40,7 @@ namespace LiquidTemplates.Csharp.Tests.Templates.Class
             // => Assert
             template.Should().Contain("public class Testname");
         }
-        
+
         [Fact]
         public void Internal()
         {

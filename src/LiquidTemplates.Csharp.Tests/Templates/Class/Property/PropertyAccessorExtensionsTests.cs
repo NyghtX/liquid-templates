@@ -18,7 +18,7 @@ namespace LiquidTemplates.Csharp.Tests.Templates.Class.Property
             var replacement = StringPropertyTemplateBuilder.Create()
                 .WithName("Testname")
 
-            // => Act
+                // => Act
                 .That().Has().PrivateSetter().GetReplacement();
 
             // => Assert

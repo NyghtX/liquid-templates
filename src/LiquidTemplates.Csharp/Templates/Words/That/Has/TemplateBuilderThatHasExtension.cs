@@ -6,7 +6,9 @@ namespace LiquidTemplates.Csharp.Templates.Words.That.Has
     {
         public static TemplateBuilderThatHasBuilder<TTemplateBuilder> Has<TTemplateBuilder>(
             this TemplateBuilderThatBuilder<TTemplateBuilder> templateThatBuilder)
-            where TTemplateBuilder : ITemplateBuilder =>
-            new TemplateBuilderThatHasBuilder<TTemplateBuilder>(templateThatBuilder.TemplateBuilder);
+            where TTemplateBuilder : ITemplateBuilder
+        {
+            return new TemplateBuilderThatHasBuilder<TTemplateBuilder>(templateThatBuilder.TemplateBuilder);
+        }
     }
 }

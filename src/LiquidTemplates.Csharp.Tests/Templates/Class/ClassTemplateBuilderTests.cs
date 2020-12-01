@@ -17,7 +17,7 @@ namespace LiquidTemplates.Csharp.Tests.Templates.Class
         public void ClassTemplate_Simple_Example()
         {
             // => Arrange
-                TemplateFiles.ClassTemplateFile = TemplateFile.From("Templates/Class/Class.template");
+            TemplateFiles.ClassTemplateFile = TemplateFile.From("Templates/Class/Class.template");
             TemplateFiles.PropertyTemplateFile = TemplateFile.From("Templates/Class/Property/Property.template");
 
             // => Act
