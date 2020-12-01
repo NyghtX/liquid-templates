@@ -17,8 +17,8 @@ namespace LiquidTemplates.Csharp.Templates.Class.Property
             PropertyTemplatePlaceholder.Placeholders)
         {
             // => Default Getter und Setter setzen
-            AddReplacement(new PlaceHolderReplacement("GETTER", "get;"));
-            AddReplacement(new PlaceHolderReplacement("SETTER", "set;"));
+            AddReplacement(new PlaceHolderReplacement(PropertyTemplatePlaceholder.PropertyGetter, "get;"));
+            AddReplacement(new PlaceHolderReplacement(PropertyTemplatePlaceholder.PropertySetter, "set;"));
         }
 
 
