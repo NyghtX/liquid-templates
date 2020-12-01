@@ -7,7 +7,7 @@ namespace LiquidTemplates.Csharp.Templates.Class.Property
     {
         public static IPropertyTemplateBuilder PrivateSetter(this PropertyTemplateHasBuilder builder)
         {
-            builder.PropertyTemplateBuilder.AddReplacement(new PlaceHolderReplacement("SETTER", "private set;"));
+            builder.PropertyTemplateBuilder.AddReplacement(new PlaceHolderReplacement(PropertyTemplatePlaceholder.PropertySetter, "private set;"));
             return builder.PropertyTemplateBuilder;
         }
     }
