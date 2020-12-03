@@ -22,18 +22,12 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="aba93b88-5f68-4dd9-81ef-9a476e241955" name="Default Changelist" comment="Cleanup">
-      <change afterPath="$PROJECT_DIR$/src/LiquidTemplates.Csharp/Templates/Class/Inheritance/Extends/BaseClass.cs" afterDir="false" />
+    <list default="true" id="aba93b88-5f68-4dd9-81ef-9a476e241955" name="Default Changelist" comment="Multiple Replacements">
+      <change afterPath="$PROJECT_DIR$/src/LiquidTemplates.Csharp/Templates/Class/Inheritance/Extends/BaseClassRegistry.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/LiquidTemplates.Csharp/Templates/Class/Inheritance/Extends/IBaseClassRegistry.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.LiquidTemplates/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LiquidTemplates/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.LiquidTemplates/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LiquidTemplates/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/LiquidTemplates.Csharp.Tests/Templates/Class/ClassTemplateBuilderTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/LiquidTemplates.Csharp.Tests/Templates/Class/ClassTemplateBuilderTests.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/LiquidTemplates.Csharp.Tests/Templates/Class/Property/PropertyAccessorExtensionsTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/LiquidTemplates.Csharp.Tests/Templates/Class/Property/PropertyAccessorExtensionsTests.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/LiquidTemplates.Csharp/LiquidTemplates.Csharp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/src/LiquidTemplates.Csharp/LiquidTemplates.Csharp.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/LiquidTemplates.Csharp/Templates/Class/Property/PropertyTemplateBuilderBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/LiquidTemplates.Csharp/Templates/Class/Property/PropertyTemplateBuilderBase.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/LiquidTemplates/Base/ITemplateBuilder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/LiquidTemplates/Base/ITemplateBuilder.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/LiquidTemplates/Base/TemplateBuilderBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/LiquidTemplates/Base/TemplateBuilderBase.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/LiquidTemplates/Replacement/IReplacementBuilder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/LiquidTemplates/Replacement/IReplacementBuilder.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/LiquidTemplates/Words/With/TemplateBuilderWithExtension.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/LiquidTemplates/Words/With/TemplateBuilderWithExtension.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LiquidTemplates.Csharp/Templates/Class/Inheritance/Extends/BaseClass.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/LiquidTemplates.Csharp/Templates/Class/Inheritance/Extends/BaseClass.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,9 +53,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/LiquidTemplates.Csharp/Templates/Class/Property/Property.template" />
-        <option value="$PROJECT_DIR$/src/LiquidTemplates.Csharp/Templates/Class/Property/PropertyTemplatePlaceholder.cs" />
-        <option value="$PROJECT_DIR$/src/LiquidTemplates.Csharp/Templates/Base/TemplateBuilderBase.cs" />
         <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch.cs" />
         <option value="$PROJECT_DIR$/src/LiquidTemplates.Csharp/Templates/Class/Property/Accessor.cs" />
         <option value="$PROJECT_DIR$/src/LiquidTemplates.Csharp/Templates/Class/Property/Words/That/ClassTemplateThatBuilder.cs" />
@@ -103,13 +94,16 @@
         <option value="$PROJECT_DIR$/src/LiquidTemplates.Csharp.Tests/Templates/Class/AccessModifierExtensionsTests.cs" />
         <option value="$PROJECT_DIR$/src/LiquidTemplates.Csharp.Tests/Templates/Class/ClassTemplateBuilderTests.cs" />
         <option value="$PROJECT_DIR$/src/LiquidTemplates.Csharp/Templates/Class/Inheritance/Extends/BaseClassBuilder.cs" />
-        <option value="$PROJECT_DIR$/src/LiquidTemplates.Csharp/Templates/Class/Inheritance/Extends/BaseClass.cs" />
         <option value="$PROJECT_DIR$/src/LiquidTemplates/Replacement/IReplacementBuilder.cs" />
         <option value="$PROJECT_DIR$/src/LiquidTemplates/Base/ITemplateBuilder.cs" />
         <option value="$PROJECT_DIR$/src/LiquidTemplates/Words/With/TemplateBuilderWithExtension.cs" />
         <option value="$PROJECT_DIR$/src/LiquidTemplates.Csharp/Templates/Class/Property/PropertyTemplateBuilderBase.cs" />
         <option value="$PROJECT_DIR$/src/LiquidTemplates.Csharp.Tests/Templates/Class/Property/PropertyAccessorExtensionsTests.cs" />
         <option value="$PROJECT_DIR$/src/LiquidTemplates/Base/TemplateBuilderBase.cs" />
+        <option value="$PROJECT_DIR$/src/LiquidTemplates.Csharp/Templates/Class/Inheritance/Extends/BaseClass.cs" />
+        <option value="$PROJECT_DIR$/src/LiquidTemplates.Csharp/Templates/Class/Inheritance/Extends/BaseClasses.cs" />
+        <option value="$PROJECT_DIR$/src/LiquidTemplates.Csharp/Templates/Class/Inheritance/Extends/IBaseClassRegistry.cs" />
+        <option value="$PROJECT_DIR$/src/LiquidTemplates.Csharp/Templates/Class/Inheritance/Extends/BaseClassRegistry.cs" />
       </list>
     </option>
   </component>
@@ -159,7 +153,7 @@
       <updated>1606545207603</updated>
       <workItem from="1606545211639" duration="6943000" />
       <workItem from="1606728488998" duration="9011000" />
-      <workItem from="1606833864600" duration="4559000" />
+      <workItem from="1606833864600" duration="5438000" />
     </task>
     <task id="LOCAL-00001" summary="Rename">
       <created>1606545225651</created>
@@ -322,7 +316,14 @@
       <option name="project" value="LOCAL" />
       <updated>1606845141522</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="Multiple Replacements">
+      <created>1606974653901</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1606974653901</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -358,7 +359,8 @@
     <MESSAGE value="Solution aufgeräumt" />
     <MESSAGE value="TemplateFile Struktur umgestellt" />
     <MESSAGE value="Cleanup" />
-    <option name="LAST_COMMIT_MESSAGE" value="Cleanup" />
+    <MESSAGE value="Multiple Replacements" />
+    <option name="LAST_COMMIT_MESSAGE" value="Multiple Replacements" />
   </component>
   <component name="WindowStateProjectService">
     <state x="779" y="526" key="ANALYSIS_DLG_com.jetbrains.rider.actions.impl.cleanup.RiderCodeCleanupAction$actionPerformed$dlg$1" timestamp="1606845134116">
@@ -457,10 +459,10 @@
       <screen x="0" y="25" width="2048" height="1255" />
     </state>
     <state x="624" y="389" key="Rider.ProjectTemplateDialog.Size/0.25.2048.1255@0.25.2048.1255" timestamp="1606843064537" />
-    <state x="785" y="271" key="RiderGenerateDialog" timestamp="1606656800423">
+    <state x="785" y="271" key="RiderGenerateDialog" timestamp="1607011642826">
       <screen x="0" y="25" width="2048" height="1255" />
     </state>
-    <state x="785" y="271" key="RiderGenerateDialog/0.25.2048.1255@0.25.2048.1255" timestamp="1606656800423" />
+    <state x="785" y="271" key="RiderGenerateDialog/0.25.2048.1255@0.25.2048.1255" timestamp="1607011642826" />
     <state x="624" y="371" key="Vcs.Push.Dialog.v2" timestamp="1606843457981">
       <screen x="0" y="25" width="2048" height="1255" />
     </state>
@@ -473,10 +475,10 @@
       <screen x="0" y="25" width="2048" height="1255" />
     </state>
     <state x="824" y="566" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.25.2048.1255@0.25.2048.1255" timestamp="1606730412580" />
-    <state x="689" y="309" width="670" height="676" key="search.everywhere.popup" timestamp="1606833149237">
+    <state x="689" y="309" width="670" height="676" key="search.everywhere.popup" timestamp="1607011312337">
       <screen x="0" y="25" width="2048" height="1255" />
     </state>
-    <state x="689" y="309" width="670" height="676" key="search.everywhere.popup/0.25.2048.1255@0.25.2048.1255" timestamp="1606833149237" />
+    <state x="689" y="309" width="670" height="676" key="search.everywhere.popup/0.25.2048.1255@0.25.2048.1255" timestamp="1607011312337" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -76,6 +76,8 @@
             <e p="Inheritance" t="Include">
               <e p="Extends" t="Include">
                 <e p="BaseClass.cs" t="Include" />
+                <e p="BaseClassRegistry.cs" t="Include" />
+                <e p="IBaseClassRegistry.cs" t="Include" />
               </e>
               <e p="Implements" t="Include" />
             </e>
