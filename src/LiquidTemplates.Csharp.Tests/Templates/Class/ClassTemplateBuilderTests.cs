@@ -1,5 +1,6 @@
 using FluentAssertions;
 using LiquidTemplates.Csharp.Templates.Class;
+using LiquidTemplates.Csharp.Templates.Class.Inheritance.Extends;
 using LiquidTemplates.Csharp.Templates.Class.Property;
 using LiquidTemplates.Csharp.Templates.Class.Property.SimpleTypes;
 using LiquidTemplates.Words.That;
@@ -57,13 +58,13 @@ namespace LiquidTemplates.Csharp.Tests.Templates.Class
                 .WithName("MyGeneratedClass")
                 .InNamespace("Nyghtx.Generator.Generated")
                 .That().Is().Public()
-               
+                .With(new BaseClass("TestBase", "MyTestbaseNamespace"))
                 .ToString();
 
             // => Assert
 
             // Klassenname
-            myGeneratedClass.Should().Contain("MyGeneratedClass : MyBase");
+            myGeneratedClass.Should().Contain("MyGeneratedClass : TestBase");
         }
     }
 }

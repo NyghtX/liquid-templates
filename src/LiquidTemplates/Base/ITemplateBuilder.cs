@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using LiquidTemplates.Extensions;
 using LiquidTemplates.Replacement;
 
 namespace LiquidTemplates
@@ -16,5 +17,11 @@ namespace LiquidTemplates
         /// </summary>
         /// <param name="replacements">Replacements, die an verschiedene Placeholder gebracht werden</param>
         public void AddReplacements(IEnumerable<PlaceHolderReplacement> replacements);
+
+        /// <summary>
+        /// Fügt dem Templatebuilder eine Extension hinzu
+        /// </summary>
+        /// <param name="extension">Extension, die dem TemplateBuilder hinzugefügt werden soll</param>
+        public void AddExtension<TExtension>(TExtension extension) where TExtension : ITemplateBuilderExtension;
     }
 }
