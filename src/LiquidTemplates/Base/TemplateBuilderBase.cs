@@ -26,7 +26,7 @@ namespace LiquidTemplates
         /// <summary>
         ///     Replacements, die für das Builden des Templates genutzt werden
         /// </summary>
-        private readonly Dictionary<string, List<PlaceHolderReplacement>> _replacements =
+        protected readonly Dictionary<string, List<PlaceHolderReplacement>> Replacements =
             new Dictionary<string, List<PlaceHolderReplacement>>();
 
         /// <summary>
@@ -44,7 +44,7 @@ namespace LiquidTemplates
 
             // => Replacement Liste initialisieren
             foreach (var placeholdersKey in placeholders.Keys)
-                _replacements.Add(placeholdersKey, new List<PlaceHolderReplacement>());
+                Replacements.Add(placeholdersKey, new List<PlaceHolderReplacement>());
         }
 
         /// <summary>
@@ -56,9 +56,9 @@ namespace LiquidTemplates
             // => Aus liste der Placeholder suchen
             var placeholder = _placeholders[replacement.Placeholder];
             if (!placeholder.Multiple)
-                _replacements[replacement.Placeholder] = new List<PlaceHolderReplacement> {replacement};
+                Replacements[replacement.Placeholder] = new List<PlaceHolderReplacement> {replacement};
             else
-                _replacements[replacement.Placeholder].Add(replacement);
+                Replacements[replacement.Placeholder].Add(replacement);
         }
 
         /// <summary>
@@ -72,12 +72,27 @@ namespace LiquidTemplates
         }
 
         /// <summary>
+        /// Gibt die Liste der registrierten Replacements wieder
+        /// </summary>
+        /// <returns></returns>
+        public IEnumerable<PlaceHolderReplacement> GetReplacementsFor(string identifier) => Replacements[identifier];
+
+        /// <summary>
+        /// Leert die Replacement Liste für einen bestimmten identifier
+        /// </summary>
+        /// <param name="replacementIdentifier">Replaement Identifier, dessen Liste geleert werden soll</param>
+        public void ClearReplacementsFor(string replacementIdentifier) => Replacements[replacementIdentifier] = new List<PlaceHolderReplacement>();
+
+        /// <summary>
         ///     Fügt dem Templatebuilder eine Extension hinzu
         /// </summary>
         /// <param name="extension">Extension, die dem TemplateBuilder hinzugefügt werden soll</param>
-        public void AddExtension<TExtension>(TExtension extension) where TExtension : ITemplateBuilderExtension
-        {
+        public void AddExtension<TExtension>(TExtension extension) where TExtension : ITemplateBuilderExtension =>
             _extensions[typeof(TExtension)].Add(extension);
+
+        public IEnumerable<ITemplateBuilderExtension> GetExtensions()
+        {
+            throw new NotImplementedException();
         }
 
 
@@ -94,7 +109,7 @@ namespace LiquidTemplates
             foreach (var placeholder in _placeholders.Values)
             {
                 // => Replacements für den Placeholder laden
-                var replacements = _replacements[placeholder.Identifier];
+                var replacements = Replacements[placeholder.Identifier];
 
                 // => Validierung
                 if (placeholder.Required && replacements.Count < 1)

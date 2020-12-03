@@ -66,5 +66,25 @@ namespace LiquidTemplates.Csharp.Tests.Templates.Class
             // Klassenname
             myGeneratedClass.Should().Contain("MyGeneratedClass : TestBase");
         }
+        
+        [Fact]
+        public void ClassTemplate_WithBaseAndInterface()
+        {
+            // => Arrange
+
+            // => Act
+            var myGeneratedClass = ClassTemplateBuilder
+                .CreateClass()
+                .WithName("MyGeneratedClass")
+                .InNamespace("Nyghtx.Generator.Generated")
+                .That().Is().Public()
+                .With(new BaseClass("TestBase", "MyTestbaseNamespace"))
+                .ToString();
+
+            // => Assert
+
+            // Klassenname
+            myGeneratedClass.Should().Contain("MyGeneratedClass : TestBase, Testinterface");
+        }
     }
 }

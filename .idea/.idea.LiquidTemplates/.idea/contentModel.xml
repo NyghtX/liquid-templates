@@ -121,9 +121,7 @@
           <e p="Class" t="Include">
             <e p="AccessModifierExtensionsTests.cs" t="Include" />
             <e p="ClassTemplateBuilderTests.cs" t="Include" />
-            <e p="Property" t="Include">
-              <e p="PropertyAccessorExtensionsTests.cs" t="Include" />
-            </e>
+            <e p="Property" t="Include" />
           </e>
         </e>
       </e>

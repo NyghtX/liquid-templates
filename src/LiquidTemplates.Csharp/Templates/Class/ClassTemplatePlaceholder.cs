@@ -15,6 +15,7 @@ namespace LiquidTemplates.Csharp.Templates.Class
         public const string Property = "PROPERTY";
         public const string Method = "METHOD";
         public const string Inheritance = "INHERITANCE";
+        public const string Implements = "IMPLEMENTS";
 
         /// <summary>
         ///     Placeholder, die zur Verfügung stehen
@@ -27,7 +28,8 @@ namespace LiquidTemplates.Csharp.Templates.Class
             {Usings, new TemplatePlaceholder(Usings)},
             {Property, new TemplatePlaceholder(Property)},
             {Method, new TemplatePlaceholder(Method)},
-            {Inheritance, new TemplatePlaceholder(Inheritance)}
+            {Inheritance, new TemplatePlaceholder(Inheritance, true, false)},
+            {Implements, new TemplatePlaceholder(Implements)}
         };
     }
 }

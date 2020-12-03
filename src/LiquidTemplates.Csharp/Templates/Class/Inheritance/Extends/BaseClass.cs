@@ -32,6 +32,7 @@ namespace LiquidTemplates.Csharp.Templates.Class.Inheritance.Extends
         public IEnumerable<PlaceHolderReplacement> GetReplacements()
         {
             // => Usings
+            yield return new PlaceHolderReplacement(ClassTemplatePlaceholder.Usings, Namespace);
 
             // => Inheritance
             yield return new PlaceHolderReplacement(ClassTemplatePlaceholder.Inheritance, ClassName);

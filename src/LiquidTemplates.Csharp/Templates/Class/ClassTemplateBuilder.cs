@@ -1,4 +1,7 @@
 using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
 using LiquidTemplates.Replacement;
 
 namespace LiquidTemplates.Csharp.Templates.Class
@@ -48,6 +51,52 @@ namespace LiquidTemplates.Csharp.Templates.Class
         public static IClassTemplateBuilder CreateClass()
         {
             return new ClassTemplateBuilder(TemplateFile);
+        }
+
+        public override string ToString()
+        {
+            // => Usings
+            var usedNamespaces = new HashSet<string>();
+            var usingStringBuilder = new StringBuilder();
+            var usings = Replacements.Single(x => x.Key == ClassTemplatePlaceholder.Usings).Value;
+            foreach (var usedNamespace in usings.Where(usedNamespace =>
+                !usedNamespaces.Contains(usedNamespace.ReplaceWith)))
+            {
+                // => Namespace hinzufügen
+                usingStringBuilder.Append($"using {usedNamespace.ReplaceWith};");       
+                usedNamespaces.Add(usedNamespace.ReplaceWith);
+            }
+            
+            // => Alte Using Replacements entfernen und neues Replacement hinzufügen
+            ClearReplacementsFor(ClassTemplatePlaceholder.Usings);
+            AddReplacement(new PlaceHolderReplacement(ClassTemplatePlaceholder.Usings, usingStringBuilder.ToString()));
+            
+            // => Inheritance
+            var inheritanceBuilder = new StringBuilder(" : ");
+            
+            // => Prüfen, ob die Klasse eine BaseClass erweitert
+            var baseClass = Replacements.Single(x => x.Key == ClassTemplatePlaceholder.Inheritance).Value
+                .SingleOrDefault();
+            if (baseClass != null)
+                inheritanceBuilder.Append(baseClass.ReplaceWith);
+
+
+            // => Prüfen, ob es Interfaces gibt, welche die Klasse implementiert
+            var implementsList = new HashSet<string>();
+            var implements = Replacements.Single(x => x.Key == ClassTemplatePlaceholder.Implements).Value;
+            foreach (var implement in implements.Select(x => x.ReplaceWith))
+            {
+                implementsList.Add(implement);
+                inheritanceBuilder.Append($"{implement}, ");
+            }
+
+            // => Inheritance builden
+            var inheritance = inheritanceBuilder.ToString();
+
+            ClearReplacementsFor(ClassTemplatePlaceholder.Inheritance);
+            AddReplacement(new PlaceHolderReplacement(ClassTemplatePlaceholder.Inheritance, inheritance != " : " ? inheritance : string.Empty));
+
+            return base.ToString();
         }
     }
 }
