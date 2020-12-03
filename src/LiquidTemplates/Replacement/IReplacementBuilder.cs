@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+
 namespace LiquidTemplates.Replacement
 {
     public interface IReplacementBuilder
@@ -6,6 +8,6 @@ namespace LiquidTemplates.Replacement
         ///     Holt das Replacement aus dem Builder
         /// </summary>
         /// <returns></returns>
-        PlaceHolderReplacement GetReplacement();
+        IEnumerable<PlaceHolderReplacement> GetReplacements();
     }
 }

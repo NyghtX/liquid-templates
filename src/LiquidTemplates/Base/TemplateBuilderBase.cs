@@ -51,6 +51,12 @@ namespace LiquidTemplates
                 _replacements[replacement.Placeholder].Add(replacement);
         }
 
+        public void AddReplacements(IEnumerable<PlaceHolderReplacement> replacements)
+        {
+            foreach (var placeHolderReplacement in replacements)
+                AddReplacement(placeHolderReplacement);
+        }
+
         public override string ToString()
         {
             var sb = new StringBuilder(Source.Content);

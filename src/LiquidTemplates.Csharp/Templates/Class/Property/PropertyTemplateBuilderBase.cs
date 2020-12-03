@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using LiquidTemplates.Replacement;
 
 namespace LiquidTemplates.Csharp.Templates.Class.Property
@@ -26,9 +27,12 @@ namespace LiquidTemplates.Csharp.Templates.Class.Property
         ///     Holt das Replacement aus dem Builder
         /// </summary>
         /// <returns></returns>
-        public PlaceHolderReplacement GetReplacement()
+        public IEnumerable<PlaceHolderReplacement> GetReplacements()
         {
-            return new PlaceHolderReplacement(ClassTemplatePlaceholder.Property, ToString());
+            return new[]
+            {
+                new PlaceHolderReplacement(ClassTemplatePlaceholder.Property, ToString())
+            };
         }
 
         public IPropertyTemplateBuilder WithName(string name)

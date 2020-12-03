@@ -1,3 +1,4 @@
+using System.Linq;
 using FluentAssertions;
 using LiquidTemplates.Csharp.Templates.Class.Property;
 using LiquidTemplates.Csharp.Templates.Class.Property.SimpleTypes;
@@ -17,10 +18,10 @@ namespace LiquidTemplates.Csharp.Tests.Templates.Class.Property
                 .WithName("Testname")
 
                 // => Act
-                .That().Has().PrivateSetter().GetReplacement();
+                .That().Has().PrivateSetter().GetReplacements();
 
             // => Assert
-            replacement.ReplaceWith.Should().Contain("private set;");
+            replacement.First().ReplaceWith.Should().Contain("private set;");
         }
     }
 }

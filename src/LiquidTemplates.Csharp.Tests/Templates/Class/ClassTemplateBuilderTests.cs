@@ -45,5 +45,25 @@ namespace LiquidTemplates.Csharp.Tests.Templates.Class
             // Property
             myGeneratedClass.Should().Contain("public string Vorname {get; private set;}");
         }
+        
+        [Fact]
+        public void ClassTemplate_WithBase()
+        {
+            // => Arrange
+
+            // => Act
+            var myGeneratedClass = ClassTemplateBuilder
+                .CreateClass()
+                .WithName("MyGeneratedClass")
+                .InNamespace("Nyghtx.Generator.Generated")
+                .That().Is().Public()
+               
+                .ToString();
+
+            // => Assert
+
+            // Klassenname
+            myGeneratedClass.Should().Contain("MyGeneratedClass : MyBase");
+        }
     }
 }

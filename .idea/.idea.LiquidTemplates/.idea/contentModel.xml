@@ -73,6 +73,12 @@
             <e p="ClassTemplateBuilder.cs" t="Include" />
             <e p="ClassTemplatePlaceholder.cs" t="Include" />
             <e p="IClassTemplateBuilder.cs" t="Include" />
+            <e p="Inheritance" t="Include">
+              <e p="Extends" t="Include">
+                <e p="BaseClass.cs" t="Include" />
+              </e>
+              <e p="Implements" t="Include" />
+            </e>
             <e p="Property" t="Include">
               <e p="IPropertyTemplateBuilder.cs" t="Include" />
               <e p="Property.template" t="Include" />
