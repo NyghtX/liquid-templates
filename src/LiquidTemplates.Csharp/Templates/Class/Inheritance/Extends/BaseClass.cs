@@ -4,7 +4,7 @@ using LiquidTemplates.Replacement;
 namespace LiquidTemplates.Csharp.Templates.Class.Inheritance.Extends
 {
     /// <summary>
-    /// Base Class Builder
+    ///     Base Class Builder
     /// </summary>
     public class BaseClass : IReplacementBuilder
     {
@@ -15,12 +15,12 @@ namespace LiquidTemplates.Csharp.Templates.Class.Inheritance.Extends
         }
 
         /// <summary>
-        /// Name der Baseclass
+        ///     Name der Baseclass
         /// </summary>
         public string ClassName { get; }
 
         /// <summary>
-        /// Namespace, in dem die Baseclass sich befindet
+        ///     Namespace, in dem die Baseclass sich befindet
         /// </summary>
         public string Namespace { get; }
 

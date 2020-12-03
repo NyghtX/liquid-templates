@@ -11,7 +11,7 @@ namespace LiquidTemplates
         /// </summary>
         /// <param name="replacement">Replacement, dass an den Placeholder gebracht wird</param>
         public void AddReplacement(PlaceHolderReplacement replacement);
-        
+
         /// <summary>
         ///     Fügt der List der Replacements mehrere Einträge hinzu
         /// </summary>
@@ -19,7 +19,7 @@ namespace LiquidTemplates
         public void AddReplacements(IEnumerable<PlaceHolderReplacement> replacements);
 
         /// <summary>
-        /// Fügt dem Templatebuilder eine Extension hinzu
+        ///     Fügt dem Templatebuilder eine Extension hinzu
         /// </summary>
         /// <param name="extension">Extension, die dem TemplateBuilder hinzugefügt werden soll</param>
         public void AddExtension<TExtension>(TExtension extension) where TExtension : ITemplateBuilderExtension;

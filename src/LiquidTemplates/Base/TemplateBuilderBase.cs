@@ -1,6 +1,5 @@
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Text;
 using LiquidTemplates.Extensions;
 using LiquidTemplates.Replacement;
@@ -14,6 +13,12 @@ namespace LiquidTemplates
     public abstract class TemplateBuilderBase : ITemplateBuilder
     {
         /// <summary>
+        ///     Extensions, die für den ITemplateBuilder registriert sind
+        /// </summary>
+        private readonly Dictionary<Type, List<ITemplateBuilderExtension>> _extensions =
+            new Dictionary<Type, List<ITemplateBuilderExtension>>();
+
+        /// <summary>
         ///     Platzhalter, die im Template ersetzt werden können
         /// </summary>
         private readonly Dictionary<string, TemplatePlaceholder> _placeholders;
@@ -23,11 +28,6 @@ namespace LiquidTemplates
         /// </summary>
         private readonly Dictionary<string, List<PlaceHolderReplacement>> _replacements =
             new Dictionary<string, List<PlaceHolderReplacement>>();
-        
-        /// <summary>
-        /// Extensions, die für den ITemplateBuilder registriert sind
-        /// </summary>
-        private readonly Dictionary<Type, List<ITemplateBuilderExtension>> _extensions = new Dictionary<Type, List<ITemplateBuilderExtension>>();
 
         /// <summary>
         ///     Source Template
@@ -38,7 +38,7 @@ namespace LiquidTemplates
         {
             Source = templateFile;
             _placeholders = placeholders;
-            
+
             // => Extension List initialisieren
             _extensions.Add(typeof(ITemplateBuilderBeforeReplacementExtension), new List<ITemplateBuilderExtension>());
 
@@ -72,11 +72,13 @@ namespace LiquidTemplates
         }
 
         /// <summary>
-        /// Fügt dem Templatebuilder eine Extension hinzu
+        ///     Fügt dem Templatebuilder eine Extension hinzu
         /// </summary>
         /// <param name="extension">Extension, die dem TemplateBuilder hinzugefügt werden soll</param>
-        public void AddExtension<TExtension>(TExtension extension) where TExtension : ITemplateBuilderExtension =>
+        public void AddExtension<TExtension>(TExtension extension) where TExtension : ITemplateBuilderExtension
+        {
             _extensions[typeof(TExtension)].Add(extension);
+        }
 
 
         public override string ToString()
@@ -87,7 +89,7 @@ namespace LiquidTemplates
             if (TryGetExtensions<ITemplateBuilderBeforeReplacementExtension>(out var extensions))
                 foreach (var templateBuilderBeforeReplacementExtension in extensions)
                     templateBuilderBeforeReplacementExtension.Execute(this);
-            
+
             // => Placeholder durchgehen
             foreach (var placeholder in _placeholders.Values)
             {
@@ -113,12 +115,13 @@ namespace LiquidTemplates
 
 
         /// <summary>
-        /// Versucht eine Extension für den Typen zu finden
+        ///     Versucht eine Extension für den Typen zu finden
         /// </summary>
         /// <param name="extensions">Extensions, die gefunden wurde</param>
         /// <typeparam name="TExtensionType"></typeparam>
         /// <returns></returns>
-        private bool TryGetExtensions<TExtensionType>(out List<TExtensionType> extensions) where TExtensionType : ITemplateBuilderExtension
+        private bool TryGetExtensions<TExtensionType>(out List<TExtensionType> extensions)
+            where TExtensionType : ITemplateBuilderExtension
         {
             extensions = _extensions[typeof(TExtensionType)] as List<TExtensionType>;
 
