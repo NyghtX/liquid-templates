@@ -1,6 +1,8 @@
+using System.Collections.Generic;
 using FluentAssertions;
 using LiquidTemplates.Csharp.Templates.Class;
 using LiquidTemplates.Csharp.Templates.Class.Inheritance.Extends;
+using LiquidTemplates.Replacement;
 using LiquidTemplates.Words.That;
 using LiquidTemplates.Words.That.Is;
 using Xunit;
@@ -15,28 +17,23 @@ namespace LiquidTemplates.Csharp.Tests.Templates.Class.Inheritance.Extends
             // => Arrange
 
             // => Act
-            var myGeneratedClass = ClassTemplateBuilder
-                .CreateClass()
-                .WithName("MyGeneratedClass")
-                .InNamespace("Nyghtx.Generator.Generated")
-                .That().Is().Public()
-                .That().Extends(new BaseClass("TestBase", "MyTestbaseNamespace"))
-                .ToString();
-
-            // => Assert
-
-            // Klassenname
-            myGeneratedClass.Should().Contain("MyGeneratedClass : TestBase");
-        }
-
-        [Fact]
-        public void Overrides()
-        {
-            // => Arrange
-            var baseClass = new BaseClass("TestBase", "MyTestbaseNamespace");
-
-
-            // => Act
+            var implementations = new List<string>()
+            {
+                "public override void Test() {int i = [IVALUE];}"
+            };
+            var templatePlaceholders = new List<TemplatePlaceholder>()
+            {
+                new TemplatePlaceholder("IVALUE", true, false)
+            };
+            var replacements = new Dictionary<string, List<PlaceHolderReplacement>>()
+            {
+                {"IVALUE", new List<PlaceHolderReplacement>()
+                {
+                    new PlaceHolderReplacement("IVALUE", "5")
+                }}
+            };
+            
+            var baseClass = new BaseClass("TestBase", "MyTestbaseNamespace", implementations, templatePlaceholders, replacements);
             var myGeneratedClass = ClassTemplateBuilder
                 .CreateClass()
                 .WithName("MyGeneratedClass")
@@ -49,6 +46,9 @@ namespace LiquidTemplates.Csharp.Tests.Templates.Class.Inheritance.Extends
 
             // Klassenname
             myGeneratedClass.Should().Contain("MyGeneratedClass : TestBase");
+            
+            myGeneratedClass.Should().Contain("public override void Test() {int i = 5;}");
+
         }
     }
 }
