@@ -14,6 +14,9 @@
       <e p="LiquidTemplates.sln" t="IncludeFlat" />
       <e p="packages" t="ExcludeRecursive" />
       <e p="src/LiquidTemplates" t="IncludeRecursive">
+        <e p="Addition" t="Include">
+          <e p="ITemplateBuilderAddition.cs" t="Include" />
+        </e>
         <e p="Base" t="Include">
           <e p="ITemplateBuilder.cs" t="Include" />
           <e p="TemplateBuilderBase.cs" t="Include" />
