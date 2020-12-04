@@ -39,6 +39,7 @@
         <e p="Replacement" t="Include">
           <e p="IReplacementBuilder.cs" t="Include" />
           <e p="PlaceHolderReplacement.cs" t="Include" />
+          <e p="PlaceholderReplacer.cs" t="Include" />
           <e p="TemplatePlaceholder.cs" t="Include" />
         </e>
         <e p="Tools" t="Include">
@@ -131,6 +132,9 @@
             <e p="AccessModifierExtensionsTests.cs" t="Include" />
             <e p="ClassTemplateBuilderTests.cs" t="Include" />
             <e p="Inheritance" t="Include">
+              <e p="Extends" t="Include">
+                <e p="ClassExtendsTests.cs" t="Include" />
+              </e>
               <e p="Implements" t="Include">
                 <e p="ClassImplementsTests.cs" t="Include" />
               </e>

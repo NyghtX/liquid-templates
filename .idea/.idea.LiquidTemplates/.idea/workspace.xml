@@ -22,11 +22,14 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="aba93b88-5f68-4dd9-81ef-9a476e241955" name="Default Changelist" comment="Cleanup">
-      <change afterPath="$PROJECT_DIR$/src/LiquidTemplates.Csharp.Tests/Templates/Class/Inheritance/Implements/ClassImplementsTests.cs" afterDir="false" />
+    <list default="true" id="aba93b88-5f68-4dd9-81ef-9a476e241955" name="Default Changelist" comment="Implements">
+      <change afterPath="$PROJECT_DIR$/src/LiquidTemplates.Csharp.Tests/Templates/Class/Inheritance/Extends/ClassExtendsTests.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/LiquidTemplates/Replacement/PlaceholderReplacer.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.LiquidTemplates/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LiquidTemplates/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.LiquidTemplates/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LiquidTemplates/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/LiquidTemplates.Csharp.Tests/Templates/Class/ClassTemplateBuilderTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/LiquidTemplates.Csharp.Tests/Templates/Class/ClassTemplateBuilderTests.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LiquidTemplates.Csharp/Templates/Class/Inheritance/Extends/BaseClass.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/LiquidTemplates.Csharp/Templates/Class/Inheritance/Extends/BaseClass.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LiquidTemplates/Base/TemplateBuilderBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/LiquidTemplates/Base/TemplateBuilderBase.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,10 +57,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/LiquidTemplates.Csharp/Tools/StringBuilderExtensions.cs" />
-        <option value="$PROJECT_DIR$/src/LiquidTemplates.Csharp/Templates/Words/With/IReplacementBuilder.cs" />
-        <option value="$PROJECT_DIR$/src/LiquidTemplates.Csharp/Templates/Base/IReplacementBuilder.cs" />
-        <option value="$PROJECT_DIR$/src/LiquidTemplates.Csharp/Templates/Words/With/TemplateBuilderWithExtension.cs" />
         <option value="$PROJECT_DIR$/src/LiquidTemplates.Csharp/Templates/Words/That/Is/TemplateBuilderThatIsBuilder.cs" />
         <option value="$PROJECT_DIR$/src/LiquidTemplates.Csharp/Templates/Class/AccessModifierExtensions.cs" />
         <option value="$PROJECT_DIR$/src/LiquidTemplates.Csharp/Templates/Words/That/TemplateBuilderThatBuilder.cs" />
@@ -97,14 +96,18 @@
         <option value="$PROJECT_DIR$/src/LiquidTemplates.Csharp/Templates/Class/Inheritance/Implements/ThatExtension.cs" />
         <option value="$PROJECT_DIR$/src/LiquidTemplates.Csharp/Templates/Class/Inheritance/Implements/InterfaceImplementation.cs" />
         <option value="$PROJECT_DIR$/src/LiquidTemplates/Words/With/TemplateBuilderWithExtension.cs" />
-        <option value="$PROJECT_DIR$/src/LiquidTemplates.Csharp/Templates/Class/Inheritance/Extends/BaseClass.cs" />
         <option value="$PROJECT_DIR$/src/LiquidTemplates/Addition/ITemplateBuilderAddition.cs" />
-        <option value="$PROJECT_DIR$/src/LiquidTemplates/Base/TemplateBuilderBase.cs" />
         <option value="$PROJECT_DIR$/src/LiquidTemplates/Base/ITemplateBuilder.cs" />
         <option value="$PROJECT_DIR$/src/LiquidTemplates.Csharp/Templates/Class/Inheritance/Extends/ThatExtension.cs" />
         <option value="$PROJECT_DIR$/src/LiquidTemplates.Csharp/Templates/Class/ClassTemplateBuilder.cs" />
-        <option value="$PROJECT_DIR$/src/LiquidTemplates.Csharp.Tests/Templates/Class/ClassTemplateBuilderTests.cs" />
         <option value="$PROJECT_DIR$/src/LiquidTemplates.Csharp.Tests/Templates/Class/Inheritance/Implements/ClassImplementsTests.cs" />
+        <option value="$PROJECT_DIR$/src/LiquidTemplates.Csharp.Tests/Templates/Class/ClassTemplateBuilderTests.cs" />
+        <option value="$PROJECT_DIR$/src/LiquidTemplates.Csharp.Tests/Templates/Class/Inheritance/Extends/ClassExtendsTests.cs" />
+        <option value="$PROJECT_DIR$/src/LiquidTemplates.Csharp/Templates/Class/Inheritance/IHasImplementation.cs" />
+        <option value="$PROJECT_DIR$/src/LiquidTemplates.Csharp/Templates/Class/Inheritance/HasImplementationBase.cs" />
+        <option value="$PROJECT_DIR$/src/LiquidTemplates.Csharp/Templates/Class/Inheritance/Extends/BaseClass.cs" />
+        <option value="$PROJECT_DIR$/src/LiquidTemplates/Replacement/PlaceholderReplacer.cs" />
+        <option value="$PROJECT_DIR$/src/LiquidTemplates/Base/TemplateBuilderBase.cs" />
       </list>
     </option>
   </component>
@@ -154,7 +157,7 @@
       <updated>1606545207603</updated>
       <workItem from="1606545211639" duration="6943000" />
       <workItem from="1606728488998" duration="9011000" />
-      <workItem from="1606833864600" duration="15934000" />
+      <workItem from="1606833864600" duration="17448000" />
     </task>
     <task id="LOCAL-00001" summary="Rename">
       <created>1606545225651</created>
@@ -394,7 +397,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607071109069</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="Implements">
+      <created>1607071406015</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1607071406015</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -438,7 +448,8 @@
     <MESSAGE value="That Extends" />
     <MESSAGE value="AppendLine bei Usings" />
     <MESSAGE value="Cleanup" />
-    <option name="LAST_COMMIT_MESSAGE" value="Cleanup" />
+    <MESSAGE value="Implements" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implements" />
   </component>
   <component name="WindowStateProjectService">
     <state x="871" y="327" key="#xdebugger.XInspectDialog" timestamp="1607061198603">
@@ -457,86 +468,86 @@
       <screen x="0" y="25" width="2048" height="1255" />
     </state>
     <state x="870" y="567" key="Github.Dialog.Accounts.Choose/0.25.2048.1255@0.25.2048.1255" timestamp="1606545233371" />
-    <state width="2006" height="446" key="GridCell.Tab.0.bottom" timestamp="1607061228656">
+    <state width="2006" height="446" key="GridCell.Tab.0.bottom" timestamp="1607071401521">
       <screen x="0" y="25" width="2048" height="1255" />
     </state>
-    <state width="2006" height="446" key="GridCell.Tab.0.bottom/0.25.2048.1255@0.25.2048.1255" timestamp="1607061228656" />
-    <state width="2006" height="446" key="GridCell.Tab.0.center" timestamp="1607061228655">
+    <state width="2006" height="446" key="GridCell.Tab.0.bottom/0.25.2048.1255@0.25.2048.1255" timestamp="1607071401521" />
+    <state width="2006" height="446" key="GridCell.Tab.0.center" timestamp="1607071401521">
       <screen x="0" y="25" width="2048" height="1255" />
     </state>
-    <state width="2006" height="446" key="GridCell.Tab.0.center/0.25.2048.1255@0.25.2048.1255" timestamp="1607061228655" />
-    <state width="2006" height="446" key="GridCell.Tab.0.left" timestamp="1607061228654">
+    <state width="2006" height="446" key="GridCell.Tab.0.center/0.25.2048.1255@0.25.2048.1255" timestamp="1607071401521" />
+    <state width="2006" height="446" key="GridCell.Tab.0.left" timestamp="1607071401520">
       <screen x="0" y="25" width="2048" height="1255" />
     </state>
-    <state width="2006" height="446" key="GridCell.Tab.0.left/0.25.2048.1255@0.25.2048.1255" timestamp="1607061228654" />
-    <state width="2006" height="446" key="GridCell.Tab.0.right" timestamp="1607061228655">
+    <state width="2006" height="446" key="GridCell.Tab.0.left/0.25.2048.1255@0.25.2048.1255" timestamp="1607071401520" />
+    <state width="2006" height="446" key="GridCell.Tab.0.right" timestamp="1607071401521">
       <screen x="0" y="25" width="2048" height="1255" />
     </state>
-    <state width="2006" height="446" key="GridCell.Tab.0.right/0.25.2048.1255@0.25.2048.1255" timestamp="1607061228655" />
-    <state width="2006" height="446" key="GridCell.Tab.1.bottom" timestamp="1607061228657">
+    <state width="2006" height="446" key="GridCell.Tab.0.right/0.25.2048.1255@0.25.2048.1255" timestamp="1607071401521" />
+    <state width="2006" height="446" key="GridCell.Tab.1.bottom" timestamp="1607071401522">
       <screen x="0" y="25" width="2048" height="1255" />
     </state>
-    <state width="2006" height="446" key="GridCell.Tab.1.bottom/0.25.2048.1255@0.25.2048.1255" timestamp="1607061228657" />
-    <state width="2006" height="446" key="GridCell.Tab.1.center" timestamp="1607061228656">
+    <state width="2006" height="446" key="GridCell.Tab.1.bottom/0.25.2048.1255@0.25.2048.1255" timestamp="1607071401522" />
+    <state width="2006" height="446" key="GridCell.Tab.1.center" timestamp="1607071401521">
       <screen x="0" y="25" width="2048" height="1255" />
     </state>
-    <state width="2006" height="446" key="GridCell.Tab.1.center/0.25.2048.1255@0.25.2048.1255" timestamp="1607061228656" />
-    <state width="2006" height="446" key="GridCell.Tab.1.left" timestamp="1607061228656">
+    <state width="2006" height="446" key="GridCell.Tab.1.center/0.25.2048.1255@0.25.2048.1255" timestamp="1607071401521" />
+    <state width="2006" height="446" key="GridCell.Tab.1.left" timestamp="1607071401521">
       <screen x="0" y="25" width="2048" height="1255" />
     </state>
-    <state width="2006" height="446" key="GridCell.Tab.1.left/0.25.2048.1255@0.25.2048.1255" timestamp="1607061228656" />
-    <state width="2006" height="446" key="GridCell.Tab.1.right" timestamp="1607061228656">
+    <state width="2006" height="446" key="GridCell.Tab.1.left/0.25.2048.1255@0.25.2048.1255" timestamp="1607071401521" />
+    <state width="2006" height="446" key="GridCell.Tab.1.right" timestamp="1607071401522">
       <screen x="0" y="25" width="2048" height="1255" />
     </state>
-    <state width="2006" height="446" key="GridCell.Tab.1.right/0.25.2048.1255@0.25.2048.1255" timestamp="1607061228656" />
-    <state width="2006" height="446" key="GridCell.Tab.2.bottom" timestamp="1607061228657">
+    <state width="2006" height="446" key="GridCell.Tab.1.right/0.25.2048.1255@0.25.2048.1255" timestamp="1607071401522" />
+    <state width="2006" height="446" key="GridCell.Tab.2.bottom" timestamp="1607071401523">
       <screen x="0" y="25" width="2048" height="1255" />
     </state>
-    <state width="2006" height="446" key="GridCell.Tab.2.bottom/0.25.2048.1255@0.25.2048.1255" timestamp="1607061228657" />
-    <state width="2006" height="446" key="GridCell.Tab.2.center" timestamp="1607061228657">
+    <state width="2006" height="446" key="GridCell.Tab.2.bottom/0.25.2048.1255@0.25.2048.1255" timestamp="1607071401523" />
+    <state width="2006" height="446" key="GridCell.Tab.2.center" timestamp="1607071401522">
       <screen x="0" y="25" width="2048" height="1255" />
     </state>
-    <state width="2006" height="446" key="GridCell.Tab.2.center/0.25.2048.1255@0.25.2048.1255" timestamp="1607061228657" />
-    <state width="2006" height="446" key="GridCell.Tab.2.left" timestamp="1607061228657">
+    <state width="2006" height="446" key="GridCell.Tab.2.center/0.25.2048.1255@0.25.2048.1255" timestamp="1607071401522" />
+    <state width="2006" height="446" key="GridCell.Tab.2.left" timestamp="1607071401522">
       <screen x="0" y="25" width="2048" height="1255" />
     </state>
-    <state width="2006" height="446" key="GridCell.Tab.2.left/0.25.2048.1255@0.25.2048.1255" timestamp="1607061228657" />
-    <state width="2006" height="446" key="GridCell.Tab.2.right" timestamp="1607061228657">
+    <state width="2006" height="446" key="GridCell.Tab.2.left/0.25.2048.1255@0.25.2048.1255" timestamp="1607071401522" />
+    <state width="2006" height="446" key="GridCell.Tab.2.right" timestamp="1607071401522">
       <screen x="0" y="25" width="2048" height="1255" />
     </state>
-    <state width="2006" height="446" key="GridCell.Tab.2.right/0.25.2048.1255@0.25.2048.1255" timestamp="1607061228657" />
-    <state width="2006" height="446" key="GridCell.Tab.3.bottom" timestamp="1607061228658">
+    <state width="2006" height="446" key="GridCell.Tab.2.right/0.25.2048.1255@0.25.2048.1255" timestamp="1607071401522" />
+    <state width="2006" height="446" key="GridCell.Tab.3.bottom" timestamp="1607071401523">
       <screen x="0" y="25" width="2048" height="1255" />
     </state>
-    <state width="2006" height="446" key="GridCell.Tab.3.bottom/0.25.2048.1255@0.25.2048.1255" timestamp="1607061228658" />
-    <state width="2006" height="446" key="GridCell.Tab.3.center" timestamp="1607061228658">
+    <state width="2006" height="446" key="GridCell.Tab.3.bottom/0.25.2048.1255@0.25.2048.1255" timestamp="1607071401523" />
+    <state width="2006" height="446" key="GridCell.Tab.3.center" timestamp="1607071401523">
       <screen x="0" y="25" width="2048" height="1255" />
     </state>
-    <state width="2006" height="446" key="GridCell.Tab.3.center/0.25.2048.1255@0.25.2048.1255" timestamp="1607061228658" />
-    <state width="2006" height="446" key="GridCell.Tab.3.left" timestamp="1607061228658">
+    <state width="2006" height="446" key="GridCell.Tab.3.center/0.25.2048.1255@0.25.2048.1255" timestamp="1607071401523" />
+    <state width="2006" height="446" key="GridCell.Tab.3.left" timestamp="1607071401523">
       <screen x="0" y="25" width="2048" height="1255" />
     </state>
-    <state width="2006" height="446" key="GridCell.Tab.3.left/0.25.2048.1255@0.25.2048.1255" timestamp="1607061228658" />
-    <state width="2006" height="446" key="GridCell.Tab.3.right" timestamp="1607061228658">
+    <state width="2006" height="446" key="GridCell.Tab.3.left/0.25.2048.1255@0.25.2048.1255" timestamp="1607071401523" />
+    <state width="2006" height="446" key="GridCell.Tab.3.right" timestamp="1607071401523">
       <screen x="0" y="25" width="2048" height="1255" />
     </state>
-    <state width="2006" height="446" key="GridCell.Tab.3.right/0.25.2048.1255@0.25.2048.1255" timestamp="1607061228658" />
-    <state width="2006" height="446" key="GridCell.Tab.4.bottom" timestamp="1607061228659">
+    <state width="2006" height="446" key="GridCell.Tab.3.right/0.25.2048.1255@0.25.2048.1255" timestamp="1607071401523" />
+    <state width="2006" height="446" key="GridCell.Tab.4.bottom" timestamp="1607071401524">
       <screen x="0" y="25" width="2048" height="1255" />
     </state>
-    <state width="2006" height="446" key="GridCell.Tab.4.bottom/0.25.2048.1255@0.25.2048.1255" timestamp="1607061228659" />
-    <state width="2006" height="446" key="GridCell.Tab.4.center" timestamp="1607061228659">
+    <state width="2006" height="446" key="GridCell.Tab.4.bottom/0.25.2048.1255@0.25.2048.1255" timestamp="1607071401524" />
+    <state width="2006" height="446" key="GridCell.Tab.4.center" timestamp="1607071401524">
       <screen x="0" y="25" width="2048" height="1255" />
     </state>
-    <state width="2006" height="446" key="GridCell.Tab.4.center/0.25.2048.1255@0.25.2048.1255" timestamp="1607061228659" />
-    <state width="2006" height="446" key="GridCell.Tab.4.left" timestamp="1607061228658">
+    <state width="2006" height="446" key="GridCell.Tab.4.center/0.25.2048.1255@0.25.2048.1255" timestamp="1607071401524" />
+    <state width="2006" height="446" key="GridCell.Tab.4.left" timestamp="1607071401523">
       <screen x="0" y="25" width="2048" height="1255" />
     </state>
-    <state width="2006" height="446" key="GridCell.Tab.4.left/0.25.2048.1255@0.25.2048.1255" timestamp="1607061228658" />
-    <state width="2006" height="446" key="GridCell.Tab.4.right" timestamp="1607061228659">
+    <state width="2006" height="446" key="GridCell.Tab.4.left/0.25.2048.1255@0.25.2048.1255" timestamp="1607071401523" />
+    <state width="2006" height="446" key="GridCell.Tab.4.right" timestamp="1607071401524">
       <screen x="0" y="25" width="2048" height="1255" />
     </state>
-    <state width="2006" height="446" key="GridCell.Tab.4.right/0.25.2048.1255@0.25.2048.1255" timestamp="1607061228659" />
+    <state width="2006" height="446" key="GridCell.Tab.4.right/0.25.2048.1255@0.25.2048.1255" timestamp="1607071401524" />
     <state x="624" y="389" key="Rider.ProjectTemplateDialog.Size" timestamp="1606843064537">
       <screen x="0" y="25" width="2048" height="1255" />
     </state>
@@ -549,10 +560,10 @@
       <screen x="0" y="25" width="2048" height="1255" />
     </state>
     <state x="624" y="371" key="Vcs.Push.Dialog.v2/0.25.2048.1255@0.25.2048.1255" timestamp="1607071157292" />
-    <state width="1024" height="627" key="XDebugger.FullValuePopup" timestamp="1607061227582">
+    <state width="1024" height="627" key="XDebugger.FullValuePopup" timestamp="1607071398198">
       <screen x="0" y="25" width="2048" height="1255" />
     </state>
-    <state width="1024" height="627" key="XDebugger.FullValuePopup/0.25.2048.1255@0.25.2048.1255" timestamp="1607061227582" />
+    <state width="1024" height="627" key="XDebugger.FullValuePopup/0.25.2048.1255@0.25.2048.1255" timestamp="1607071398198" />
     <state x="824" y="566" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1607070844823">
       <screen x="0" y="25" width="2048" height="1255" />
     </state>
@@ -577,6 +588,19 @@
             </endOffsets>
           </properties>
           <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/src/LiquidTemplates.Csharp.Tests/Templates/Class/Inheritance/Implements/ClassImplementsTests.cs</url>
+          <line>54</line>
+          <properties documentPath="$PROJECT_DIR$/src/LiquidTemplates.Csharp.Tests/Templates/Class/Inheritance/Implements/ClassImplementsTests.cs" initialLine="54">
+            <startOffsets>
+              <option value="1825" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1885" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="14" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

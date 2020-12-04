@@ -137,34 +137,12 @@ namespace LiquidTemplates
 
         public override string ToString()
         {
-            var sb = new StringBuilder(Source.Content);
-
             // => EXTENSION ITemplateBuilderBeforeReplacementExtension
             if (TryGetExtensions<ITemplateBuilderBeforeReplacementExtension>(out var extensions))
                 foreach (var templateBuilderBeforeReplacementExtension in extensions)
                     templateBuilderBeforeReplacementExtension.Execute(this);
 
-            // => Placeholder durchgehen
-            foreach (var placeholder in _placeholders.Values)
-            {
-                // => Replacements für den Placeholder laden
-                var replacements = Replacements[placeholder.Identifier];
-
-                // => Validierung
-                if (placeholder.Required && replacements.Count < 1)
-                    throw new MissingMemberException(
-                        $"Es muss mindestens ein Replacement für den Placeholder {placeholder.Identifier} gesetzt sein.");
-
-                // => Replacements zusammenführen
-                var replacementStringBuilder = new StringBuilder();
-                foreach (var placeHolderReplacement in replacements)
-                    replacementStringBuilder.Append(placeHolderReplacement.ReplaceWith);
-
-                // => Replacements anwenden
-                sb.ReplacePlaceholder(placeholder.Identifier, replacementStringBuilder.ToString());
-            }
-
-            return sb.ToString();
+            return Source.Content.ReplacePlaceholders(_placeholders.Values, Replacements);
         }
 
 
