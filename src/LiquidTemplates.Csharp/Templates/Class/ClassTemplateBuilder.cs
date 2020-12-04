@@ -55,22 +55,9 @@ namespace LiquidTemplates.Csharp.Templates.Class
 
         public override string ToString()
         {
-            // => Usings
-            var usedNamespaces = new HashSet<string>();
-            var usingStringBuilder = new StringBuilder();
-            var usings = Replacements.Single(x => x.Key == ClassTemplatePlaceholder.Usings).Value;
-            foreach (var usedNamespace in usings.Where(usedNamespace =>
-                !usedNamespaces.Contains(usedNamespace.ReplaceWith)))
-            {
-                // => Namespace hinzufügen
-                usingStringBuilder.Append($"using {usedNamespace.ReplaceWith};");
-                usedNamespaces.Add(usedNamespace.ReplaceWith);
-            }
-
-            // => Alte Using Replacements entfernen und neues Replacement hinzufügen
-            ClearReplacementsFor(ClassTemplatePlaceholder.Usings);
-            AddReplacement(new PlaceHolderReplacement(ClassTemplatePlaceholder.Usings, usingStringBuilder.ToString()));
-
+            // => Usings Builden
+            BuildUsings();
+         
             // => Inheritance
             var inheritanceBuilder = new StringBuilder(" : ");
 
@@ -98,6 +85,25 @@ namespace LiquidTemplates.Csharp.Templates.Class
                 inheritance != " : " ? inheritance : string.Empty));
 
             return base.ToString();
+        }
+
+        private void BuildUsings()
+        {
+            // => Usings
+            var usedNamespaces = new HashSet<string>();
+            var usingStringBuilder = new StringBuilder();
+            var usings = Replacements.Single(x => x.Key == ClassTemplatePlaceholder.Usings).Value;
+            foreach (var usedNamespace in usings.Where(usedNamespace =>
+                !usedNamespaces.Contains(usedNamespace.ReplaceWith)))
+            {
+                // => Namespace hinzufügen
+                usingStringBuilder.AppendLine($"using {usedNamespace.ReplaceWith};");
+                usedNamespaces.Add(usedNamespace.ReplaceWith);
+            }
+
+            // => Alte Using Replacements entfernen und neues Replacement hinzufügen
+            ClearReplacementsFor(ClassTemplatePlaceholder.Usings);
+            AddReplacement(new PlaceHolderReplacement(ClassTemplatePlaceholder.Usings, usingStringBuilder.ToString()));
         }
     }
 }
