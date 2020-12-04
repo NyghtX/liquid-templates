@@ -9,9 +9,9 @@ namespace LiquidTemplates.Csharp.Templates.Class.Inheritance.Extends
     public class BaseClass : IReplacementBuilder
     {
         /// <summary>
-        ///     Standardwerte, die in die Platzhalter kommen
+        ///     Werte, die in die Platzhalter kommen
         /// </summary>
-        private readonly IEnumerable<PlaceHolderReplacement> _defaultValues;
+        private readonly Dictionary<string, List<PlaceHolderReplacement>> _replacements;
 
         /// <summary>
         ///     Implementierungen, die übernommen werden
@@ -24,17 +24,17 @@ namespace LiquidTemplates.Csharp.Templates.Class.Inheritance.Extends
         private readonly IEnumerable<TemplatePlaceholder> _placeholders;
 
         public BaseClass(string className, string ns, IEnumerable<string> implementations,
-            IEnumerable<TemplatePlaceholder> placeholders, IEnumerable<PlaceHolderReplacement> defaultValues)
+            IEnumerable<TemplatePlaceholder> placeholders, Dictionary<string, List<PlaceHolderReplacement>> replacements)
         {
             _implementations = implementations;
             _placeholders = placeholders;
-            _defaultValues = defaultValues;
+            _replacements = replacements;
             ClassName = className;
             Namespace = ns;
         }
 
         public BaseClass(string className, string ns) : this(className, ns, new List<string>(),
-            new List<TemplatePlaceholder>(), new List<PlaceHolderReplacement>())
+            new List<TemplatePlaceholder>(), new Dictionary<string, List<PlaceHolderReplacement>>())
         {
         }
 
@@ -59,13 +59,13 @@ namespace LiquidTemplates.Csharp.Templates.Class.Inheritance.Extends
             foreach (var implementation in _implementations)
             {
                 // => Placeholder Replacen
+                yield return new PlaceHolderReplacement(ClassTemplatePlaceholder.Method,
+                    implementation.ReplacePlaceholders(_placeholders, _replacements));
+                implementation.ReplacePlaceholders(_placeholders, _replacements);
             }
 
-            return new List<PlaceHolderReplacement>
-            {
-                new PlaceHolderReplacement(ClassTemplatePlaceholder.Usings, Namespace),
-                new PlaceHolderReplacement(ClassTemplatePlaceholder.Inheritance, ClassName)
-            };
+            yield return new PlaceHolderReplacement(ClassTemplatePlaceholder.Usings, Namespace);
+            yield return new PlaceHolderReplacement(ClassTemplatePlaceholder.Inheritance, ClassName);
         }
     }
 }
