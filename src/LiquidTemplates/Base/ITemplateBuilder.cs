@@ -36,7 +36,7 @@ namespace LiquidTemplates
         /// </summary>
         /// <param name="extension">Extension, die dem TemplateBuilder hinzugefügt werden soll</param>
         public void AddExtension<TExtension>(TExtension extension) where TExtension : ITemplateBuilderExtension;
-        
+
         /// <summary>
         ///     Fügt dem Templatebuilder eine Addition hinzu
         /// </summary>
@@ -44,7 +44,7 @@ namespace LiquidTemplates
         public void AddAddition<TAddition>(TAddition addition) where TAddition : ITemplateBuilderAddition;
 
         /// <summary>
-        /// Gibt eine Liste mit Additions des Typen
+        ///     Gibt eine Liste mit Additions des Typen
         /// </summary>
         /// <typeparam name="TAddition">Typ der Additions</typeparam>
         /// <returns>Liste mit Additions</returns>

@@ -14,16 +14,16 @@ namespace LiquidTemplates
     public abstract class TemplateBuilderBase : ITemplateBuilder
     {
         /// <summary>
-        ///     Extensions, die für den ITemplateBuilder registriert sind
-        /// </summary>
-        private readonly Dictionary<Type, List<ITemplateBuilderExtension>> _extensions =
-            new Dictionary<Type, List<ITemplateBuilderExtension>>();
-        
-        /// <summary>
         ///     Additions, die dem Builder hinzugefügt wurden
         /// </summary>
         private readonly Dictionary<Type, List<ITemplateBuilderAddition>> _additions =
             new Dictionary<Type, List<ITemplateBuilderAddition>>();
+
+        /// <summary>
+        ///     Extensions, die für den ITemplateBuilder registriert sind
+        /// </summary>
+        private readonly Dictionary<Type, List<ITemplateBuilderExtension>> _extensions =
+            new Dictionary<Type, List<ITemplateBuilderExtension>>();
 
         /// <summary>
         ///     Platzhalter, die im Template ersetzt werden können
@@ -111,21 +111,23 @@ namespace LiquidTemplates
         /// <param name="addition">Addition, die dem TemplateBuilder hinzugefügt werden soll</param>
         public void AddAddition<TAddition>(TAddition addition) where TAddition : ITemplateBuilderAddition
         {
-            if(!_additions.ContainsKey(typeof(TAddition)))
+            if (!_additions.ContainsKey(typeof(TAddition)))
                 _additions.Add(typeof(TAddition), new List<ITemplateBuilderAddition>());
-            
+
             _additions[typeof(TAddition)].Add(addition);
         }
 
         /// <summary>
-        /// Gibt eine Liste mit Additions des Typen
+        ///     Gibt eine Liste mit Additions des Typen
         /// </summary>
         /// <typeparam name="TAddition">Typ der Additions</typeparam>
         /// <returns>Liste mit Additions</returns>
-        public IEnumerable<TAddition> GetAdditions<TAddition>() where TAddition : ITemplateBuilderAddition =>
-            _additions.ContainsKey(typeof(TAddition))
+        public IEnumerable<TAddition> GetAdditions<TAddition>() where TAddition : ITemplateBuilderAddition
+        {
+            return _additions.ContainsKey(typeof(TAddition))
                 ? (IEnumerable<TAddition>) _additions[typeof(TAddition)]
                 : new List<TAddition>();
+        }
 
         public IEnumerable<ITemplateBuilderExtension> GetExtensions()
         {
