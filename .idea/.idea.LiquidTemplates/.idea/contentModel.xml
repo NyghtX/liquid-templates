@@ -83,7 +83,12 @@
                 <e p="BaseClassRegistry.cs" t="Include" />
                 <e p="IBaseClassRegistry.cs" t="Include" />
               </e>
-              <e p="Implements" t="Include" />
+              <e p="Implements" t="Include">
+                <e p="IInterfaceImplementationRegistry.cs" t="Include" />
+                <e p="InterfaceImplementation.cs" t="Include" />
+                <e p="InterfaceImplementationRegistry.cs" t="Include" />
+                <e p="ThatExtension.cs" t="Include" />
+              </e>
             </e>
             <e p="Property" t="Include">
               <e p="IPropertyTemplateBuilder.cs" t="Include" />

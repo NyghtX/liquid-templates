@@ -31,13 +31,11 @@ namespace LiquidTemplates.Csharp.Templates.Class.Inheritance.Extends
         /// <returns></returns>
         public IEnumerable<PlaceHolderReplacement> GetReplacements()
         {
-            // => Usings
-            yield return new PlaceHolderReplacement(ClassTemplatePlaceholder.Usings, Namespace);
-
-            // => Inheritance
-            yield return new PlaceHolderReplacement(ClassTemplatePlaceholder.Inheritance, ClassName);
-
-            // => Overrides
+            return new List<PlaceHolderReplacement>()
+            {
+                new PlaceHolderReplacement(ClassTemplatePlaceholder.Usings, Namespace),
+                new PlaceHolderReplacement(ClassTemplatePlaceholder.Inheritance, ClassName)
+            };
         }
     }
 }

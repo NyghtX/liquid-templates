@@ -78,7 +78,7 @@ namespace LiquidTemplates.Csharp.Templates.Class
             var baseClass = Replacements.Single(x => x.Key == ClassTemplatePlaceholder.Inheritance).Value
                 .SingleOrDefault();
             if (baseClass != null)
-                inheritanceBuilder.Append(baseClass.ReplaceWith);
+                inheritanceBuilder.Append($"{baseClass.ReplaceWith}, ");
 
 
             // => Prüfen, ob es Interfaces gibt, welche die Klasse implementiert
@@ -91,7 +91,7 @@ namespace LiquidTemplates.Csharp.Templates.Class
             }
 
             // => Inheritance builden
-            var inheritance = inheritanceBuilder.ToString();
+            var inheritance = inheritanceBuilder.ToString().TrimEnd(' ', ',');
 
             ClearReplacementsFor(ClassTemplatePlaceholder.Inheritance);
             AddReplacement(new PlaceHolderReplacement(ClassTemplatePlaceholder.Inheritance, inheritance != " : " ? inheritance : string.Empty));
