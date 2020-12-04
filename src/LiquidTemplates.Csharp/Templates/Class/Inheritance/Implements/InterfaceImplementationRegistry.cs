@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 
 namespace LiquidTemplates.Csharp.Templates.Class.Inheritance.Implements
@@ -10,7 +11,7 @@ namespace LiquidTemplates.Csharp.Templates.Class.Inheritance.Implements
         /// <returns>Alle registrierten InterfaceImplementationes</returns>
         public IEnumerable<InterfaceImplementation> GetAll()
         {
-            throw new System.NotImplementedException();
+            throw new NotImplementedException();
         }
 
         /// <summary>
@@ -21,7 +22,7 @@ namespace LiquidTemplates.Csharp.Templates.Class.Inheritance.Implements
         /// <returns>Informationen zu der gesuchten InterfaceImplementation</returns>
         public InterfaceImplementation Get(string className, string ns)
         {
-            throw new System.NotImplementedException();
+            throw new NotImplementedException();
         }
 
         /// <summary>
@@ -30,7 +31,7 @@ namespace LiquidTemplates.Csharp.Templates.Class.Inheritance.Implements
         /// <param name="interfaceImplementation">InterfaceImplementation, die registriert werden soll</param>
         public void Register(InterfaceImplementation interfaceImplementation)
         {
-            throw new System.NotImplementedException();
+            throw new NotImplementedException();
         }
     }
 }

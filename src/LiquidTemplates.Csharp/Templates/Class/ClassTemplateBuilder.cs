@@ -63,17 +63,17 @@ namespace LiquidTemplates.Csharp.Templates.Class
                 !usedNamespaces.Contains(usedNamespace.ReplaceWith)))
             {
                 // => Namespace hinzufügen
-                usingStringBuilder.Append($"using {usedNamespace.ReplaceWith};");       
+                usingStringBuilder.Append($"using {usedNamespace.ReplaceWith};");
                 usedNamespaces.Add(usedNamespace.ReplaceWith);
             }
-            
+
             // => Alte Using Replacements entfernen und neues Replacement hinzufügen
             ClearReplacementsFor(ClassTemplatePlaceholder.Usings);
             AddReplacement(new PlaceHolderReplacement(ClassTemplatePlaceholder.Usings, usingStringBuilder.ToString()));
-            
+
             // => Inheritance
             var inheritanceBuilder = new StringBuilder(" : ");
-            
+
             // => Prüfen, ob die Klasse eine BaseClass erweitert
             var baseClass = Replacements.Single(x => x.Key == ClassTemplatePlaceholder.Inheritance).Value
                 .SingleOrDefault();
@@ -94,7 +94,8 @@ namespace LiquidTemplates.Csharp.Templates.Class
             var inheritance = inheritanceBuilder.ToString().TrimEnd(' ', ',');
 
             ClearReplacementsFor(ClassTemplatePlaceholder.Inheritance);
-            AddReplacement(new PlaceHolderReplacement(ClassTemplatePlaceholder.Inheritance, inheritance != " : " ? inheritance : string.Empty));
+            AddReplacement(new PlaceHolderReplacement(ClassTemplatePlaceholder.Inheritance,
+                inheritance != " : " ? inheritance : string.Empty));
 
             return base.ToString();
         }

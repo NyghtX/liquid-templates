@@ -5,15 +5,15 @@ using LiquidTemplates.Replacement;
 namespace LiquidTemplates.Csharp.Templates.Class.Inheritance.Implements
 {
     /// <summary>
-    /// Implementierung eines Interfaces
+    ///     Implementierung eines Interfaces
     /// </summary>
     public class InterfaceImplementation : IReplacementBuilder
     {
         /// <summary>
-        /// Liste der Implementierungen des Interfaces
+        ///     Liste der Implementierungen des Interfaces
         /// </summary>
         private readonly List<string> _implementations = new List<string>();
-        
+
         public InterfaceImplementation(string interfaceName, string ns)
         {
             InterfaceName = interfaceName;
@@ -21,19 +21,14 @@ namespace LiquidTemplates.Csharp.Templates.Class.Inheritance.Implements
         }
 
         /// <summary>
-        /// Name des Interfaces
+        ///     Name des Interfaces
         /// </summary>
         public string InterfaceName { get; }
 
         /// <summary>
-        /// Namespace, in dem das Interface liegt
+        ///     Namespace, in dem das Interface liegt
         /// </summary>
         public string Namespace { get; }
-
-        public void AddImplementation(string implementation)
-        {
-            _implementations.Add(implementation);
-        }
 
 
         /// <summary>
@@ -43,19 +38,24 @@ namespace LiquidTemplates.Csharp.Templates.Class.Inheritance.Implements
         public IEnumerable<PlaceHolderReplacement> GetReplacements()
         {
             var retVal = new List<PlaceHolderReplacement>();
-            
+
             // => Using
             retVal.Add(new PlaceHolderReplacement(ClassTemplatePlaceholder.Usings, Namespace));
 
             // => Interface Inheritance
             retVal.Add(new PlaceHolderReplacement(ClassTemplatePlaceholder.Implements, InterfaceName));
-            
+
             // => Implementations zurückgeben
             retVal.AddRange(_implementations.Select(implementation =>
                 new PlaceHolderReplacement(ClassTemplatePlaceholder.Method, implementation)));
-            
-            
+
+
             return retVal;
+        }
+
+        public void AddImplementation(string implementation)
+        {
+            _implementations.Add(implementation);
         }
     }
 }

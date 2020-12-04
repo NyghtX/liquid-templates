@@ -11,6 +11,5 @@ namespace LiquidTemplates.Csharp.Templates.Class.Inheritance.Implements
             thatBuilder.TemplateBuilder.AddReplacements(interfaceImplementation.GetReplacements());
             return thatBuilder.TemplateBuilder;
         }
-
     }
 }

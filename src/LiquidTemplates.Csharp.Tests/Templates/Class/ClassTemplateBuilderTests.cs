@@ -67,7 +67,7 @@ namespace LiquidTemplates.Csharp.Tests.Templates.Class
             // Klassenname
             myGeneratedClass.Should().Contain("MyGeneratedClass : TestBase");
         }
-        
+
         [Fact]
         public void ClassTemplate_WithInterface()
         {
@@ -87,7 +87,7 @@ namespace LiquidTemplates.Csharp.Tests.Templates.Class
             // Klassenname
             myGeneratedClass.Should().Contain("MyGeneratedClass : IMyInterface");
         }
-        
+
         [Fact]
         public void ClassTemplate_WithBaseAndInterface()
         {

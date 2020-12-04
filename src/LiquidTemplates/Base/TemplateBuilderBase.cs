@@ -72,23 +72,31 @@ namespace LiquidTemplates
         }
 
         /// <summary>
-        /// Gibt die Liste der registrierten Replacements wieder
+        ///     Gibt die Liste der registrierten Replacements wieder
         /// </summary>
         /// <returns></returns>
-        public IEnumerable<PlaceHolderReplacement> GetReplacementsFor(string identifier) => Replacements[identifier];
+        public IEnumerable<PlaceHolderReplacement> GetReplacementsFor(string identifier)
+        {
+            return Replacements[identifier];
+        }
 
         /// <summary>
-        /// Leert die Replacement Liste für einen bestimmten identifier
+        ///     Leert die Replacement Liste für einen bestimmten identifier
         /// </summary>
         /// <param name="replacementIdentifier">Replaement Identifier, dessen Liste geleert werden soll</param>
-        public void ClearReplacementsFor(string replacementIdentifier) => Replacements[replacementIdentifier] = new List<PlaceHolderReplacement>();
+        public void ClearReplacementsFor(string replacementIdentifier)
+        {
+            Replacements[replacementIdentifier] = new List<PlaceHolderReplacement>();
+        }
 
         /// <summary>
         ///     Fügt dem Templatebuilder eine Extension hinzu
         /// </summary>
         /// <param name="extension">Extension, die dem TemplateBuilder hinzugefügt werden soll</param>
-        public void AddExtension<TExtension>(TExtension extension) where TExtension : ITemplateBuilderExtension =>
+        public void AddExtension<TExtension>(TExtension extension) where TExtension : ITemplateBuilderExtension
+        {
             _extensions[typeof(TExtension)].Add(extension);
+        }
 
         public IEnumerable<ITemplateBuilderExtension> GetExtensions()
         {
