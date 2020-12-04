@@ -7,10 +7,11 @@ namespace LiquidTemplates.Replacement
 {
     public static class PlaceholderReplacer
     {
-        public static string ReplacePlaceholders(this string value, IEnumerable<TemplatePlaceholder> placeholders, Dictionary<string, List<PlaceHolderReplacement>> replacements)
+        public static string ReplacePlaceholders(this string value, IEnumerable<TemplatePlaceholder> placeholders,
+            Dictionary<string, List<PlaceHolderReplacement>> replacements)
         {
             var sb = new StringBuilder(value);
-            
+
             // => Placeholder durchgehen
             foreach (var placeholder in placeholders)
             {

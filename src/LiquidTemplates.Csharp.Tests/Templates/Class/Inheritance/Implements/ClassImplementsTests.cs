@@ -28,7 +28,7 @@ namespace LiquidTemplates.Csharp.Tests.Templates.Class.Inheritance.Implements
             // Klassenname
             myGeneratedClass.Should().Contain("MyGeneratedClass : IMyInterface");
         }
-        
+
         [Fact]
         public void Implements_Success()
         {
@@ -37,7 +37,7 @@ namespace LiquidTemplates.Csharp.Tests.Templates.Class.Inheritance.Implements
             interfaceImplementation.AddImplementation("public void Test() {};");
 
             // => Act
-            
+
             var myGeneratedClass = ClassTemplateBuilder
                 .CreateClass()
                 .WithName("MyGeneratedClass")
@@ -50,7 +50,7 @@ namespace LiquidTemplates.Csharp.Tests.Templates.Class.Inheritance.Implements
 
             // Klassenname
             myGeneratedClass.Should().Contain("MyGeneratedClass : IMyInterface");
-            
+
             // Implementierung
             myGeneratedClass.Should().Contain("public void Test() {};");
         }

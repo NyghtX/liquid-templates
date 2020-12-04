@@ -1,10 +1,8 @@
 using System;
 using System.Collections.Generic;
-using System.Text;
 using LiquidTemplates.Addition;
 using LiquidTemplates.Extensions;
 using LiquidTemplates.Replacement;
-using LiquidTemplates.Tools;
 
 namespace LiquidTemplates
 {

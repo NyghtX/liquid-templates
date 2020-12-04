@@ -28,12 +28,13 @@ namespace LiquidTemplates.Csharp.Tests.Templates.Class.Inheritance.Extends
             // Klassenname
             myGeneratedClass.Should().Contain("MyGeneratedClass : TestBase");
         }
+
         [Fact]
         public void Overrides()
         {
             // => Arrange
             var baseClass = new BaseClass("TestBase", "MyTestbaseNamespace");
-            
+
 
             // => Act
             var myGeneratedClass = ClassTemplateBuilder

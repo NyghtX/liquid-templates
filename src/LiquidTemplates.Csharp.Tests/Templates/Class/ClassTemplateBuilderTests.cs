@@ -48,9 +48,6 @@ namespace LiquidTemplates.Csharp.Tests.Templates.Class
             myGeneratedClass.Should().Contain("public string Vorname {get; private set;}");
         }
 
-       
-
-       
 
         [Fact]
         public void ClassTemplate_WithBaseAndInterface()

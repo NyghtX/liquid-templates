@@ -57,7 +57,7 @@ namespace LiquidTemplates.Csharp.Templates.Class
         {
             // => Usings Builden
             BuildUsings();
-         
+
             // => Inheritance
             var inheritanceBuilder = new StringBuilder(" : ");
 
