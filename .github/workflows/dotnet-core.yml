@@ -28,5 +28,5 @@ jobs:
       run: dotnet test --no-restore --verbosity normal
     - name: Pack
       run: dotnet pack --configuration Release
-    - name: Publish Protocol
-      run: dotnet nuget push "LiquidTemplates/bin/Release/*.nupkg" --skip-duplicate --source github  
+    - name: Publish
+      run: dotnet nuget push "src/LiquidTemplates/bin/Release/*.nupkg" --skip-duplicate --source github  

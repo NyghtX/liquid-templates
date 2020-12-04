@@ -22,10 +22,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="aba93b88-5f68-4dd9-81ef-9a476e241955" name="Default Changelist" comment="Testes Method Replacement">
+    <list default="true" id="aba93b88-5f68-4dd9-81ef-9a476e241955" name="Default Changelist" comment="Lang Ver">
+      <change beforePath="$PROJECT_DIR$/.github/workflows/dotnet-core.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/dotnet-core.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.LiquidTemplates/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LiquidTemplates/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.LiquidTemplates/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LiquidTemplates/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/LiquidTemplates/LiquidTemplates.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/src/LiquidTemplates/LiquidTemplates.csproj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,8 +102,8 @@
         <option value="$PROJECT_DIR$/src/LiquidTemplates.Csharp/Templates/Class/Inheritance/Extends/BaseClass.cs" />
         <option value="$PROJECT_DIR$/src/LiquidTemplates.Csharp.Tests/Templates/Class/Inheritance/Extends/ClassExtendsTests.cs" />
         <option value="$PROJECT_DIR$/src/LiquidTemplates/LiquidTemplates.csproj" />
-        <option value="$PROJECT_DIR$/.github/workflows/dotnet-core.yml" />
         <option value="$PROJECT_DIR$/src/LiquidTemplates/Base/ITemplateBuilder.cs" />
+        <option value="$PROJECT_DIR$/.github/workflows/dotnet-core.yml" />
       </list>
     </option>
   </component>
@@ -122,6 +121,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="C#" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager" selected=".NET Project.LiquidTemplates.Csharp.Tests">
@@ -154,7 +154,7 @@
       <updated>1606545207603</updated>
       <workItem from="1606545211639" duration="6943000" />
       <workItem from="1606728488998" duration="9011000" />
-      <workItem from="1606833864600" duration="18875000" />
+      <workItem from="1606833864600" duration="19093000" />
     </task>
     <task id="LOCAL-00001" summary="Rename">
       <created>1606545225651</created>
@@ -429,7 +429,28 @@
       <option name="project" value="LOCAL" />
       <updated>1607074456911</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="CI Build">
+      <created>1607076086493</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1607076086493</updated>
+    </task>
+    <task id="LOCAL-00041" summary="CI Build">
+      <created>1607076100599</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1607076100599</updated>
+    </task>
+    <task id="LOCAL-00042" summary="Lang Ver">
+      <created>1607076195391</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1607076195391</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -451,8 +472,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="Working change" />
-    <MESSAGE value="With" />
     <MESSAGE value="Property Base" />
     <MESSAGE value="Property Accessor" />
     <MESSAGE value="Private Setter Extension" />
@@ -476,7 +495,9 @@
     <MESSAGE value="Cleanup" />
     <MESSAGE value="Method Replacement" />
     <MESSAGE value="Testes Method Replacement" />
-    <option name="LAST_COMMIT_MESSAGE" value="Testes Method Replacement" />
+    <MESSAGE value="CI Build" />
+    <MESSAGE value="Lang Ver" />
+    <option name="LAST_COMMIT_MESSAGE" value="Lang Ver" />
   </component>
   <component name="WindowStateProjectService">
     <state x="871" y="327" key="#xdebugger.XInspectDialog" timestamp="1607061198603">
@@ -583,10 +604,10 @@
       <screen x="0" y="25" width="2048" height="1255" />
     </state>
     <state x="785" y="271" key="RiderGenerateDialog/0.25.2048.1255@0.25.2048.1255" timestamp="1607021804790" />
-    <state x="624" y="371" key="Vcs.Push.Dialog.v2" timestamp="1607071157292">
+    <state x="624" y="371" key="Vcs.Push.Dialog.v2" timestamp="1607076196592">
       <screen x="0" y="25" width="2048" height="1255" />
     </state>
-    <state x="624" y="371" key="Vcs.Push.Dialog.v2/0.25.2048.1255@0.25.2048.1255" timestamp="1607071157292" />
+    <state x="624" y="371" key="Vcs.Push.Dialog.v2/0.25.2048.1255@0.25.2048.1255" timestamp="1607076196592" />
     <state width="1024" height="627" key="XDebugger.FullValuePopup" timestamp="1607071398198">
       <screen x="0" y="25" width="2048" height="1255" />
     </state>
