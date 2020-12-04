@@ -22,12 +22,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="aba93b88-5f68-4dd9-81ef-9a476e241955" name="Default Changelist" comment="Cleanup">
-      <change afterPath="$PROJECT_DIR$/src/LiquidTemplates/Addition/ITemplateBuilderAddition.cs" afterDir="false" />
+    <list default="true" id="aba93b88-5f68-4dd9-81ef-9a476e241955" name="Default Changelist" comment="Additions">
+      <change afterPath="$PROJECT_DIR$/src/LiquidTemplates.Csharp/Templates/Class/Inheritance/Extends/ThatExtension.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.LiquidTemplates/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LiquidTemplates/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.LiquidTemplates/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LiquidTemplates/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/LiquidTemplates/Base/ITemplateBuilder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/LiquidTemplates/Base/ITemplateBuilder.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/LiquidTemplates/Base/TemplateBuilderBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/LiquidTemplates/Base/TemplateBuilderBase.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LiquidTemplates.Csharp.Tests/Templates/Class/ClassTemplateBuilderTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/LiquidTemplates.Csharp.Tests/Templates/Class/ClassTemplateBuilderTests.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,7 +54,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/LiquidTemplates.Csharp/Templates/Class/Property/Words/That/Has/PropertyTemplateHasBuilder.cs" />
         <option value="$PROJECT_DIR$/src/LiquidTemplates.Csharp/Templates/Class/Property/Words/That/Has/PropertyTemplateThatBuilderHasExtension.cs" />
         <option value="$PROJECT_DIR$/src/LiquidTemplates.Csharp/Tools/StringBuilderExtensions.cs" />
         <option value="$PROJECT_DIR$/src/LiquidTemplates.Csharp/Templates/Words/With/IReplacementBuilder.cs" />
@@ -102,10 +100,11 @@
         <option value="$PROJECT_DIR$/src/LiquidTemplates/Words/With/TemplateBuilderWithExtension.cs" />
         <option value="$PROJECT_DIR$/src/LiquidTemplates.Csharp/Templates/Class/Inheritance/Extends/BaseClass.cs" />
         <option value="$PROJECT_DIR$/src/LiquidTemplates.Csharp/Templates/Class/ClassTemplateBuilder.cs" />
-        <option value="$PROJECT_DIR$/src/LiquidTemplates.Csharp.Tests/Templates/Class/ClassTemplateBuilderTests.cs" />
         <option value="$PROJECT_DIR$/src/LiquidTemplates/Addition/ITemplateBuilderAddition.cs" />
-        <option value="$PROJECT_DIR$/src/LiquidTemplates/Base/ITemplateBuilder.cs" />
         <option value="$PROJECT_DIR$/src/LiquidTemplates/Base/TemplateBuilderBase.cs" />
+        <option value="$PROJECT_DIR$/src/LiquidTemplates/Base/ITemplateBuilder.cs" />
+        <option value="$PROJECT_DIR$/src/LiquidTemplates.Csharp/Templates/Class/Inheritance/Extends/ThatExtension.cs" />
+        <option value="$PROJECT_DIR$/src/LiquidTemplates.Csharp.Tests/Templates/Class/ClassTemplateBuilderTests.cs" />
       </list>
     </option>
   </component>
@@ -155,7 +154,7 @@
       <updated>1606545207603</updated>
       <workItem from="1606545211639" duration="6943000" />
       <workItem from="1606728488998" duration="9011000" />
-      <workItem from="1606833864600" duration="15399000" />
+      <workItem from="1606833864600" duration="15545000" />
     </task>
     <task id="LOCAL-00001" summary="Rename">
       <created>1606545225651</created>
@@ -367,7 +366,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607061259796</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="Additions">
+      <created>1607070848583</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1607070848583</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -408,7 +414,8 @@
     <MESSAGE value="First Base Class Test" />
     <MESSAGE value="Base + Interface" />
     <MESSAGE value="Cleanup" />
-    <option name="LAST_COMMIT_MESSAGE" value="Cleanup" />
+    <MESSAGE value="Additions" />
+    <option name="LAST_COMMIT_MESSAGE" value="Additions" />
   </component>
   <component name="WindowStateProjectService">
     <state x="871" y="327" key="#xdebugger.XInspectDialog" timestamp="1607061198603">
@@ -523,10 +530,10 @@
       <screen x="0" y="25" width="2048" height="1255" />
     </state>
     <state width="1024" height="627" key="XDebugger.FullValuePopup/0.25.2048.1255@0.25.2048.1255" timestamp="1607061227582" />
-    <state x="824" y="566" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1607027224529">
+    <state x="824" y="566" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1607070844823">
       <screen x="0" y="25" width="2048" height="1255" />
     </state>
-    <state x="824" y="566" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.25.2048.1255@0.25.2048.1255" timestamp="1607027224529" />
+    <state x="824" y="566" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.25.2048.1255@0.25.2048.1255" timestamp="1607070844823" />
     <state x="689" y="309" width="670" height="676" key="search.everywhere.popup" timestamp="1607020413310">
       <screen x="0" y="25" width="2048" height="1255" />
     </state>

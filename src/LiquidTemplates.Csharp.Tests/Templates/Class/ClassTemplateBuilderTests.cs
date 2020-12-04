@@ -59,7 +59,7 @@ namespace LiquidTemplates.Csharp.Tests.Templates.Class
                 .WithName("MyGeneratedClass")
                 .InNamespace("Nyghtx.Generator.Generated")
                 .That().Is().Public()
-                .With(new BaseClass("TestBase", "MyTestbaseNamespace"))
+                .That().Extends(new BaseClass("TestBase", "MyTestbaseNamespace"))
                 .ToString();
 
             // => Assert
@@ -99,7 +99,7 @@ namespace LiquidTemplates.Csharp.Tests.Templates.Class
                 .WithName("MyGeneratedClass")
                 .InNamespace("Nyghtx.Generator.Generated")
                 .That().Is().Public()
-                .With(new BaseClass("TestBase", "MyTestbaseNamespace"))
+                .That().Extends(new BaseClass("TestBase", "MyTestbaseNamespace"))
                 .That().Implements(new InterfaceImplementation("Testinterface", "My.Interface.Namespace"))
                 .ToString();
 

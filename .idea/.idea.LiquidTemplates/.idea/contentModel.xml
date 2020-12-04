@@ -85,6 +85,7 @@
                 <e p="BaseClass.cs" t="Include" />
                 <e p="BaseClassRegistry.cs" t="Include" />
                 <e p="IBaseClassRegistry.cs" t="Include" />
+                <e p="ThatExtension.cs" t="Include" />
               </e>
               <e p="Implements" t="Include">
                 <e p="IInterfaceImplementationRegistry.cs" t="Include" />
