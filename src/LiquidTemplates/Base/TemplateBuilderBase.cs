@@ -191,7 +191,7 @@ namespace LiquidTemplates
         /// Lässt den Template Builder builden
         /// </summary>
         /// <returns>Files, die das Resultat des Builds sind</returns>
-        public IEnumerable<GeneratedFile> Build()
+        public virtual IEnumerable<GeneratedFile> Build()
         {
             // => Additions durchbuilden
             foreach (var templateBuilderAddition in _additions.Values.SelectMany(templateBuilderAdditions =>
@@ -200,6 +200,7 @@ namespace LiquidTemplates
 
             return _files;
         }
+        
 
 
         public override string ToString()
