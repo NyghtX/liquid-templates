@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using LiquidTemplates.Addition;
 using LiquidTemplates.Extensions;
 using LiquidTemplates.Replacement;
@@ -33,6 +34,11 @@ namespace LiquidTemplates
         /// </summary>
         protected readonly Dictionary<string, List<PlaceHolderReplacement>> Replacements =
             new Dictionary<string, List<PlaceHolderReplacement>>();
+
+        /// <summary>
+        /// Files, die beim Build ausgegeben werden
+        /// </summary>
+        private readonly List<GeneratedFile> _files = new List<GeneratedFile>();
 
         /// <summary>
         ///     Source Template
@@ -130,6 +136,29 @@ namespace LiquidTemplates
         public IEnumerable<ITemplateBuilderExtension> GetExtensions()
         {
             throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Fügt dem Builder ein File hinzu
+        /// </summary>
+        /// <param name="file">File, das beim Build mit ausgegeben wird</param>
+        public void AddFile(GeneratedFile file)
+        {
+            _files.Add(file);
+        }
+
+        /// <summary>
+        /// Lässt den Template Builder builden
+        /// </summary>
+        /// <returns>Files, die das Resultat des Builds sind</returns>
+        public IEnumerable<GeneratedFile> Build()
+        {
+            // => Additions durchbuilden
+            foreach (var templateBuilderAddition in _additions.Values.SelectMany(templateBuilderAdditions =>
+                templateBuilderAdditions))
+                templateBuilderAddition.Build();
+
+            return _files;
         }
 
 

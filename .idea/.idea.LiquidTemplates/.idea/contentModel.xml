@@ -18,6 +18,7 @@
           <e p="ITemplateBuilderAddition.cs" t="Include" />
         </e>
         <e p="Base" t="Include">
+          <e p="GeneratedFile.cs" t="Include" />
           <e p="ITemplateBuilder.cs" t="Include" />
           <e p="TemplateBuilderBase.cs" t="Include" />
           <e p="TemplateFile.cs" t="Include" />

@@ -5,5 +5,9 @@ namespace LiquidTemplates.Addition
     /// </summary>
     public interface ITemplateBuilderAddition
     {
+        /// <summary>
+        /// Führt den Build-Prozess der Addition aus
+        /// </summary>
+        void Build();
     }
 }
