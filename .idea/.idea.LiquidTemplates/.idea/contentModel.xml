@@ -106,6 +106,7 @@
                 <e p="DoublePropertyTemplateBuilder.cs" t="Include" />
                 <e p="FloatPropertyTemplateBuilder.cs" t="Include" />
                 <e p="IntPropertyTemplateBuilder.cs" t="Include" />
+                <e p="Property.cs" t="Include" />
                 <e p="SimplePropertyBuilderBase.cs" t="Include" />
                 <e p="StringPropertyTemplateBuilder.cs" t="Include" />
               </e>
