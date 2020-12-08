@@ -23,7 +23,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="aba93b88-5f68-4dd9-81ef-9a476e241955" name="Default Changelist" comment="Inheritance der Template Builder eingeführt">
-      <change beforePath="$PROJECT_DIR$/src/LiquidTemplates/Base/ITemplateBuilder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/LiquidTemplates/Base/ITemplateBuilder.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.LiquidTemplates/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LiquidTemplates/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LiquidTemplates/LiquidTemplates.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/src/LiquidTemplates/LiquidTemplates.csproj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,7 +92,6 @@
         <option value="$PROJECT_DIR$/src/LiquidTemplates/Replacement/PlaceholderReplacer.cs" />
         <option value="$PROJECT_DIR$/src/LiquidTemplates.Csharp/Templates/Class/Inheritance/Extends/BaseClass.cs" />
         <option value="$PROJECT_DIR$/src/LiquidTemplates.Csharp.Tests/Templates/Class/Inheritance/Extends/ClassExtendsTests.cs" />
-        <option value="$PROJECT_DIR$/src/LiquidTemplates/LiquidTemplates.csproj" />
         <option value="$PROJECT_DIR$/.github/workflows/dotnet-core.yml" />
         <option value="$PROJECT_DIR$/src/LiquidTemplates.Csharp/Templates/Class/Property/SimpleTypes/SimpleTypes.cs" />
         <option value="$PROJECT_DIR$/src/LiquidTemplates.Csharp/Templates/Class/Property/SimpleTypes/Types.cs" />
@@ -100,8 +100,9 @@
         <option value="$PROJECT_DIR$/src/LiquidTemplates/Base/GeneratedFile.cs" />
         <option value="$PROJECT_DIR$/src/LiquidTemplates/Extensions/ITemplateBuilderExtension.cs" />
         <option value="$PROJECT_DIR$/src/LiquidTemplates/Addition/ITemplateBuilderAddition.cs" />
-        <option value="$PROJECT_DIR$/src/LiquidTemplates/Base/TemplateBuilderBase.cs" />
         <option value="$PROJECT_DIR$/src/LiquidTemplates/Base/ITemplateBuilder.cs" />
+        <option value="$PROJECT_DIR$/src/LiquidTemplates/Base/TemplateBuilderBase.cs" />
+        <option value="$PROJECT_DIR$/src/LiquidTemplates/LiquidTemplates.csproj" />
       </list>
     </option>
   </component>
@@ -492,7 +493,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607408154625</updated>
     </task>
-    <option name="localTasksCounter" value="49" />
+    <task id="LOCAL-00049" summary="Inheritance der Template Builder eingeführt">
+      <created>1607408351807</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1607408351807</updated>
+    </task>
+    <option name="localTasksCounter" value="50" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -642,10 +650,10 @@
       <screen x="0" y="25" width="2048" height="1255" />
     </state>
     <state x="624" y="389" key="Rider.ProjectTemplateDialog.Size/0.25.2048.1255@0.25.2048.1255" timestamp="1606843064537" />
-    <state x="785" y="271" key="RiderGenerateDialog" timestamp="1607407851926">
+    <state x="785" y="271" key="RiderGenerateDialog" timestamp="1607408319117">
       <screen x="0" y="25" width="2048" height="1255" />
     </state>
-    <state x="785" y="271" key="RiderGenerateDialog/0.25.2048.1255@0.25.2048.1255" timestamp="1607407851926" />
+    <state x="785" y="271" key="RiderGenerateDialog/0.25.2048.1255@0.25.2048.1255" timestamp="1607408319117" />
     <state x="624" y="371" key="Vcs.Push.Dialog.v2" timestamp="1607403252096">
       <screen x="0" y="25" width="2048" height="1255" />
     </state>
