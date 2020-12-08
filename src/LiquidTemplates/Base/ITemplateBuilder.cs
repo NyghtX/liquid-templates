@@ -8,6 +8,18 @@ namespace LiquidTemplates
     public interface ITemplateBuilder
     {
         /// <summary>
+        /// Setzt das Parent Element des Builders
+        /// </summary>
+        /// <param name="templateBuilder"></param>
+        void SetParent(ITemplateBuilder templateBuilder);
+
+        /// <summary>
+        /// Fügt einen TemplateBuilder als Child Element hinzu
+        /// </summary>
+        /// <param name="templateBuilder"></param>
+        void AddChild(ITemplateBuilder templateBuilder);
+        
+        /// <summary>
         ///     Fügt der List der Replacements einen Eintrag hinzu
         /// </summary>
         /// <param name="replacement">Replacement, dass an den Placeholder gebracht wird</param>

@@ -22,14 +22,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="aba93b88-5f68-4dd9-81ef-9a476e241955" name="Default Changelist" comment="Property Shortcut">
-      <change afterPath="$PROJECT_DIR$/src/LiquidTemplates/Base/GeneratedFile.cs" afterDir="false" />
+    <list default="true" id="aba93b88-5f68-4dd9-81ef-9a476e241955" name="Default Changelist" comment="c# Validation csproj">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.LiquidTemplates/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LiquidTemplates/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.LiquidTemplates/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LiquidTemplates/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/LiquidTemplates/Addition/ITemplateBuilderAddition.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/LiquidTemplates/Addition/ITemplateBuilderAddition.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/LiquidTemplates/Base/ITemplateBuilder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/LiquidTemplates/Base/ITemplateBuilder.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/LiquidTemplates/Base/TemplateBuilderBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/LiquidTemplates/Base/TemplateBuilderBase.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/LiquidTemplates/Extensions/ITemplateBuilderExtension.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/LiquidTemplates/Extensions/ITemplateBuilderExtension.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,6 +49,7 @@
     <setting file="file://$PROJECT_DIR$/src/LiquidTemplates.Csharp/Templates/Class/Property/SimpleTypes/FloatPropertyTemplateBuilder.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/18D5A60D-361A-4AFD-A431-F772FA87FCC3/d9/b0109e6d/TestInvoker`1.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/C158E430-C142-4741-ADAB-56A022C4B7B0/6f/29ecb12e/Enumerable.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/D4EBF847-9D18-4582-B5D4-AEB0ED79DFAA/12/265bb9b3/TemplateBuilderBase.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -103,9 +101,9 @@
         <option value="$PROJECT_DIR$/src/LiquidTemplates.Csharp/Templates/Class/Property/SimpleTypes/Property.cs" />
         <option value="$PROJECT_DIR$/src/LiquidTemplates.Csharp/LiquidTemplates.Csharp.csproj" />
         <option value="$PROJECT_DIR$/src/LiquidTemplates/Base/GeneratedFile.cs" />
-        <option value="$PROJECT_DIR$/src/LiquidTemplates/Base/ITemplateBuilder.cs" />
         <option value="$PROJECT_DIR$/src/LiquidTemplates/Extensions/ITemplateBuilderExtension.cs" />
         <option value="$PROJECT_DIR$/src/LiquidTemplates/Addition/ITemplateBuilderAddition.cs" />
+        <option value="$PROJECT_DIR$/src/LiquidTemplates/Base/ITemplateBuilder.cs" />
         <option value="$PROJECT_DIR$/src/LiquidTemplates/Base/TemplateBuilderBase.cs" />
       </list>
     </option>
@@ -476,7 +474,21 @@
       <option name="project" value="LOCAL" />
       <updated>1607403250537</updated>
     </task>
-    <option name="localTasksCounter" value="46" />
+    <task id="LOCAL-00046" summary="Addition Build">
+      <created>1607406768151</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1607406768151</updated>
+    </task>
+    <task id="LOCAL-00047" summary="c# Validation csproj">
+      <created>1607406943194</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1607406943194</updated>
+    </task>
+    <option name="localTasksCounter" value="48" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -498,8 +510,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="Private Setter Extension" />
-    <MESSAGE value="Private Setter Extension Test" />
     <MESSAGE value="Class Access Modifier Tests" />
     <MESSAGE value="Refactor" />
     <MESSAGE value="Weitere Builder für Simple Types" />
@@ -523,7 +533,9 @@
     <MESSAGE value="Lang Ver" />
     <MESSAGE value="CI" />
     <MESSAGE value="Property Shortcut" />
-    <option name="LAST_COMMIT_MESSAGE" value="Property Shortcut" />
+    <MESSAGE value="Addition Build" />
+    <MESSAGE value="c# Validation csproj" />
+    <option name="LAST_COMMIT_MESSAGE" value="c# Validation csproj" />
   </component>
   <component name="WindowStateProjectService">
     <state x="871" y="327" key="#xdebugger.XInspectDialog" timestamp="1607061198603">
@@ -626,10 +638,10 @@
       <screen x="0" y="25" width="2048" height="1255" />
     </state>
     <state x="624" y="389" key="Rider.ProjectTemplateDialog.Size/0.25.2048.1255@0.25.2048.1255" timestamp="1606843064537" />
-    <state x="785" y="271" key="RiderGenerateDialog" timestamp="1607021804790">
+    <state x="785" y="271" key="RiderGenerateDialog" timestamp="1607407851926">
       <screen x="0" y="25" width="2048" height="1255" />
     </state>
-    <state x="785" y="271" key="RiderGenerateDialog/0.25.2048.1255@0.25.2048.1255" timestamp="1607021804790" />
+    <state x="785" y="271" key="RiderGenerateDialog/0.25.2048.1255@0.25.2048.1255" timestamp="1607407851926" />
     <state x="624" y="371" key="Vcs.Push.Dialog.v2" timestamp="1607403252096">
       <screen x="0" y="25" width="2048" height="1255" />
     </state>
@@ -642,10 +654,10 @@
       <screen x="0" y="25" width="2048" height="1255" />
     </state>
     <state x="824" y="566" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.25.2048.1255@0.25.2048.1255" timestamp="1607070844823" />
-    <state x="689" y="309" width="670" height="676" key="search.everywhere.popup" timestamp="1607074293776">
+    <state x="689" y="309" width="670" height="676" key="search.everywhere.popup" timestamp="1607407717376">
       <screen x="0" y="25" width="2048" height="1255" />
     </state>
-    <state x="689" y="309" width="670" height="676" key="search.everywhere.popup/0.25.2048.1255@0.25.2048.1255" timestamp="1607074293776" />
+    <state x="689" y="309" width="670" height="676" key="search.everywhere.popup/0.25.2048.1255@0.25.2048.1255" timestamp="1607407717376" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

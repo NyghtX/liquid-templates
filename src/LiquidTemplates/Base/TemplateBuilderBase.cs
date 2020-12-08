@@ -41,6 +41,16 @@ namespace LiquidTemplates
         private readonly List<GeneratedFile> _files = new List<GeneratedFile>();
 
         /// <summary>
+        /// Parent Builder
+        /// </summary>
+        private ITemplateBuilder _parent;
+
+        /// <summary>
+        /// Child Elemente des Template Builders
+        /// </summary>
+        private List<ITemplateBuilder> _children = new List<ITemplateBuilder>();
+
+        /// <summary>
         ///     Source Template
         /// </summary>
         protected readonly TemplateFile Source;
@@ -56,6 +66,24 @@ namespace LiquidTemplates
             // => Replacement Liste initialisieren
             foreach (var placeholdersKey in placeholders.Keys)
                 Replacements.Add(placeholdersKey, new List<PlaceHolderReplacement>());
+        }
+
+        /// <summary>
+        /// Setzt das Parent Element des Builders
+        /// </summary>
+        /// <param name="templateBuilder"></param>
+        public void SetParent(ITemplateBuilder templateBuilder)
+        {
+            _parent = templateBuilder;
+        }
+
+        /// <summary>
+        /// Fügt einen TemplateBuilder als Child Element hinzu
+        /// </summary>
+        /// <param name="templateBuilder"></param>
+        public void AddChild(ITemplateBuilder templateBuilder)
+        {
+            _children.Add(templateBuilder);
         }
 
         /// <summary>
