@@ -22,11 +22,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="aba93b88-5f68-4dd9-81ef-9a476e241955" name="Default Changelist" comment="CI">
-      <change afterPath="$PROJECT_DIR$/src/LiquidTemplates.Csharp/Templates/Class/Property/SimpleTypes/Types.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.github/workflows/dotnet-core.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/dotnet-core.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.LiquidTemplates/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LiquidTemplates/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.LiquidTemplates/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LiquidTemplates/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="aba93b88-5f68-4dd9-81ef-9a476e241955" name="Default Changelist" comment="Property Shortcut">
+      <change beforePath="$PROJECT_DIR$/src/LiquidTemplates.Csharp/LiquidTemplates.Csharp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/src/LiquidTemplates.Csharp/LiquidTemplates.Csharp.csproj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,7 +50,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/LiquidTemplates.Csharp/Templates/Words/That/Is/TemplateBuilderThatBuilderExtension.cs" />
         <option value="$PROJECT_DIR$/src/LiquidTemplates.Csharp/Templates/Words/That/Has/ClassTemplateThatBuilderIsExtension.cs" />
         <option value="$PROJECT_DIR$/src/LiquidTemplates.Csharp/Templates/Words/That/Has/TemplateBuilderThatIsBuilder.cs" />
         <option value="$PROJECT_DIR$/src/LiquidTemplates.Csharp/Templates/Class/Property/PropertyAccessorExtensions.cs" />
@@ -100,10 +96,11 @@
         <option value="$PROJECT_DIR$/src/LiquidTemplates.Csharp.Tests/Templates/Class/Inheritance/Extends/ClassExtendsTests.cs" />
         <option value="$PROJECT_DIR$/src/LiquidTemplates/LiquidTemplates.csproj" />
         <option value="$PROJECT_DIR$/src/LiquidTemplates/Base/ITemplateBuilder.cs" />
-        <option value="$PROJECT_DIR$/src/LiquidTemplates.Csharp/LiquidTemplates.Csharp.csproj" />
         <option value="$PROJECT_DIR$/.github/workflows/dotnet-core.yml" />
         <option value="$PROJECT_DIR$/src/LiquidTemplates.Csharp/Templates/Class/Property/SimpleTypes/SimpleTypes.cs" />
         <option value="$PROJECT_DIR$/src/LiquidTemplates.Csharp/Templates/Class/Property/SimpleTypes/Types.cs" />
+        <option value="$PROJECT_DIR$/src/LiquidTemplates.Csharp/Templates/Class/Property/SimpleTypes/Property.cs" />
+        <option value="$PROJECT_DIR$/src/LiquidTemplates.Csharp/LiquidTemplates.Csharp.csproj" />
       </list>
     </option>
   </component>
@@ -459,7 +456,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607076306162</updated>
     </task>
-    <option name="localTasksCounter" value="44" />
+    <task id="LOCAL-00044" summary="Property Shortcut">
+      <created>1607402944649</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1607402944649</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -481,7 +485,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="Property Accessor" />
     <MESSAGE value="Private Setter Extension" />
     <MESSAGE value="Private Setter Extension Test" />
     <MESSAGE value="Class Access Modifier Tests" />
@@ -506,7 +509,8 @@
     <MESSAGE value="CI Build" />
     <MESSAGE value="Lang Ver" />
     <MESSAGE value="CI" />
-    <option name="LAST_COMMIT_MESSAGE" value="CI" />
+    <MESSAGE value="Property Shortcut" />
+    <option name="LAST_COMMIT_MESSAGE" value="Property Shortcut" />
   </component>
   <component name="WindowStateProjectService">
     <state x="871" y="327" key="#xdebugger.XInspectDialog" timestamp="1607061198603">
@@ -633,19 +637,6 @@
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/src/LiquidTemplates.Csharp/Templates/Class/Property/PropertyTemplateBuilderBase.cs</url>
-          <line>18</line>
-          <properties documentPath="$PROJECT_DIR$/src/LiquidTemplates.Csharp/Templates/Class/Property/PropertyTemplateBuilderBase.cs" initialLine="12">
-            <startOffsets>
-              <option value="718" />
-            </startOffsets>
-            <endOffsets>
-              <option value="719" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/src/LiquidTemplates.Csharp.Tests/Templates/Class/Inheritance/Implements/ClassImplementsTests.cs</url>
           <line>54</line>
