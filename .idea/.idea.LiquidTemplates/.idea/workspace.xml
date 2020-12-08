@@ -22,9 +22,16 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="aba93b88-5f68-4dd9-81ef-9a476e241955" name="Default Changelist" comment="Base Version Up">
+    <list default="true" id="aba93b88-5f68-4dd9-81ef-9a476e241955" name="Default Changelist" comment="Build überschreibbar gemacht">
+      <change afterPath="$PROJECT_DIR$/src/LiquidTemplates/Extensions/ITemplateBuilderAfterBuildExtension.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/LiquidTemplates/Extensions/ITemplateBuilderBeforeBuildExtension.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.LiquidTemplates/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LiquidTemplates/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.LiquidTemplates/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LiquidTemplates/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LiquidTemplates/Addition/ITemplateBuilderAddition.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LiquidTemplates/Base/GeneratedFile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/LiquidTemplates/Base/GeneratedFile.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LiquidTemplates/Base/ITemplateBuilder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/LiquidTemplates/Base/ITemplateBuilder.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/LiquidTemplates/Base/TemplateBuilderBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/LiquidTemplates/Base/TemplateBuilderBase.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LiquidTemplates/Extensions/ITemplateBuilderExtension.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/LiquidTemplates/Extensions/ITemplateBuilderExtension.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,10 +60,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/LiquidTemplates.Csharp/Templates/Words/That/Has/TemplateBuilderThatIsBuilder.cs" />
-        <option value="$PROJECT_DIR$/src/LiquidTemplates.Csharp/Templates/Class/Property/PropertyAccessorExtensions.cs" />
-        <option value="$PROJECT_DIR$/src/LiquidTemplates.Csharp/Templates/Words/That/Has/TemplateBuilderThatHasExtension.cs" />
-        <option value="$PROJECT_DIR$/src/LiquidTemplates.Csharp/Templates/Class/Property/IPropertyTemplateBuilder.cs" />
         <option value="$PROJECT_DIR$/src/LiquidTemplates.Csharp/Templates/Base/PlaceHolderReplacement.cs" />
         <option value="$PROJECT_DIR$/src/LiquidTemplates.Csharp/Templates/Class/Property/SimpleTypes/IntPropertyTemplateBuilder.cs" />
         <option value="$PROJECT_DIR$/src/LiquidTemplates.Csharp/Templates/Class/Property/SimpleTypes/FloatPropertyTemplateBuilder.cs" />
@@ -97,12 +100,16 @@
         <option value="$PROJECT_DIR$/src/LiquidTemplates.Csharp/Templates/Class/Property/SimpleTypes/Types.cs" />
         <option value="$PROJECT_DIR$/src/LiquidTemplates.Csharp/Templates/Class/Property/SimpleTypes/Property.cs" />
         <option value="$PROJECT_DIR$/src/LiquidTemplates.Csharp/LiquidTemplates.Csharp.csproj" />
-        <option value="$PROJECT_DIR$/src/LiquidTemplates/Base/GeneratedFile.cs" />
-        <option value="$PROJECT_DIR$/src/LiquidTemplates/Extensions/ITemplateBuilderExtension.cs" />
         <option value="$PROJECT_DIR$/src/LiquidTemplates/Addition/ITemplateBuilderAddition.cs" />
-        <option value="$PROJECT_DIR$/src/LiquidTemplates/Base/ITemplateBuilder.cs" />
-        <option value="$PROJECT_DIR$/src/LiquidTemplates/LiquidTemplates.csproj" />
         <option value="$PROJECT_DIR$/src/LiquidTemplates.Csharp/Templates/Class/ClassTemplateBuilder.cs" />
+        <option value="$PROJECT_DIR$/src/LiquidTemplates/LiquidTemplates.csproj" />
+        <option value="$PROJECT_DIR$/src/LiquidTemplates/Extensions/ITemplateBuilderAdditionExtension.cs" />
+        <option value="$PROJECT_DIR$/src/LiquidTemplates/Extensions/ITemplateBuilderExtension.cs" />
+        <option value="$PROJECT_DIR$/src/LiquidTemplates/Extensions/ITemplateBuilderBeforeBuildExtension.cs" />
+        <option value="$PROJECT_DIR$/src/LiquidTemplates/Extensions/ITemplateBuilderAfterBuildExtension.cs" />
+        <option value="$PROJECT_DIR$/src/LiquidTemplates/Base/GeneratedFile.cs" />
+        <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch_1.cs" />
+        <option value="$PROJECT_DIR$/src/LiquidTemplates/Base/ITemplateBuilder.cs" />
         <option value="$PROJECT_DIR$/src/LiquidTemplates/Base/TemplateBuilderBase.cs" />
       </list>
     </option>
@@ -158,13 +165,6 @@
       <workItem from="1606833864600" duration="19398000" />
       <workItem from="1607077351018" duration="311000" />
       <workItem from="1607077682968" duration="207000" />
-    </task>
-    <task id="LOCAL-00003" summary="Cleanup">
-      <created>1606729322103</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1606729322103</updated>
     </task>
     <task id="LOCAL-00004" summary="With">
       <created>1606729627142</created>
@@ -502,7 +502,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607428988451</updated>
     </task>
-    <option name="localTasksCounter" value="52" />
+    <task id="LOCAL-00052" summary="Build überschreibbar gemacht">
+      <created>1607431043261</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1607431043262</updated>
+    </task>
+    <option name="localTasksCounter" value="53" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -524,7 +531,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="Weitere Builder für Simple Types" />
     <MESSAGE value="Class Template erweitert" />
     <MESSAGE value="Solution aufgeräumt" />
     <MESSAGE value="TemplateFile Struktur umgestellt" />
@@ -549,7 +555,8 @@
     <MESSAGE value="Inheritance der Template Builder eingeführt" />
     <MESSAGE value="Additions" />
     <MESSAGE value="Base Version Up" />
-    <option name="LAST_COMMIT_MESSAGE" value="Base Version Up" />
+    <MESSAGE value="Build überschreibbar gemacht" />
+    <option name="LAST_COMMIT_MESSAGE" value="Build überschreibbar gemacht" />
   </component>
   <component name="WindowStateProjectService">
     <state x="871" y="327" key="#xdebugger.XInspectDialog" timestamp="1607061198603">
@@ -660,10 +667,10 @@
       <screen x="0" y="25" width="2048" height="1255" />
     </state>
     <state x="533" y="270" key="SettingsEditor/0.25.2048.1255@0.25.2048.1255" timestamp="1607430601523" />
-    <state x="624" y="371" key="Vcs.Push.Dialog.v2" timestamp="1607428821329">
+    <state x="624" y="371" key="Vcs.Push.Dialog.v2" timestamp="1607431044645">
       <screen x="0" y="25" width="2048" height="1255" />
     </state>
-    <state x="624" y="371" key="Vcs.Push.Dialog.v2/0.25.2048.1255@0.25.2048.1255" timestamp="1607428821329" />
+    <state x="624" y="371" key="Vcs.Push.Dialog.v2/0.25.2048.1255@0.25.2048.1255" timestamp="1607431044645" />
     <state width="1024" height="627" key="XDebugger.FullValuePopup" timestamp="1607071398198">
       <screen x="0" y="25" width="2048" height="1255" />
     </state>

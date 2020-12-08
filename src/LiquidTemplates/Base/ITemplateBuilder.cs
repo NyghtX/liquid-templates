@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-using LiquidTemplates.Addition;
 using LiquidTemplates.Extensions;
 using LiquidTemplates.Replacement;
 
@@ -62,34 +61,16 @@ namespace LiquidTemplates
         public void AddExtension<TExtension>(TExtension extension) where TExtension : ITemplateBuilderExtension;
 
         /// <summary>
-        ///     Fügt dem Templatebuilder eine Addition hinzu
-        /// </summary>
-        /// <param name="addition">Addition, die dem TemplateBuilder hinzugefügt werden soll</param>
-        public void AddAddition<TAddition>(TAddition addition) where TAddition : ITemplateBuilderAddition;
-
-        /// <summary>
-        ///     Gibt eine Liste mit Additions des Typen
-        /// </summary>
-        /// <typeparam name="TAddition">Typ der Additions</typeparam>
-        /// <returns>Liste mit Additions</returns>
-        public IEnumerable<TAddition> GetAdditions<TAddition>() where TAddition : ITemplateBuilderAddition;
-
-        /// <summary>
         ///     Gibt die Liste der registrierten Extensions wieder
         /// </summary>
         /// <returns></returns>
         public IEnumerable<ITemplateBuilderExtension> GetExtensions();
-
-        /// <summary>
-        /// Fügt dem Builder ein File hinzu
-        /// </summary>
-        /// <param name="file">File, das beim Build mit ausgegeben wird</param>
-        public void AddFile(GeneratedFile file);
+        
 
         /// <summary>
         /// Lässt den Template Builder builden
         /// </summary>
         /// <returns>Files, die das Resultat des Builds sind</returns>
-        public IEnumerable<GeneratedFile> Build();
+        public void Build();
     }
 }

@@ -14,17 +14,15 @@
       <e p="LiquidTemplates.sln" t="IncludeFlat" />
       <e p="packages" t="ExcludeRecursive" />
       <e p="src/LiquidTemplates" t="IncludeRecursive">
-        <e p="Addition" t="Include">
-          <e p="ITemplateBuilderAddition.cs" t="Include" />
-        </e>
         <e p="Base" t="Include">
-          <e p="GeneratedFile.cs" t="Include" />
           <e p="ITemplateBuilder.cs" t="Include" />
           <e p="TemplateBuilderBase.cs" t="Include" />
           <e p="TemplateFile.cs" t="Include" />
         </e>
         <e p="bin" t="ExcludeRecursive" />
         <e p="Extensions" t="Include">
+          <e p="ITemplateBuilderAfterBuildExtension.cs" t="Include" />
+          <e p="ITemplateBuilderBeforeBuildExtension.cs" t="Include" />
           <e p="ITemplateBuilderBeforeReplacementExtension.cs" t="Include" />
           <e p="ITemplateBuilderExtension.cs" t="Include" />
         </e>
