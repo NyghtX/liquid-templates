@@ -18,6 +18,18 @@ namespace LiquidTemplates
         /// </summary>
         /// <param name="templateBuilder"></param>
         void AddChild(ITemplateBuilder templateBuilder);
+
+        /// <summary>
+        /// Liest die Liste der Children des Builders
+        /// </summary>
+        /// <returns></returns>
+        IEnumerable<ITemplateBuilder> GetChildren();
+
+        /// <summary>
+        /// Liest den Parent Builder des Builders
+        /// </summary>
+        /// <returns></returns>
+        ITemplateBuilder GetParent();
         
         /// <summary>
         ///     Fügt der List der Replacements einen Eintrag hinzu

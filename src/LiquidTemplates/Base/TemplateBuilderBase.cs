@@ -87,6 +87,18 @@ namespace LiquidTemplates
         }
 
         /// <summary>
+        /// Liest die Liste der Children des Builders
+        /// </summary>
+        /// <returns></returns>
+        public IEnumerable<ITemplateBuilder> GetChildren() => _children;
+
+        /// <summary>
+        /// Liest den Parent Builder des Builders
+        /// </summary>
+        /// <returns></returns>
+        public ITemplateBuilder GetParent() => _parent;
+
+        /// <summary>
         ///     Fügt der List der Replacements einen Eintrag hinzu
         /// </summary>
         /// <param name="replacement">Replacement, dass an den Placeholder gebracht wird</param>
