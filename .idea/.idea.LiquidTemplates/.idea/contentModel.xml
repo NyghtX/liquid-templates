@@ -79,6 +79,7 @@
             <e p="Class.template" t="Include" />
             <e p="ClassTemplateBuilder.cs" t="Include" />
             <e p="ClassTemplatePlaceholder.cs" t="Include" />
+            <e p="GeneratedFile.cs" t="Include" />
             <e p="IClassTemplateBuilder.cs" t="Include" />
             <e p="Inheritance" t="Include">
               <e p="Extends" t="Include">

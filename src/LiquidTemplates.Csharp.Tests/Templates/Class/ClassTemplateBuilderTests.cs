@@ -1,3 +1,4 @@
+using System.Linq;
 using FluentAssertions;
 using LiquidTemplates.Csharp.Templates.Class;
 using LiquidTemplates.Csharp.Templates.Class.Inheritance.Extends;
@@ -20,7 +21,7 @@ namespace LiquidTemplates.Csharp.Tests.Templates.Class
             // => Arrange
 
             // => Act
-            var myGeneratedClass = ClassTemplateBuilder
+            var classTemplateBuilder = ClassTemplateBuilder
                 .CreateClass()
                 .WithName("MyGeneratedClass")
                 .InNamespace("Nyghtx.Generator.Generated")
@@ -30,22 +31,28 @@ namespace LiquidTemplates.Csharp.Tests.Templates.Class
                         .Create()
                         .WithName("Vorname")
                         .That().Has().PrivateSetter()
-                )
-                .ToString();
+                );
+            
+            classTemplateBuilder.Build();
 
             // => Assert
+            var generatedClass = classTemplateBuilder.GetGeneratedFiles().First();
+            var generatedClassContent = generatedClass.Conent;
+            
+            // Filename
+            generatedClass.Filename.Should().Be("MyGeneratedClass.generated.cs");
 
             // Klassenname
-            myGeneratedClass.Should().Contain("MyGeneratedClass");
+            generatedClassContent.Should().Contain("MyGeneratedClass");
 
             // Namespace
-            myGeneratedClass.Should().Contain("namespace Nyghtx.Generator.Generated");
+            generatedClassContent.Should().Contain("namespace Nyghtx.Generator.Generated");
 
             // Access
-            myGeneratedClass.Should().Contain("public class");
+            generatedClassContent.Should().Contain("public class");
 
             // Property
-            myGeneratedClass.Should().Contain("public string Vorname {get; private set;}");
+            generatedClassContent.Should().Contain("public string Vorname {get; private set;}");
         }
 
 

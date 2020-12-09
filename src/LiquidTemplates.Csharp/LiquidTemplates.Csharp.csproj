@@ -20,7 +20,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="NyghtX.LiquidTemplates" Version="0.0.2" />
+    <PackageReference Include="NyghtX.LiquidTemplates" Version="0.0.5" />
   </ItemGroup>
 
 </Project>

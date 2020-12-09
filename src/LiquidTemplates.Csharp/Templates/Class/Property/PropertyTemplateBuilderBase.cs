@@ -40,5 +40,11 @@ namespace LiquidTemplates.Csharp.Templates.Class.Property
             AddReplacement(new PlaceHolderReplacement(PropertyTemplatePlaceholder.PropertyName, name));
             return this;
         }
+
+        public override string ToString()
+        {
+            Build();
+            return BuildResult;
+        }
     }
 }

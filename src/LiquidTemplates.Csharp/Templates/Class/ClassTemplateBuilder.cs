@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using LiquidTemplates.Replacement;
+using static System.String;
 
 namespace LiquidTemplates.Csharp.Templates.Class
 {
@@ -11,6 +12,16 @@ namespace LiquidTemplates.Csharp.Templates.Class
     /// </summary>
     public class ClassTemplateBuilder : TemplateBuilderBase, IClassTemplateBuilder
     {
+        /// <summary>
+        /// Files, die beim Build ausgegeben werden
+        /// </summary>
+        private readonly List<GeneratedFile> _files = new List<GeneratedFile>();
+        
+        /// <summary>
+        /// Name der Klasse
+        /// </summary>
+        private string _className = Empty;
+        
         /// <summary>
         ///     TemplateFile, das für ClassTemplates genutzt werden soll
         /// </summary>
@@ -29,6 +40,7 @@ namespace LiquidTemplates.Csharp.Templates.Class
         public IClassTemplateBuilder WithName(string name)
         {
             AddReplacement(new PlaceHolderReplacement(ClassTemplatePlaceholder.Classname, name));
+            _className = name;
             return this;
         }
 
@@ -44,16 +56,25 @@ namespace LiquidTemplates.Csharp.Templates.Class
         }
 
         /// <summary>
+        /// Fügt dem ClassTemplateBuilder ein neues File hinzu, das beim Build ausgegeben wird
+        /// </summary>
+        /// <param name="file">File, das dem Builder hinzugefügt werden soll</param>
+        public void AddFile(GeneratedFile file) => _files.Add(file);
+
+        /// <summary>
+        /// Gibt die generierten Files aus
+        /// </summary>
+        /// <returns>Liste der generierten Files</returns>
+        public IEnumerable<GeneratedFile> GetGeneratedFiles() => _files;
+
+        /// <summary>
         ///     Beginnt den Prozess ein neues Class Template zum Generieren zu erstellen
         /// </summary>
         /// <returns>ClassTemplate, das Fluent genutzt werden soll</returns>
         /// <exception cref="NullReferenceException">Wenn das TemplateFile noch nicht gesetzt wurde</exception>
-        public static IClassTemplateBuilder CreateClass()
-        {
-            return new ClassTemplateBuilder(TemplateFile);
-        }
+        public static IClassTemplateBuilder CreateClass() => new ClassTemplateBuilder(TemplateFile);
 
-        public override string ToString()
+        public override void BeforeBuild()
         {
             // => Usings Builden
             BuildUsings();
@@ -82,9 +103,14 @@ namespace LiquidTemplates.Csharp.Templates.Class
 
             ClearReplacementsFor(ClassTemplatePlaceholder.Inheritance);
             AddReplacement(new PlaceHolderReplacement(ClassTemplatePlaceholder.Inheritance,
-                inheritance != " : " ? inheritance : string.Empty));
+                inheritance != " : " ? inheritance : Empty));
+        }
 
-            return base.ToString();
+        public override void AfterBuild()
+        {
+                    
+            // => Template zur Files hinufügen
+            AddFile(new GeneratedFile($"{_className}.generated.cs", BuildResult));
         }
 
         private void BuildUsings()
