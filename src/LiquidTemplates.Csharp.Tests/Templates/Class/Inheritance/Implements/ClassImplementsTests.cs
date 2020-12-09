@@ -22,7 +22,7 @@ namespace LiquidTemplates.Csharp.Tests.Templates.Class.Inheritance.Implements
                 .InNamespace("Nyghtx.Generator.Generated")
                 .That().Is().Public()
                 .That().Implements(new InterfaceImplementation("IMyInterface", "My.Interface.Namespace"));
-            
+
             classTemplateBuilder.Build();
             var generatedClass = classTemplateBuilder.GetGeneratedFiles().First();
             var generatedClassContent = generatedClass.Conent;
@@ -47,7 +47,7 @@ namespace LiquidTemplates.Csharp.Tests.Templates.Class.Inheritance.Implements
                 .InNamespace("Nyghtx.Generator.Generated")
                 .That().Is().Public()
                 .That().Implements(interfaceImplementation);
-            
+
             classTemplateBuilder.Build();
             var generatedClass = classTemplateBuilder.GetGeneratedFiles().First();
             var generatedClassContent = generatedClass.Conent;

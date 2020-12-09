@@ -55,7 +55,7 @@ namespace LiquidTemplates.Csharp.Tests.Templates.Class
 
                 // => Act
                 .That().Is().Internal();
-            
+
             classTemplateBuilder.Build();
             var generatedClass = classTemplateBuilder.GetGeneratedFiles().First();
             var generatedClassContent = generatedClass.Conent;

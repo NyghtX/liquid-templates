@@ -18,30 +18,33 @@ namespace LiquidTemplates.Csharp.Tests.Templates.Class.Inheritance.Extends
             // => Arrange
 
             // => Act
-            var implementations = new List<string>()
+            var implementations = new List<string>
             {
                 "public override void Test() {int i = [IVALUE];}"
             };
-            var templatePlaceholders = new List<TemplatePlaceholder>()
+            var templatePlaceholders = new List<TemplatePlaceholder>
             {
                 new TemplatePlaceholder("IVALUE", true, false)
             };
-            var replacements = new Dictionary<string, List<PlaceHolderReplacement>>()
+            var replacements = new Dictionary<string, List<PlaceHolderReplacement>>
             {
-                {"IVALUE", new List<PlaceHolderReplacement>()
                 {
-                    new PlaceHolderReplacement("IVALUE", "5")
-                }}
+                    "IVALUE", new List<PlaceHolderReplacement>
+                    {
+                        new PlaceHolderReplacement("IVALUE", "5")
+                    }
+                }
             };
-            
-            var baseClass = new BaseClass("TestBase", "MyTestbaseNamespace", implementations, templatePlaceholders, replacements);
+
+            var baseClass = new BaseClass("TestBase", "MyTestbaseNamespace", implementations, templatePlaceholders,
+                replacements);
             var classTemplateBuilder = ClassTemplateBuilder
                 .CreateClass()
                 .WithName("MyGeneratedClass")
                 .InNamespace("Nyghtx.Generator.Generated")
                 .That().Is().Public()
                 .That().Extends(baseClass);
-            
+
             classTemplateBuilder.Build();
             var generatedClass = classTemplateBuilder.GetGeneratedFiles().First();
             var generatedClassContent = generatedClass.Conent;
@@ -50,9 +53,8 @@ namespace LiquidTemplates.Csharp.Tests.Templates.Class.Inheritance.Extends
 
             // Klassenname
             generatedClassContent.Should().Contain("MyGeneratedClass : TestBase");
-            
-            generatedClassContent.Should().Contain("public override void Test() {int i = 5;}");
 
+            generatedClassContent.Should().Contain("public override void Test() {int i = 5;}");
         }
     }
 }

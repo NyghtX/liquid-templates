@@ -13,19 +13,19 @@ namespace LiquidTemplates.Csharp.Templates.Class
     public class ClassTemplateBuilder : TemplateBuilderBase, IClassTemplateBuilder
     {
         /// <summary>
-        /// Files, die beim Build ausgegeben werden
-        /// </summary>
-        private readonly List<GeneratedFile> _files = new List<GeneratedFile>();
-        
-        /// <summary>
-        /// Name der Klasse
-        /// </summary>
-        private string _className = Empty;
-        
-        /// <summary>
         ///     TemplateFile, das für ClassTemplates genutzt werden soll
         /// </summary>
         public static TemplateFile TemplateFile = TemplateFile.From("Templates/Class/Class.template");
+
+        /// <summary>
+        ///     Files, die beim Build ausgegeben werden
+        /// </summary>
+        private readonly List<GeneratedFile> _files = new List<GeneratedFile>();
+
+        /// <summary>
+        ///     Name der Klasse
+        /// </summary>
+        private string _className = Empty;
 
         public ClassTemplateBuilder(TemplateFile templateFile) : base(templateFile,
             ClassTemplatePlaceholder.Placeholders)
@@ -56,23 +56,32 @@ namespace LiquidTemplates.Csharp.Templates.Class
         }
 
         /// <summary>
-        /// Fügt dem ClassTemplateBuilder ein neues File hinzu, das beim Build ausgegeben wird
+        ///     Fügt dem ClassTemplateBuilder ein neues File hinzu, das beim Build ausgegeben wird
         /// </summary>
         /// <param name="file">File, das dem Builder hinzugefügt werden soll</param>
-        public void AddFile(GeneratedFile file) => _files.Add(file);
+        public void AddFile(GeneratedFile file)
+        {
+            _files.Add(file);
+        }
 
         /// <summary>
-        /// Gibt die generierten Files aus
+        ///     Gibt die generierten Files aus
         /// </summary>
         /// <returns>Liste der generierten Files</returns>
-        public IEnumerable<GeneratedFile> GetGeneratedFiles() => _files;
+        public IEnumerable<GeneratedFile> GetGeneratedFiles()
+        {
+            return _files;
+        }
 
         /// <summary>
         ///     Beginnt den Prozess ein neues Class Template zum Generieren zu erstellen
         /// </summary>
         /// <returns>ClassTemplate, das Fluent genutzt werden soll</returns>
         /// <exception cref="NullReferenceException">Wenn das TemplateFile noch nicht gesetzt wurde</exception>
-        public static IClassTemplateBuilder CreateClass() => new ClassTemplateBuilder(TemplateFile);
+        public static IClassTemplateBuilder CreateClass()
+        {
+            return new ClassTemplateBuilder(TemplateFile);
+        }
 
         public override void BeforeBuild()
         {
@@ -108,7 +117,6 @@ namespace LiquidTemplates.Csharp.Templates.Class
 
         public override void AfterBuild()
         {
-                    
             // => Template zur Files hinufügen
             AddFile(new GeneratedFile($"{_className}.generated.cs", BuildResult));
         }

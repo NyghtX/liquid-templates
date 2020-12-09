@@ -19,13 +19,13 @@ namespace LiquidTemplates.Csharp.Templates.Class
         public IClassTemplateBuilder InNamespace(string inNamespace);
 
         /// <summary>
-        /// Fügt dem ClassTemplateBuilder ein neues File hinzu, das beim Build ausgegeben wird
+        ///     Fügt dem ClassTemplateBuilder ein neues File hinzu, das beim Build ausgegeben wird
         /// </summary>
         /// <param name="file">File, das dem Builder hinzugefügt werden soll</param>
         public void AddFile(GeneratedFile file);
 
         /// <summary>
-        /// Gibt die generierten Files aus
+        ///     Gibt die generierten Files aus
         /// </summary>
         /// <returns>Liste der generierten Files</returns>
         public IEnumerable<GeneratedFile> GetGeneratedFiles();

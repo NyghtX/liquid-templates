@@ -9,11 +9,6 @@ namespace LiquidTemplates.Csharp.Templates.Class.Inheritance.Extends
     public class BaseClass : IReplacementBuilder
     {
         /// <summary>
-        ///     Werte, die in die Platzhalter kommen
-        /// </summary>
-        private readonly Dictionary<string, List<PlaceHolderReplacement>> _replacements;
-
-        /// <summary>
         ///     Implementierungen, die übernommen werden
         /// </summary>
         private readonly IEnumerable<string> _implementations;
@@ -23,8 +18,14 @@ namespace LiquidTemplates.Csharp.Templates.Class.Inheritance.Extends
         /// </summary>
         private readonly IEnumerable<TemplatePlaceholder> _placeholders;
 
+        /// <summary>
+        ///     Werte, die in die Platzhalter kommen
+        /// </summary>
+        private readonly Dictionary<string, List<PlaceHolderReplacement>> _replacements;
+
         public BaseClass(string className, string ns, IEnumerable<string> implementations,
-            IEnumerable<TemplatePlaceholder> placeholders, Dictionary<string, List<PlaceHolderReplacement>> replacements)
+            IEnumerable<TemplatePlaceholder> placeholders,
+            Dictionary<string, List<PlaceHolderReplacement>> replacements)
         {
             _implementations = implementations;
             _placeholders = placeholders;

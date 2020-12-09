@@ -7,29 +7,29 @@ namespace LiquidTemplates
     public interface ITemplateBuilder
     {
         /// <summary>
-        /// Setzt das Parent Element des Builders
+        ///     Setzt das Parent Element des Builders
         /// </summary>
         /// <param name="templateBuilder"></param>
         void SetParent(ITemplateBuilder templateBuilder);
 
         /// <summary>
-        /// Fügt einen TemplateBuilder als Child Element hinzu
+        ///     Fügt einen TemplateBuilder als Child Element hinzu
         /// </summary>
         /// <param name="templateBuilder"></param>
         void AddChild(ITemplateBuilder templateBuilder);
 
         /// <summary>
-        /// Liest die Liste der Children des Builders
+        ///     Liest die Liste der Children des Builders
         /// </summary>
         /// <returns></returns>
         IEnumerable<ITemplateBuilder> GetChildren();
 
         /// <summary>
-        /// Liest den Parent Builder des Builders
+        ///     Liest den Parent Builder des Builders
         /// </summary>
         /// <returns></returns>
         ITemplateBuilder GetParent();
-        
+
         /// <summary>
         ///     Fügt der List der Replacements einen Eintrag hinzu
         /// </summary>
@@ -65,10 +65,10 @@ namespace LiquidTemplates
         /// </summary>
         /// <returns></returns>
         public IEnumerable<ITemplateBuilderExtension> GetExtensions();
-        
+
 
         /// <summary>
-        /// Lässt den Template Builder builden
+        ///     Lässt den Template Builder builden
         /// </summary>
         /// <returns>Files, die das Resultat des Builds sind</returns>
         public void Build();

@@ -9,12 +9,12 @@ namespace LiquidTemplates.Csharp.Templates.Class
         }
 
         /// <summary>
-        /// Name des Files
+        ///     Name des Files
         /// </summary>
         public string Filename { get; }
 
         /// <summary>
-        /// Inhalt des Files
+        ///     Inhalt des Files
         /// </summary>
         public string Conent { get; }
     }

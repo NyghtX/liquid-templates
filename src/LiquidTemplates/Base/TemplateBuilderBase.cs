@@ -28,22 +28,22 @@ namespace LiquidTemplates
             new Dictionary<string, List<PlaceHolderReplacement>>();
 
         /// <summary>
-        /// Parent Builder
-        /// </summary>
-        private ITemplateBuilder _parent;
-
-        /// <summary>
-        /// Child Elemente des Template Builders
-        /// </summary>
-        private List<ITemplateBuilder> _children = new List<ITemplateBuilder>();
-
-        /// <summary>
         ///     Source Template
         /// </summary>
         protected readonly TemplateFile Source;
 
         /// <summary>
-        /// Ergebnis des Builds
+        ///     Child Elemente des Template Builders
+        /// </summary>
+        private readonly List<ITemplateBuilder> _children = new List<ITemplateBuilder>();
+
+        /// <summary>
+        ///     Parent Builder
+        /// </summary>
+        private ITemplateBuilder _parent;
+
+        /// <summary>
+        ///     Ergebnis des Builds
         /// </summary>
         protected string BuildResult = string.Empty;
 
@@ -64,7 +64,7 @@ namespace LiquidTemplates
         }
 
         /// <summary>
-        /// Setzt das Parent Element des Builders
+        ///     Setzt das Parent Element des Builders
         /// </summary>
         /// <param name="templateBuilder"></param>
         public void SetParent(ITemplateBuilder templateBuilder)
@@ -73,7 +73,7 @@ namespace LiquidTemplates
         }
 
         /// <summary>
-        /// Fügt einen TemplateBuilder als Child Element hinzu
+        ///     Fügt einen TemplateBuilder als Child Element hinzu
         /// </summary>
         /// <param name="templateBuilder"></param>
         public void AddChild(ITemplateBuilder templateBuilder)
@@ -82,16 +82,22 @@ namespace LiquidTemplates
         }
 
         /// <summary>
-        /// Liest die Liste der Children des Builders
+        ///     Liest die Liste der Children des Builders
         /// </summary>
         /// <returns></returns>
-        public IEnumerable<ITemplateBuilder> GetChildren() => _children;
+        public IEnumerable<ITemplateBuilder> GetChildren()
+        {
+            return _children;
+        }
 
         /// <summary>
-        /// Liest den Parent Builder des Builders
+        ///     Liest den Parent Builder des Builders
         /// </summary>
         /// <returns></returns>
-        public ITemplateBuilder GetParent() => _parent;
+        public ITemplateBuilder GetParent()
+        {
+            return _parent;
+        }
 
         /// <summary>
         ///     Fügt der List der Replacements einen Eintrag hinzu
@@ -121,31 +127,41 @@ namespace LiquidTemplates
         ///     Gibt die Liste der registrierten Replacements wieder
         /// </summary>
         /// <returns></returns>
-        public IEnumerable<PlaceHolderReplacement> GetReplacementsFor(string identifier) => Replacements[identifier];
+        public IEnumerable<PlaceHolderReplacement> GetReplacementsFor(string identifier)
+        {
+            return Replacements[identifier];
+        }
 
         /// <summary>
         ///     Leert die Replacement Liste für einen bestimmten identifier
         /// </summary>
         /// <param name="replacementIdentifier">Replaement Identifier, dessen Liste geleert werden soll</param>
-        public void ClearReplacementsFor(string replacementIdentifier) =>
+        public void ClearReplacementsFor(string replacementIdentifier)
+        {
             Replacements[replacementIdentifier] = new List<PlaceHolderReplacement>();
+        }
 
         /// <summary>
         ///     Fügt dem Templatebuilder eine Extension hinzu
         /// </summary>
         /// <param name="extension">Extension, die dem TemplateBuilder hinzugefügt werden soll</param>
-        public void AddExtension<TExtension>(TExtension extension) where TExtension : ITemplateBuilderExtension =>
+        public void AddExtension<TExtension>(TExtension extension) where TExtension : ITemplateBuilderExtension
+        {
             _extensions[typeof(TExtension)].Add(extension);
+        }
 
 
         /// <summary>
         ///     Gibt die Liste der registrierten Extensions wieder
         /// </summary>
         /// <returns></returns>
-        public IEnumerable<ITemplateBuilderExtension> GetExtensions() => _extensions[typeof(ITemplateBuilderExtension)];
+        public IEnumerable<ITemplateBuilderExtension> GetExtensions()
+        {
+            return _extensions[typeof(ITemplateBuilderExtension)];
+        }
 
         /// <summary>
-        /// Lässt den Template Builder builden
+        ///     Lässt den Template Builder builden
         /// </summary>
         /// <returns>Files, die das Resultat des Builds sind</returns>
         public virtual void Build()
@@ -155,38 +171,37 @@ namespace LiquidTemplates
 
             // => BeforeBuild builden
             BeforeBuild();
-            
+
             // => Before Replacement Extensions aufrufen
             RunExtensions(typeof(ITemplateBuilderBeforeReplacementExtension));
             BuildResult = Source.Content.ReplacePlaceholders(_placeholders.Values, Replacements);
 
             // => After Build Extensions ausführen
             RunExtensions(typeof(ITemplateBuilderAfterBuildExtension));
-            
+
             // => After Build
             AfterBuild();
         }
 
         /// <summary>
-        /// Bevor der Build ausgeführt wird
+        ///     Bevor der Build ausgeführt wird
         /// </summary>
         public virtual void BeforeBuild()
         {
             // => Kann vom Child überschrieben werden
         }
-        
+
         /// <summary>
-        /// Nachdem der Build ausgeführt wurde
+        ///     Nachdem der Build ausgeführt wurde
         /// </summary>
         public virtual void AfterBuild()
         {
             // => Kann vom Child überschrieben werden
         }
 
-        
 
         /// <summary>
-        /// Führt alle registrierten Extensions eines bestimmten Typen aus
+        ///     Führt alle registrierten Extensions eines bestimmten Typen aus
         /// </summary>
         /// <param name="ofType">Typ der Extensions, die ausgeführt werden sollen</param>
         protected void RunExtensions(Type ofType)

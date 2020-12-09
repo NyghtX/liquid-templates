@@ -32,13 +32,13 @@ namespace LiquidTemplates.Csharp.Tests.Templates.Class
                         .WithName("Vorname")
                         .That().Has().PrivateSetter()
                 );
-            
+
             classTemplateBuilder.Build();
 
             // => Assert
             var generatedClass = classTemplateBuilder.GetGeneratedFiles().First();
             var generatedClassContent = generatedClass.Conent;
-            
+
             // Filename
             generatedClass.Filename.Should().Be("MyGeneratedClass.generated.cs");
 
