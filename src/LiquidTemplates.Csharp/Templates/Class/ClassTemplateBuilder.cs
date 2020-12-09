@@ -15,7 +15,18 @@ namespace LiquidTemplates.Csharp.Templates.Class
         /// <summary>
         ///     TemplateFile, das für ClassTemplates genutzt werden soll
         /// </summary>
-        public static TemplateFile TemplateFile = TemplateFile.From("Templates/Class/Class.template");
+        public static TemplateFile TemplateFile = new TemplateFile(@"[USINGS]
+
+namespace [NAMESPACE]
+{
+    [ACCESSMODIFIER] class [CLASSNAME][INHERITANCE]
+    {
+        [PROPERTY]
+        
+        [METHOD]
+
+    }
+}");
 
         /// <summary>
         ///     Files, die beim Build ausgegeben werden

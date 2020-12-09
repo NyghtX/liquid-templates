@@ -8,7 +8,7 @@ namespace LiquidTemplates.Csharp.Templates.Class.Property
         /// <summary>
         ///     TemplateFile, das für PropertyTemplates genutzt werden soll
         /// </summary>
-        public static TemplateFile TemplateFile = TemplateFile.From("Templates/Class/Property/Property.template");
+        public static TemplateFile TemplateFile = new TemplateFile(@"public [PROPERTYTYPE] [PROPERTYNAME] {[GETTER] [SETTER]}");
 
         public PropertyTemplateBuilderBase() : this(TemplateFile)
         {
