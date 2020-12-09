@@ -153,8 +153,8 @@ namespace LiquidTemplates
             // => Before Build Extensions ausführen
             RunExtensions(typeof(ITemplateBuilderBeforeBuildExtension));
 
-            // => Child builden
-            InternalBuild();
+            // => BeforeBuild builden
+            BeforeBuild();
             
             // => Before Replacement Extensions aufrufen
             RunExtensions(typeof(ITemplateBuilderBeforeReplacementExtension));
@@ -162,15 +162,27 @@ namespace LiquidTemplates
 
             // => After Build Extensions ausführen
             RunExtensions(typeof(ITemplateBuilderAfterBuildExtension));
+            
+            // => After Build
+            AfterBuild();
         }
 
         /// <summary>
-        /// Buildprozess des spezifischen Templates
+        /// Bevor der Build ausgeführt wird
         /// </summary>
-        public virtual void InternalBuild()
+        public virtual void BeforeBuild()
         {
             // => Kann vom Child überschrieben werden
         }
+        
+        /// <summary>
+        /// Nachdem der Build ausgeführt wurde
+        /// </summary>
+        public virtual void AfterBuild()
+        {
+            // => Kann vom Child überschrieben werden
+        }
+
         
 
         /// <summary>

@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <PackageId>NyghtX.LiquidTemplates</PackageId>
-    <Version>0.0.4</Version>
+    <Version>0.0.5</Version>
     <Authors>Jan Heinsohn</Authors>
     <Company>Jan Heinsohn</Company>
     <PackageDescription>Base für Liquid Templates</PackageDescription>
