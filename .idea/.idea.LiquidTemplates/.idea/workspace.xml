@@ -22,7 +22,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="aba93b88-5f68-4dd9-81ef-9a476e241955" name="Default Changelist" comment="Cleanup">
+    <list default="true" id="aba93b88-5f68-4dd9-81ef-9a476e241955" name="Default Changelist" comment="Version UP">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.LiquidTemplates/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LiquidTemplates/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/LiquidTemplates.Csharp/LiquidTemplates.Csharp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/src/LiquidTemplates.Csharp/LiquidTemplates.Csharp.csproj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -160,14 +161,7 @@
       <workItem from="1607077682968" duration="207000" />
       <workItem from="1607433086415" duration="110000" />
       <workItem from="1607433478885" duration="1898000" />
-      <workItem from="1607489589094" duration="1004000" />
-    </task>
-    <task id="LOCAL-00009" summary="Private Setter Extension">
-      <created>1606810232413</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1606810232413</updated>
+      <workItem from="1607489589094" duration="1596000" />
     </task>
     <task id="LOCAL-00010" summary="Private Setter Extension Test">
       <created>1606817009914</created>
@@ -505,7 +499,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607491015896</updated>
     </task>
-    <option name="localTasksCounter" value="58" />
+    <task id="LOCAL-00058" summary="Version UP">
+      <created>1607491030177</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1607491030177</updated>
+    </task>
+    <option name="localTasksCounter" value="59" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -527,7 +528,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="BaseClass Registry" />
     <MESSAGE value="BeforeReplacement Extension" />
     <MESSAGE value="First Base Class Test" />
     <MESSAGE value="Base + Interface" />
@@ -552,7 +552,8 @@
     <MESSAGE value="New Base Verion" />
     <MESSAGE value="Unit Testss" />
     <MESSAGE value="Cleanup" />
-    <option name="LAST_COMMIT_MESSAGE" value="Cleanup" />
+    <MESSAGE value="Version UP" />
+    <option name="LAST_COMMIT_MESSAGE" value="Version UP" />
   </component>
   <component name="WindowStateProjectService">
     <state x="871" y="327" key="#xdebugger.XInspectDialog" timestamp="1607061198603">
@@ -663,10 +664,10 @@
       <screen x="0" y="25" width="2048" height="1255" />
     </state>
     <state x="533" y="270" key="SettingsEditor/0.25.2048.1255@0.25.2048.1255" timestamp="1607430601523" />
-    <state x="624" y="371" key="Vcs.Push.Dialog.v2" timestamp="1607488751355">
+    <state x="624" y="371" key="Vcs.Push.Dialog.v2" timestamp="1607491031718">
       <screen x="0" y="25" width="2048" height="1255" />
     </state>
-    <state x="624" y="371" key="Vcs.Push.Dialog.v2/0.25.2048.1255@0.25.2048.1255" timestamp="1607488751355" />
+    <state x="624" y="371" key="Vcs.Push.Dialog.v2/0.25.2048.1255@0.25.2048.1255" timestamp="1607491031718" />
     <state width="1024" height="627" key="XDebugger.FullValuePopup" timestamp="1607071398198">
       <screen x="0" y="25" width="2048" height="1255" />
     </state>

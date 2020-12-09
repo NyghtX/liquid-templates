@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <PackageId>NyghtX.LiquidTemplates.Csharp</PackageId>
-    <Version>0.0.3</Version>
+    <Version>0.0.4</Version>
     <Authors>Jan Heinsohn</Authors>
     <Company>Jan Heinsohn</Company>
     <PackageDescription>Base für Liquid Templates C#</PackageDescription>
@@ -13,9 +13,11 @@
   <ItemGroup>
     <None Update="Templates\Class\Class.template">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <IncludeInPackage>true</IncludeInPackage>
     </None>
     <None Update="Templates\Class\Property\Property.template">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <IncludeInPackage>true</IncludeInPackage>
     </None>
   </ItemGroup>
 
