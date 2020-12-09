@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using FluentAssertions;
 using LiquidTemplates.Csharp.Templates.Class;
 using LiquidTemplates.Csharp.Templates.Class.Inheritance.Extends;
@@ -34,20 +35,23 @@ namespace LiquidTemplates.Csharp.Tests.Templates.Class.Inheritance.Extends
             };
             
             var baseClass = new BaseClass("TestBase", "MyTestbaseNamespace", implementations, templatePlaceholders, replacements);
-            var myGeneratedClass = ClassTemplateBuilder
+            var classTemplateBuilder = ClassTemplateBuilder
                 .CreateClass()
                 .WithName("MyGeneratedClass")
                 .InNamespace("Nyghtx.Generator.Generated")
                 .That().Is().Public()
-                .That().Extends(baseClass)
-                .ToString();
+                .That().Extends(baseClass);
+            
+            classTemplateBuilder.Build();
+            var generatedClass = classTemplateBuilder.GetGeneratedFiles().First();
+            var generatedClassContent = generatedClass.Conent;
 
             // => Assert
 
             // Klassenname
-            myGeneratedClass.Should().Contain("MyGeneratedClass : TestBase");
+            generatedClassContent.Should().Contain("MyGeneratedClass : TestBase");
             
-            myGeneratedClass.Should().Contain("public override void Test() {int i = 5;}");
+            generatedClassContent.Should().Contain("public override void Test() {int i = 5;}");
 
         }
     }

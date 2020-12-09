@@ -1,3 +1,4 @@
+using System.Linq;
 using FluentAssertions;
 using LiquidTemplates.Csharp.Templates.Class;
 using LiquidTemplates.Words.That;
@@ -12,45 +13,55 @@ namespace LiquidTemplates.Csharp.Tests.Templates.Class
         public void Private()
         {
             // => Arrange
-            var template = ClassTemplateBuilder.CreateClass()
+            var classTemplateBuilder = ClassTemplateBuilder.CreateClass()
                 .WithName("Testname")
                 .InNamespace("Testnamespace")
 
                 // => Act
-                .That().Is().Private().ToString();
+                .That().Is().Private();
+            classTemplateBuilder.Build();
+            var generatedClass = classTemplateBuilder.GetGeneratedFiles().First();
+            var generatedClassContent = generatedClass.Conent;
 
             // => Assert
-            template.Should().Contain("private class Testname");
+            generatedClassContent.Should().Contain("private class Testname");
         }
 
         [Fact]
         public void Public()
         {
             // => Arrange
-            var template = ClassTemplateBuilder.CreateClass()
+            var classTemplateBuilder = ClassTemplateBuilder.CreateClass()
                 .WithName("Testname")
                 .InNamespace("Testnamespace")
 
                 // => Act
-                .That().Is().Public().ToString();
+                .That().Is().Public();
+            classTemplateBuilder.Build();
+            var generatedClass = classTemplateBuilder.GetGeneratedFiles().First();
+            var generatedClassContent = generatedClass.Conent;
 
             // => Assert
-            template.Should().Contain("public class Testname");
+            generatedClassContent.Should().Contain("public class Testname");
         }
 
         [Fact]
         public void Internal()
         {
             // => Arrange
-            var template = ClassTemplateBuilder.CreateClass()
+            var classTemplateBuilder = ClassTemplateBuilder.CreateClass()
                 .WithName("Testname")
                 .InNamespace("Testnamespace")
 
                 // => Act
-                .That().Is().Internal().ToString();
+                .That().Is().Internal();
+            
+            classTemplateBuilder.Build();
+            var generatedClass = classTemplateBuilder.GetGeneratedFiles().First();
+            var generatedClassContent = generatedClass.Conent;
 
             // => Assert
-            template.Should().Contain("internal class Testname");
+            generatedClassContent.Should().Contain("internal class Testname");
         }
     }
 }

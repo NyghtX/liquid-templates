@@ -1,3 +1,4 @@
+using System.Linq;
 using FluentAssertions;
 using LiquidTemplates.Csharp.Templates.Class;
 using LiquidTemplates.Csharp.Templates.Class.Inheritance.Implements;
@@ -15,18 +16,20 @@ namespace LiquidTemplates.Csharp.Tests.Templates.Class.Inheritance.Implements
             // => Arrange
 
             // => Act
-            var myGeneratedClass = ClassTemplateBuilder
+            var classTemplateBuilder = ClassTemplateBuilder
                 .CreateClass()
                 .WithName("MyGeneratedClass")
                 .InNamespace("Nyghtx.Generator.Generated")
                 .That().Is().Public()
-                .That().Implements(new InterfaceImplementation("IMyInterface", "My.Interface.Namespace"))
-                .ToString();
-
+                .That().Implements(new InterfaceImplementation("IMyInterface", "My.Interface.Namespace"));
+            
+            classTemplateBuilder.Build();
+            var generatedClass = classTemplateBuilder.GetGeneratedFiles().First();
+            var generatedClassContent = generatedClass.Conent;
             // => Assert
 
             // Klassenname
-            myGeneratedClass.Should().Contain("MyGeneratedClass : IMyInterface");
+            generatedClassContent.Should().Contain("MyGeneratedClass : IMyInterface");
         }
 
         [Fact]
@@ -38,21 +41,23 @@ namespace LiquidTemplates.Csharp.Tests.Templates.Class.Inheritance.Implements
 
             // => Act
 
-            var myGeneratedClass = ClassTemplateBuilder
+            var classTemplateBuilder = ClassTemplateBuilder
                 .CreateClass()
                 .WithName("MyGeneratedClass")
                 .InNamespace("Nyghtx.Generator.Generated")
                 .That().Is().Public()
-                .That().Implements(interfaceImplementation)
-                .ToString();
-
+                .That().Implements(interfaceImplementation);
+            
+            classTemplateBuilder.Build();
+            var generatedClass = classTemplateBuilder.GetGeneratedFiles().First();
+            var generatedClassContent = generatedClass.Conent;
             // => Assert
 
             // Klassenname
-            myGeneratedClass.Should().Contain("MyGeneratedClass : IMyInterface");
+            generatedClassContent.Should().Contain("MyGeneratedClass : IMyInterface");
 
             // Implementierung
-            myGeneratedClass.Should().Contain("public void Test() {};");
+            generatedClassContent.Should().Contain("public void Test() {};");
         }
     }
 }
